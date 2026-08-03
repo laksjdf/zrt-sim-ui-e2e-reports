@@ -1,0 +1,92 @@
+<testsuites id="" name="" tests="23" failures="0" skipped="0" errors="0" time="574.481318">
+<testsuite name="l0/failed-task.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.417" errors="0">
+<testcase name="@L0 不存在的配置文件产生可诊断失败" classname="l0/failed-task.spec.ts" time="13.417">
+</testcase>
+</testsuite>
+<testsuite name="l0/home.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.077" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/home.spec.ts" time="8.077">
+</testcase>
+</testsuite>
+<testsuite name="l0/inference-model.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.829" errors="0">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference-model.spec.ts" time="5.829">
+</testcase>
+</testsuite>
+<testsuite name="l0/task-history.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="27.268" errors="0">
+<testcase name="@L0 任务管理与历史结果回跳" classname="l0/task-history.spec.ts" time="27.268">
+</testcase>
+</testsuite>
+<testsuite name="l0/training-model-estimate.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="25.378" errors="0">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training-model-estimate.spec.ts" time="25.378">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-model.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.2" errors="0">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/asset-model.spec.ts" time="10.2">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-module.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.03" errors="0">
+<testcase name="@L1 Module CRUD 与复用" classname="l1/asset-module.spec.ts" time="8.03">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-operator.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.155" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/asset-operator.spec.ts" time="8.155">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-compare.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="60.472" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference-compare.spec.ts" time="60.472">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-operator.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.788" errors="0">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference-operator.spec.ts" time="8.788">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimize.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="92.383" errors="0">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference-optimize.spec.ts" time="92.383">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-pd-ratio.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="2" failures="0" skipped="0" time="111.725" errors="0">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference-pd-ratio.spec.ts" time="70.985">
+</testcase>
+<testcase name="@L1 PD 配比无可行解/OOM" classname="l1/inference-pd-ratio.spec.ts" time="40.74">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-result.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.016" errors="0">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference-result.spec.ts" time="11.016">
+</testcase>
+</testsuite>
+<testsuite name="l1/route-proxy.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.509" errors="0">
+<testcase name="@L1 部署前缀和深层路由" classname="l1/route-proxy.spec.ts" time="9.509">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.175" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics.spec.ts" time="3.175">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-filter-history.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="21.242" errors="0">
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/task-filter-history.spec.ts" time="21.242">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-lifecycle.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="63.584" errors="0">
+<testcase name="@L1 重跑、终止、单删和批删" classname="l1/task-lifecycle.spec.ts" time="63.584">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-compare.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.146" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training-compare.spec.ts" time="9.146">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-hardware-search.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.077" errors="0">
+<testcase name="@L1 训练硬件寻优" classname="l1/training-hardware-search.spec.ts" time="14.077">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-operator.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.714" errors="0">
+<testcase name="@L1 训练算子性能评估" classname="l1/training-operator.spec.ts" time="11.714">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-source.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="31.267" errors="0">
+<testcase name="@L1 训练 YAML 与 file 来源" classname="l1/training-source.spec.ts" time="31.267">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-strategy-search.spec.ts" timestamp="2026-08-03T14:56:11.579Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.427" errors="0">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training-strategy-search.spec.ts" time="15.427">
+</testcase>
+</testsuite>
+</testsuites>
