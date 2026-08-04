@@ -1,0 +1,1015 @@
+<testsuites id="" name="" tests="23" failures="2" skipped="0" errors="15" time="812.854692">
+<testsuite name="l0/failed-task.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="122.264" errors="1">
+<testcase name="@L0 不存在的配置文件产生可诊断失败" classname="l0/failed-task.spec.ts" time="122.264">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 120000ms exceeded." type="Error">
+<![CDATA[  [chromium] › l0/failed-task.spec.ts:5:1 › @L0 不存在的配置文件产生可诊断失败 ────────────────────────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: page.waitForFunction: Test timeout of 120000ms exceeded.
+
+       at ../support/job-poller.ts:9
+
+       7 |   timeoutMs = 120_000,
+       8 | ) {
+    >  9 |   await page.waitForFunction(
+         |              ^
+      10 |     ({ id, status }) => {
+      11 |       const el = document.querySelector(`[data-testid="${id}"]`)
+      12 |       return el?.getAttribute('data-status') === status
+        at waitForPageJobStatus (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/support/job-poller.ts:9:14)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l0/failed-task.spec.ts:27:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l0-failed-task--L0-不存在的配置文件产生可诊断失败-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l0/home.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.498" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/home.spec.ts" time="7.498">
+</testcase>
+</testsuite>
+<testsuite name="l0/inference-model.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.317" errors="1">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference-model.spec.ts" time="20.317">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l0/inference-model.spec.ts:3:1 › @L0 推理模型性能评估完整闭环 ───────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-hardware-select')
+        - locator resolved to <select value="A5_POD" data-testid="infer-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      18 |
+      19 |   // Step 3: 选择第一个硬件并运行
+    > 20 |   await page.getByTestId('infer-hardware-select').selectOption({ index: 1 })
+         |                                                   ^
+      21 |   await page.getByTestId('infer-step-3-run').click()
+      22 |
+      23 |   // 等待结果
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l0/inference-model.spec.ts:20:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l0-inference-model--L0-推理模型性能评估完整闭环-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l0/task-history.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.561" errors="1">
+<testcase name="@L0 任务管理与历史结果回跳" classname="l0/task-history.spec.ts" time="19.561">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l0/task-history.spec.ts:6:1 › @L0 任务管理与历史结果回跳 ───────────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('estimate-cluster-preset-select')
+
+
+       at ../pages/training-model.page.ts:54
+
+      52 |     await this.sourceForm.click()
+      53 |     await this.modelSelect.selectOption(params.modelId)
+    > 54 |     await this.clusterPresetSelect.selectOption(params.presetId)
+         |                                    ^
+      55 |     await this.tpSelect.selectOption(String(params.tp))
+      56 |     await this.ppSelect.selectOption(String(params.pp))
+      57 |     await this.epSelect.selectOption(String(params.ep))
+        at TrainingModelPage.fillForm (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/pages/training-model.page.ts:54:36)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l0/task-history.spec.ts:14:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l0-task-history--L0-任务管理与历史结果回跳-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l0/training-model-estimate.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.631" errors="1">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training-model-estimate.spec.ts" time="19.631">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l0/training-model-estimate.spec.ts:6:1 › @L0 训练模型评估从浏览器提交到报告和任务历史 ───────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('estimate-cluster-preset-select')
+
+
+       at ../pages/training-model.page.ts:54
+
+      52 |     await this.sourceForm.click()
+      53 |     await this.modelSelect.selectOption(params.modelId)
+    > 54 |     await this.clusterPresetSelect.selectOption(params.presetId)
+         |                                    ^
+      55 |     await this.tpSelect.selectOption(String(params.tp))
+      56 |     await this.ppSelect.selectOption(String(params.pp))
+      57 |     await this.epSelect.selectOption(String(params.ep))
+        at TrainingModelPage.fillForm (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/pages/training-model.page.ts:54:36)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l0/training-model-estimate.spec.ts:27:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l0-training-model-estimate--L0-训练模型评估从浏览器提交到报告和任务历史-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-model.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.876" errors="0">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/asset-model.spec.ts" time="10.876">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-module.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.278" errors="0">
+<testcase name="@L1 Module CRUD 与复用" classname="l1/asset-module.spec.ts" time="8.278">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-operator.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.752" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/asset-operator.spec.ts" time="7.752">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-compare.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="1" skipped="0" time="125.2" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference-compare.spec.ts" time="125.2">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › l1/inference-compare.spec.ts:3:1 › @L1 推理硬件性能对比 ─────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('.cr-section-card').filter({ hasText: '硬件性能对比' })
+    Expected: visible
+    Timeout: 120000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 120000ms
+      - waiting for locator('.cr-section-card').filter({ hasText: '硬件性能对比' })
+
+
+      30 |
+      31 |   // Step 4 结果
+    > 32 |   await expect(page.locator('.cr-section-card').filter({ hasText: '硬件性能对比' })).toBeVisible({ timeout: 120_000 })
+         |                                                                                ^
+      33 |   await expect(page.locator('.cr-compare-table')).toBeVisible()
+      34 | })
+      35 |
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-compare.spec.ts:32:80
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-compare--L1-推理硬件性能对比-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-operator.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="122.273" errors="1">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference-operator.spec.ts" time="122.273">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="Test timeout of 120000ms exceeded." type="Error">
+<![CDATA[  [chromium] › l1/inference-operator.spec.ts:3:1 › @L1 推理算子性能评估 ────────────────────────────────────
+
+    Test timeout of 120000ms exceeded.
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  getByTestId('op-job-status')
+    Expected: "succeeded"
+    Received: "pending"
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 120000ms
+      - waiting for getByTestId('op-job-status')
+        240 × locator resolved to <div data-v-8ff6ecfc="" class="result-card" data-status="pending" data-testid="op-job-status">…</div>
+            - unexpected value "pending"
+
+
+      25 |
+      26 |   await page.getByTestId('op-job-status').waitFor({ state: 'visible' })
+    > 27 |   await expect(page.getByTestId('op-job-status')).toHaveAttribute('data-status', 'succeeded', { timeout: 120_000 })
+         |                                                   ^
+      28 |
+      29 |   await api.deleteTask(job.task_id)
+      30 | })
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-operator.spec.ts:27:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimize.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.406" errors="1">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference-optimize.spec.ts" time="20.406">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-optimize.spec.ts:3:1 › @L1 推理策略寻优与应用策略 ─────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-hardware-select')
+        - locator resolved to <select value="A5_POD" data-testid="infer-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      22 |
+      23 |   // Step 3: 选择硬件
+    > 24 |   await page.getByTestId('infer-hardware-select').selectOption({ index: 1 })
+         |                                                   ^
+      25 |   await page.getByTestId('infer-step-3-run').click()
+      26 |
+      27 |   // Step 4 寻优结果
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:24:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-pd-ratio.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="2" failures="0" skipped="0" time="40.756" errors="2">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference-pd-ratio.spec.ts" time="20.349">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-pd-ratio.spec.ts:3:1 › @L1 PD 配比可行结果 ───────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-hardware-select')
+        - locator resolved to <select value="A5_POD" data-testid="infer-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      22 |
+      23 |   // Step 3: 选择硬件
+    > 24 |   await page.getByTestId('infer-hardware-select').selectOption({ index: 1 })
+         |                                                   ^
+      25 |   await page.getByTestId('infer-step-3-run').click()
+      26 |
+      27 |   // Step 4 PD 结果
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-pd-ratio.spec.ts:24:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-pd-ratio--L1-PD-配比可行结果-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 PD 配比无可行解/OOM" classname="l1/inference-pd-ratio.spec.ts" time="20.407">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-pd-ratio.spec.ts:33:1 › @L1 PD 配比无可行解/OOM ──────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-hardware-select')
+        - locator resolved to <select value="A5_POD" data-testid="infer-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      52 |   await page.getByTestId('infer-step-2-continue').click()
+      53 |
+    > 54 |   await page.getByTestId('infer-hardware-select').selectOption({ index: 1 })
+         |                                                   ^
+      55 |   await page.getByTestId('infer-step-3-run').click()
+      56 |
+      57 |   const result = page.getByRole('heading', { name: 'PD 配比寻优结果' })
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-pd-ratio.spec.ts:54:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-pd-ratio--L1-PD-配比无可行解-OOM-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-result.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="20.271" errors="1">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference-result.spec.ts" time="20.271">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-result.spec.ts:3:1 › @L1 推理结果筛选和多硬件切换 ──────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-hardware-select')
+        - locator resolved to <select value="A5_POD" data-testid="infer-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      22 |
+      23 |   // Step 3: 选择硬件并运行
+    > 24 |   await page.getByTestId('infer-hardware-select').selectOption({ index: 1 })
+         |                                                   ^
+      25 |   await page.getByTestId('infer-step-3-run').click()
+      26 |
+      27 |   // Step 4 结果
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-result.spec.ts:24:51
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-result--L1-推理结果筛选和多硬件切换-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/route-proxy.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.203" errors="0">
+<testcase name="@L1 部署前缀和深层路由" classname="l1/route-proxy.spec.ts" time="9.203">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.151" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics.spec.ts" time="3.151">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-filter-history.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.199" errors="1">
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/task-filter-history.spec.ts" time="19.199">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/task-filter-history.spec.ts:6:1 › @L1 任务筛选、详情和历史 Run ─────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('estimate-cluster-preset-select')
+
+
+       at ../pages/training-model.page.ts:54
+
+      52 |     await this.sourceForm.click()
+      53 |     await this.modelSelect.selectOption(params.modelId)
+    > 54 |     await this.clusterPresetSelect.selectOption(params.presetId)
+         |                                    ^
+      55 |     await this.tpSelect.selectOption(String(params.tp))
+      56 |     await this.ppSelect.selectOption(String(params.pp))
+      57 |     await this.epSelect.selectOption(String(params.ep))
+        at TrainingModelPage.fillForm (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/pages/training-model.page.ts:54:36)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/task-filter-history.spec.ts:12:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-task-filter-history--L1-任务筛选、详情和历史-Run-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/task-lifecycle.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.306" errors="1">
+<testcase name="@L1 重跑、终止、单删和批删" classname="l1/task-lifecycle.spec.ts" time="19.306">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/task-lifecycle.spec.ts:24:1 › @L1 重跑、终止、单删和批删 ────────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('estimate-cluster-preset-select')
+
+
+       at ../pages/training-model.page.ts:54
+
+      52 |     await this.sourceForm.click()
+      53 |     await this.modelSelect.selectOption(params.modelId)
+    > 54 |     await this.clusterPresetSelect.selectOption(params.presetId)
+         |                                    ^
+      55 |     await this.tpSelect.selectOption(String(params.tp))
+      56 |     await this.ppSelect.selectOption(String(params.pp))
+      57 |     await this.epSelect.selectOption(String(params.ep))
+        at TrainingModelPage.fillForm (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/pages/training-model.page.ts:54:36)
+        at createTask (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/task-lifecycle.spec.ts:9:3)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/task-lifecycle.spec.ts:27:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-task-lifecycle--L1-重跑、终止、单删和批删-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-compare.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="1" skipped="0" time="8.605" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training-compare.spec.ts" time="8.605">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › l1/training-compare.spec.ts:3:1 › @L1 训练多硬件性能对比 ─────────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: /硬件对比|Compare/ })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByRole('heading', { name: /硬件对比|Compare/ })
+
+
+       5 |
+       6 |   await page.goto('/zrt-sim/train/compare')
+    >  7 |   await expect(page.getByRole('heading', { name: /硬件对比|Compare/ })).toBeVisible()
+         |                                                                     ^
+       8 |
+       9 |   await page.getByTestId('compare-model-select').selectOption(catalogs.train.modelId)
+      10 |   await page.getByTestId('compare-world-size-input').fill('128')
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-compare.spec.ts:7:69
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-compare--L1-训练多硬件性能对比-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-hardware-search.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.492" errors="1">
+<testcase name="@L1 训练硬件寻优" classname="l1/training-hardware-search.spec.ts" time="19.492">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.fill: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-hardware-search.spec.ts:18:1 › @L1 训练硬件寻优 ───────────────────────────────
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('hardware-nodes-input')
+
+
+      23 |
+      24 |   await selectV4Model(page.getByTestId('hardware-model-select'))
+    > 25 |   await page.getByTestId('hardware-nodes-input').fill('16')
+         |                                                  ^
+      26 |   await page.getByTestId('hardware-gpus-per-node-select').selectOption('8')
+      27 |   await page.getByTestId('hardware-top-n-input').fill('2')
+      28 |   await selectFormValue(page, 'TP', '4')
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-hardware-search.spec.ts:25:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-hardware-search--L1-训练硬件寻优-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-operator.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.451" errors="1">
+<testcase name="@L1 训练算子性能评估" classname="l1/training-operator.spec.ts" time="19.451">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-operator--L1-训练算子性能评估-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-operator--L1-训练算子性能评估-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-operator--L1-训练算子性能评估-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-operator--L1-训练算子性能评估-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-operator.spec.ts:4:1 › @L1 训练算子性能评估 ─────────────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('op-hardware-select')
+        - locator resolved to <select data-v-8ff6ecfc="" class="form-select" data-testid="op-hardware-select">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        30 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      10 |   await page.getByTestId('op-operator-select').selectOption('matmul')
+      11 |   // 硬件目录中没有 h100，使用 catalog 返回的真实硬件
+    > 12 |   await page.getByTestId('op-hardware-select').selectOption(catalogs.train.hardwareId)
+         |                                                ^
+      13 |
+      14 |   // matmul 需要两个输入张量
+      15 |   const rows = page.getByTestId('op-tensor-row')
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-operator.spec.ts:12:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-operator--L1-训练算子性能评估-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-operator--L1-训练算子性能评估-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-operator--L1-训练算子性能评估-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-operator--L1-训练算子性能评估-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-operator--L1-训练算子性能评估-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-source.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="125.678" errors="1">
+<testcase name="@L1 训练 YAML 与 file 来源" classname="l1/training-source.spec.ts" time="125.678">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="page.waitForFunction: Timeout 120000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-source.spec.ts:28:1 › @L1 训练 YAML 与 file 来源 ─────────────────────────────
+
+    TimeoutError: page.waitForFunction: Timeout 120000ms exceeded.
+
+       at ../support/job-poller.ts:9
+
+       7 |   timeoutMs = 120_000,
+       8 | ) {
+    >  9 |   await page.waitForFunction(
+         |              ^
+      10 |     ({ id, status }) => {
+      11 |       const el = document.querySelector(`[data-testid="${id}"]`)
+      12 |       return el?.getAttribute('data-status') === status
+        at waitForPageJobStatus (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/support/job-poller.ts:9:14)
+        at submitAndWait (/home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-source.spec.ts:24:9)
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-source.spec.ts:52:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-strategy-search.spec.ts" timestamp="2026-08-04T08:25:33.188Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.319" errors="1">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training-strategy-search.spec.ts" time="19.319">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-strategy-search.spec.ts:24:1 › @L1 训练策略自动寻优 ─────────────────────────────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('strategy-cluster-preset-select')
+
+
+      29 |
+      30 |   await selectV4Model(page.getByTestId('strategy-model-select'))
+    > 31 |   await page.getByTestId('strategy-cluster-preset-select').selectOption('H100_POD')
+         |                                                            ^
+      32 |   await page.getByTestId('strategy-top-n-input').fill('3')
+      33 |   await selectOnlySpaceValue(page, 'TP', '4')
+      34 |   await selectOnlySpaceValue(page, 'PP', '8')
+        at /home/runner/work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-strategy-search.spec.ts:31:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>
