@@ -1,0 +1,149 @@
+{
+  "total": 23,
+  "passed": 23,
+  "failed": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "suite": "l0/failed-task.spec.ts",
+      "name": "@L0 不存在的配置文件产生可诊断失败",
+      "status": "passed",
+      "durationSeconds": 12.981
+    },
+    {
+      "suite": "l0/home.spec.ts",
+      "name": "@L0 首页与核心入口可达",
+      "status": "passed",
+      "durationSeconds": 8.361
+    },
+    {
+      "suite": "l0/inference-model.spec.ts",
+      "name": "@L0 推理模型性能评估完整闭环",
+      "status": "passed",
+      "durationSeconds": 5.775
+    },
+    {
+      "suite": "l0/task-history.spec.ts",
+      "name": "@L0 任务管理与历史结果回跳",
+      "status": "passed",
+      "durationSeconds": 28.627
+    },
+    {
+      "suite": "l0/training-model-estimate.spec.ts",
+      "name": "@L0 训练模型评估从浏览器提交到报告和任务历史",
+      "status": "passed",
+      "durationSeconds": 24.012
+    },
+    {
+      "suite": "l1/asset-model.spec.ts",
+      "name": "@L1 自定义模型 CRUD 与内置保护",
+      "status": "passed",
+      "durationSeconds": 10.876
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module CRUD 与复用",
+      "status": "passed",
+      "durationSeconds": 8.432
+    },
+    {
+      "suite": "l1/asset-operator.spec.ts",
+      "name": "@L1 自定义算子 CRUD",
+      "status": "passed",
+      "durationSeconds": 9.174
+    },
+    {
+      "suite": "l1/inference-compare.spec.ts",
+      "name": "@L1 推理硬件性能对比",
+      "status": "passed",
+      "durationSeconds": 260.877
+    },
+    {
+      "suite": "l1/inference-operator.spec.ts",
+      "name": "@L1 推理算子性能评估",
+      "status": "passed",
+      "durationSeconds": 8.912
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 推理策略寻优与应用策略",
+      "status": "passed",
+      "durationSeconds": 113.3
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比可行结果",
+      "status": "passed",
+      "durationSeconds": 80.754
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比无可行解/OOM",
+      "status": "passed",
+      "durationSeconds": 40.861
+    },
+    {
+      "suite": "l1/inference-result.spec.ts",
+      "name": "@L1 推理结果筛选和多硬件切换",
+      "status": "passed",
+      "durationSeconds": 11.157
+    },
+    {
+      "suite": "l1/route-proxy.spec.ts",
+      "name": "@L1 部署前缀和深层路由",
+      "status": "passed",
+      "durationSeconds": 9.708
+    },
+    {
+      "suite": "l1/statistics.spec.ts",
+      "name": "@L1 信息统计访问与导出",
+      "status": "passed",
+      "durationSeconds": 3.123
+    },
+    {
+      "suite": "l1/task-filter-history.spec.ts",
+      "name": "@L1 任务筛选、详情和历史 Run",
+      "status": "passed",
+      "durationSeconds": 24.167
+    },
+    {
+      "suite": "l1/task-lifecycle.spec.ts",
+      "name": "@L1 重跑、终止、单删和批删",
+      "status": "passed",
+      "durationSeconds": 80.629
+    },
+    {
+      "suite": "l1/training-compare.spec.ts",
+      "name": "@L1 训练多硬件性能对比",
+      "status": "passed",
+      "durationSeconds": 260.209
+    },
+    {
+      "suite": "l1/training-hardware-search.spec.ts",
+      "name": "@L1 训练硬件寻优",
+      "status": "passed",
+      "durationSeconds": 16.942
+    },
+    {
+      "suite": "l1/training-operator.spec.ts",
+      "name": "@L1 训练算子性能评估",
+      "status": "passed",
+      "durationSeconds": 9.742
+    },
+    {
+      "suite": "l1/training-source.spec.ts",
+      "name": "@L1 训练 YAML 与 file 来源",
+      "status": "passed",
+      "durationSeconds": 40.841
+    },
+    {
+      "suite": "l1/training-strategy-search.spec.ts",
+      "name": "@L1 训练策略自动寻优",
+      "status": "passed",
+      "durationSeconds": 13.436
+    }
+  ],
+  "exitCode": 0,
+  "conclusion": "pass",
+  "reportError": ""
+}
