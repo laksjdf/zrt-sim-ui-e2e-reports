@@ -1,0 +1,214 @@
+<testsuites id="" name="" tests="31" failures="0" skipped="0" errors="2" time="612.7706979999999">
+<testsuite name="l0/failed-task.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.329" errors="0">
+<testcase name="@L0 不存在的配置文件产生可诊断失败" classname="l0/failed-task.spec.ts" time="8.329">
+</testcase>
+</testsuite>
+<testsuite name="l0/home.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.587" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/home.spec.ts" time="1.587">
+</testcase>
+</testsuite>
+<testsuite name="l0/inference-model.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.168" errors="0">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference-model.spec.ts" time="7.168">
+</testcase>
+</testsuite>
+<testsuite name="l0/service-availability.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.793" errors="0">
+<testcase name="@L0 服务读取链路的浏览器请求全部成功" classname="l0/service-availability.spec.ts" time="1.793">
+</testcase>
+</testsuite>
+<testsuite name="l0/task-history.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.885" errors="0">
+<testcase name="@L0 任务管理与历史结果回跳" classname="l0/task-history.spec.ts" time="10.885">
+</testcase>
+</testsuite>
+<testsuite name="l0/training-model-estimate.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.57" errors="0">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training-model-estimate.spec.ts" time="8.57">
+</testcase>
+</testsuite>
+<testsuite name="l0/user-manual-navigation.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.099" errors="0">
+<testcase name="@L0 普通用户可打开用户手册" classname="l0/user-manual-navigation.spec.ts" time="1.099">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-hardware.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.132" errors="0">
+<testcase name="@L1 硬件资产 CRUD 与内置保护" classname="l1/asset-hardware.spec.ts" time="1.132">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-model.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.974" errors="1">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/asset-model.spec.ts" time="16.974">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/asset-model.spec.ts:5:1 › @L1 自定义模型 CRUD 与内置保护 ───────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('model-row-e2e_model_l1_1786954873504').locator('button, a').filter({ hasText: /详情/ }).first()
+
+
+      25 |   await page.getByPlaceholder('搜索模型名称，回车确认').fill(name)
+      26 |   await page.getByPlaceholder('搜索模型名称，回车确认').press('Enter')
+    > 27 |   await page.getByTestId(`model-row-${name}`).locator('button, a').filter({ hasText: /详情/ }).first().click()
+         |                                                                                                      ^
+      28 |   await expect(page.getByTestId('model-detail-modal')).toContainText(name)
+      29 |   await page.locator('[data-testid="model-detail-modal"] .mm-close').click()
+      30 |   await expect(page.getByTestId('model-detail-modal')).not.toBeVisible()
+        at /Users/xietianqi/actions-runner-zrt-sim-ui/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/asset-model.spec.ts:27:102
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-asset-model--L1-自定义模型-CRUD-与内置保护-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-module.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.696" errors="0">
+<testcase name="@L1 Module CRUD 与复用" classname="l1/asset-module.spec.ts" time="1.696">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-operator.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.591" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/asset-operator.spec.ts" time="1.591">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-batch-experiment.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.255" errors="0">
+<testcase name="@L1 推理批量实验服务闭环" classname="l1/inference-batch-experiment.spec.ts" time="7.255">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-compare.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="297.778" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference-compare.spec.ts" time="297.778">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-hardware-editable.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.093" errors="0">
+<testcase name="@L1 推理任务提交修改后的硬件规格并生效" classname="l1/inference-hardware-editable.spec.ts" time="8.093">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-operator.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="6.526" errors="0">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference-operator.spec.ts" time="6.526">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimize.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="69.005" errors="0">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference-optimize.spec.ts" time="69.005">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-pd-ratio.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="2" failures="0" skipped="0" time="36.577" errors="0">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference-pd-ratio.spec.ts" time="18.309">
+</testcase>
+<testcase name="@L1 PD 配比无可行解/OOM" classname="l1/inference-pd-ratio.spec.ts" time="18.268">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-result.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.391" errors="0">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference-result.spec.ts" time="7.391">
+</testcase>
+</testsuite>
+<testsuite name="l1/release-info.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.389" errors="0">
+<testcase name="@L1 版本信息当前和历史读取" classname="l1/release-info.spec.ts" time="0.666">
+</testcase>
+<testcase name="@L1 管理员编辑版本信息并恢复" classname="l1/release-info.spec.ts" time="0.723">
+</testcase>
+</testsuite>
+<testsuite name="l1/route-proxy.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.741" errors="0">
+<testcase name="@L1 部署前缀和深层路由" classname="l1/route-proxy.spec.ts" time="1.741">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.704" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics.spec.ts" time="0.704">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-filter-history.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.564" errors="0">
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/task-filter-history.spec.ts" time="8.564">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-lifecycle.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="33.764" errors="0">
+<testcase name="@L1 重跑、终止、单删和批删" classname="l1/task-lifecycle.spec.ts" time="33.764">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-batch-experiment.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.331" errors="0">
+<testcase name="@L1 训练批量实验服务闭环" classname="l1/training-batch-experiment.spec.ts" time="7.331">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-compare.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.662" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training-compare.spec.ts" time="7.662">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-hardware-search.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.518" errors="0">
+<testcase name="@L1 训练硬件寻优" classname="l1/training-hardware-search.spec.ts" time="8.518">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-operator.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="11.43" errors="0">
+<testcase name="@L1 训练算子性能评估" classname="l1/training-operator.spec.ts" time="11.43">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-source.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="23.241" errors="1">
+<testcase name="@L1 训练 YAML 与 file 来源" classname="l1/training-source.spec.ts" time="23.241">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="page.waitForResponse: Timeout 15000ms exceeded while waiting for event &quot;response&quot;" type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-source.spec.ts:29:1 › @L1 训练 YAML 与 file 来源 ─────────────────────────────
+
+    TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event "response"
+
+      16 |   }
+      17 |
+    > 18 |   const submitted = page.waitForResponse(response =>
+         |                          ^
+      19 |     response.request().method() === 'POST'
+      20 |     && response.url().endsWith('/api/train/estimate')
+      21 |     && response.status() === 202,
+        at submitAndWait (/Users/xietianqi/actions-runner-zrt-sim-ui/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-source.spec.ts:18:26)
+        at /Users/xietianqi/actions-runner-zrt-sim-ui/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-source.spec.ts:56:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-source--L1-训练-YAML-与-file-来源-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-strategy-search.spec.ts" timestamp="2026-08-17T08:20:31.801Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.189" errors="0">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training-strategy-search.spec.ts" time="12.189">
+</testcase>
+</testsuite>
+</testsuites>
