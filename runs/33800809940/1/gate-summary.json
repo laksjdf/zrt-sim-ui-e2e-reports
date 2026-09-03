@@ -1,202 +1,202 @@
 {
   "total": 31,
-  "passed": 31,
-  "failed": 0,
+  "passed": 28,
+  "failed": 3,
   "skipped": 0,
   "cases": [
     {
       "suite": "l0/home.spec.ts",
       "name": "@L0 首页与核心入口可达",
       "status": "passed",
-      "durationSeconds": 5.154
+      "durationSeconds": 3.942
     },
     {
       "suite": "l0/inference-model.spec.ts",
       "name": "@L0 推理模型性能评估完整闭环",
       "status": "passed",
-      "durationSeconds": 7.167
+      "durationSeconds": 7.06
     },
     {
       "suite": "l0/service-availability.spec.ts",
       "name": "@L0 服务读取链路的浏览器请求全部成功",
       "status": "passed",
-      "durationSeconds": 3.428
+      "durationSeconds": 2.742
     },
     {
       "suite": "l0/task-history.spec.ts",
       "name": "@L0 任务管理与历史结果回跳",
       "status": "passed",
-      "durationSeconds": 25.375
+      "durationSeconds": 24.359
     },
     {
       "suite": "l0/training-model-estimate.spec.ts",
       "name": "@L0 训练模型评估从浏览器提交到报告和任务历史",
       "status": "passed",
-      "durationSeconds": 26.47
+      "durationSeconds": 23.747
     },
     {
       "suite": "l0/user-manual-navigation.spec.ts",
       "name": "@L0 普通用户可打开用户手册",
       "status": "passed",
-      "durationSeconds": 2.024
+      "durationSeconds": 1.656
     },
     {
       "suite": "l1/asset-hardware.spec.ts",
       "name": "@L1 硬件资产 CRUD 与内置保护",
       "status": "passed",
-      "durationSeconds": 2.269
+      "durationSeconds": 1.821
     },
     {
       "suite": "l1/asset-model.spec.ts",
       "name": "@L1 自定义模型 CRUD 与内置保护",
       "status": "passed",
-      "durationSeconds": 4.034
+      "durationSeconds": 3.431
     },
     {
       "suite": "l1/asset-module.spec.ts",
       "name": "@L1 Module CRUD 与复用",
       "status": "passed",
-      "durationSeconds": 3.001
+      "durationSeconds": 2.357
     },
     {
       "suite": "l1/asset-operator.spec.ts",
       "name": "@L1 自定义算子 CRUD",
       "status": "passed",
-      "durationSeconds": 3.036
+      "durationSeconds": 2.338
     },
     {
       "suite": "l1/asset-operator.spec.ts",
       "name": "@L1 新增算子失败显示错误并保持弹窗打开",
       "status": "passed",
-      "durationSeconds": 1.404
+      "durationSeconds": 1.125
     },
     {
       "suite": "l1/inference-batch-experiment.spec.ts",
       "name": "@L1 推理批量实验服务闭环",
       "status": "passed",
-      "durationSeconds": 7.799
+      "durationSeconds": 7.502
     },
     {
       "suite": "l1/inference-compare.spec.ts",
       "name": "@L1 推理硬件性能对比",
       "status": "passed",
-      "durationSeconds": 247.821
+      "durationSeconds": 167.625
     },
     {
       "suite": "l1/inference-custom-communication-tiers.spec.ts",
       "name": "@L1 推理任务提交用户新增的通信中间层",
       "status": "passed",
-      "durationSeconds": 8.129
+      "durationSeconds": 7.801
     },
     {
       "suite": "l1/inference-hardware-editable.spec.ts",
       "name": "@L1 推理任务提交修改后的硬件规格并生效",
       "status": "passed",
-      "durationSeconds": 8.079
+      "durationSeconds": 7.624
     },
     {
       "suite": "l1/inference-operator.spec.ts",
       "name": "@L1 推理算子性能评估",
       "status": "passed",
-      "durationSeconds": 7.041
+      "durationSeconds": 9.654
     },
     {
       "suite": "l1/inference-optimize.spec.ts",
       "name": "@L1 推理策略寻优与应用策略",
-      "status": "passed",
-      "durationSeconds": 360.618
+      "status": "failed",
+      "durationSeconds": 219.138
     },
     {
       "suite": "l1/inference-pd-ratio.spec.ts",
       "name": "@L1 PD 配比可行结果",
-      "status": "passed",
-      "durationSeconds": 58.342
+      "status": "failed",
+      "durationSeconds": 16.39
     },
     {
       "suite": "l1/inference-pd-ratio.spec.ts",
       "name": "@L1 PD 配比无可行解/OOM",
-      "status": "passed",
-      "durationSeconds": 38.24
+      "status": "failed",
+      "durationSeconds": 16.371
     },
     {
       "suite": "l1/inference-result.spec.ts",
       "name": "@L1 推理结果筛选和多硬件切换",
       "status": "passed",
-      "durationSeconds": 7.595
+      "durationSeconds": 7.179
     },
     {
       "suite": "l1/release-info.spec.ts",
       "name": "@L1 版本信息当前和历史读取",
       "status": "passed",
-      "durationSeconds": 1.094
+      "durationSeconds": 0.897
     },
     {
       "suite": "l1/release-info.spec.ts",
       "name": "@L1 管理员编辑版本信息并恢复",
       "status": "passed",
-      "durationSeconds": 1.239
+      "durationSeconds": 0.918
     },
     {
       "suite": "l1/route-proxy.spec.ts",
       "name": "@L1 部署前缀和深层路由",
       "status": "passed",
-      "durationSeconds": 3.246
+      "durationSeconds": 2.568
     },
     {
       "suite": "l1/statistics.spec.ts",
       "name": "@L1 信息统计访问与导出",
       "status": "passed",
-      "durationSeconds": 1.124
+      "durationSeconds": 0.931
     },
     {
       "suite": "l1/task-filter-history.spec.ts",
       "name": "@L1 任务筛选、详情和历史 Run",
       "status": "passed",
-      "durationSeconds": 10.681
+      "durationSeconds": 8.783
     },
     {
       "suite": "l1/task-lifecycle.spec.ts",
       "name": "@L1 重跑、终止、单删和批删",
       "status": "passed",
-      "durationSeconds": 26.657
+      "durationSeconds": 24.502
     },
     {
       "suite": "l1/training-batch-experiment.spec.ts",
       "name": "@L1 批量训练实验服务闭环",
       "status": "passed",
-      "durationSeconds": 7.796
+      "durationSeconds": 7.487
     },
     {
       "suite": "l1/training-compare.spec.ts",
       "name": "@L1 训练多硬件性能对比",
       "status": "passed",
-      "durationSeconds": 13.209
+      "durationSeconds": 12.507
     },
     {
       "suite": "l1/training-hardware-search.spec.ts",
       "name": "@L1 训练硬件寻优",
       "status": "passed",
-      "durationSeconds": 9.384
+      "durationSeconds": 8.536
     },
     {
       "suite": "l1/training-operator.spec.ts",
       "name": "@L1 训练算子性能评估",
       "status": "passed",
-      "durationSeconds": 7.766
+      "durationSeconds": 9.458
     },
     {
       "suite": "l1/training-strategy-search.spec.ts",
       "name": "@L1 训练策略自动寻优",
       "status": "passed",
-      "durationSeconds": 8.905
+      "durationSeconds": 8.365
     }
   ],
-  "exitCode": 0,
-  "conclusion": "pass",
+  "exitCode": 1,
+  "conclusion": "fail",
   "reportError": "",
   "latency": {
     "thresholdMs": 500,
-    "total": 474,
+    "total": 441,
     "warnings": []
   }
 }
