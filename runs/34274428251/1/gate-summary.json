@@ -1,0 +1,319 @@
+{
+  "total": 48,
+  "passed": 39,
+  "failed": 9,
+  "skipped": 0,
+  "cases": [
+    {
+      "suite": "l0/home.spec.ts",
+      "name": "@L0 首页与核心入口可达",
+      "status": "passed",
+      "durationSeconds": 5.043
+    },
+    {
+      "suite": "l0/inference-model.spec.ts",
+      "name": "@L0 推理模型性能评估完整闭环",
+      "status": "passed",
+      "durationSeconds": 12.222
+    },
+    {
+      "suite": "l0/service-availability.spec.ts",
+      "name": "@L0 服务读取链路的浏览器请求全部成功",
+      "status": "passed",
+      "durationSeconds": 4.544
+    },
+    {
+      "suite": "l0/task-history.spec.ts",
+      "name": "@L0 任务管理与历史结果回跳",
+      "status": "passed",
+      "durationSeconds": 27.99
+    },
+    {
+      "suite": "l0/training-model-estimate.spec.ts",
+      "name": "@L0 训练模型评估从浏览器提交到报告和任务历史",
+      "status": "passed",
+      "durationSeconds": 27.436
+    },
+    {
+      "suite": "l0/user-manual-navigation.spec.ts",
+      "name": "@L0 普通用户可打开用户手册",
+      "status": "passed",
+      "durationSeconds": 2.73
+    },
+    {
+      "suite": "l1/asset-hardware.spec.ts",
+      "name": "@L1 硬件资产 CRUD 与内置保护",
+      "status": "passed",
+      "durationSeconds": 2.5
+    },
+    {
+      "suite": "l1/asset-model.spec.ts",
+      "name": "@L1 自定义模型 CRUD 与内置保护",
+      "status": "passed",
+      "durationSeconds": 5.125
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 乱序成功响应不覆盖当前场景，旧请求结束不提前关闭 loading",
+      "status": "passed",
+      "durationSeconds": 1.681
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 关闭重开后旧查询失败不清空新查询的选项",
+      "status": "passed",
+      "durationSeconds": 1.809
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 关闭旧编辑后迟到回调不改写新表单的 Spec JSON",
+      "status": "passed",
+      "durationSeconds": 1.831
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 首屏仅加载模块，新增时查询算子并随场景切换",
+      "status": "passed",
+      "durationSeconds": 1.905
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 首次编辑按模块场景读取算子并保留已选项和保存能力",
+      "status": "passed",
+      "durationSeconds": 1.799
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 新增算子查询失败时结束加载，保留表单且再次打开可重试",
+      "status": "passed",
+      "durationSeconds": 1.84
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 编辑算子查询失败时结束加载，保留表单且再次打开可重试",
+      "status": "passed",
+      "durationSeconds": 1.919
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module CRUD 与复用",
+      "status": "passed",
+      "durationSeconds": 4.142
+    },
+    {
+      "suite": "l1/asset-operator.spec.ts",
+      "name": "@L1 自定义算子 CRUD",
+      "status": "passed",
+      "durationSeconds": 3.982
+    },
+    {
+      "suite": "l1/asset-operator.spec.ts",
+      "name": "@L1 新增算子失败显示错误并保持弹窗打开",
+      "status": "passed",
+      "durationSeconds": 1.884
+    },
+    {
+      "suite": "l1/inference-batch-experiment.spec.ts",
+      "name": "@L1 推理批量实验服务闭环",
+      "status": "passed",
+      "durationSeconds": 8.071
+    },
+    {
+      "suite": "l1/inference-batch-optimization-toggle.spec.ts",
+      "name": "@L1 推理批量实验寻优开关可往返切换：strategy_search",
+      "status": "passed",
+      "durationSeconds": 2.689
+    },
+    {
+      "suite": "l1/inference-batch-optimization-toggle.spec.ts",
+      "name": "@L1 推理批量实验寻优开关可往返切换：hardware_sensitivity",
+      "status": "passed",
+      "durationSeconds": 2.725
+    },
+    {
+      "suite": "l1/inference-compare.spec.ts",
+      "name": "@L1 推理硬件性能对比",
+      "status": "failed",
+      "durationSeconds": 16.5
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 evaluate Decode 配置在前后步骤往返时完整保留",
+      "status": "passed",
+      "durationSeconds": 2.437
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 optimize Decode 配置在前后步骤往返时完整保留",
+      "status": "passed",
+      "durationSeconds": 2.37
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 独立 O-TP=2 CP=1 切分不增加总卡数并保留步骤编辑",
+      "status": "passed",
+      "durationSeconds": 2.144
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 独立 O-TP=2 CP=2 切分不增加总卡数并保留步骤编辑",
+      "status": "passed",
+      "durationSeconds": 2.013
+    },
+    {
+      "suite": "l1/inference-custom-communication-tiers.spec.ts",
+      "name": "@L1 推理任务提交用户新增的通信中间层",
+      "status": "failed",
+      "durationSeconds": 17.626
+    },
+    {
+      "suite": "l1/inference-hardware-editable.spec.ts",
+      "name": "@L1 推理任务提交修改后的硬件规格并生效",
+      "status": "passed",
+      "durationSeconds": 8.291
+    },
+    {
+      "suite": "l1/inference-operator.spec.ts",
+      "name": "@L1 推理算子性能评估",
+      "status": "passed",
+      "durationSeconds": 8.258
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 推理策略寻优与应用策略",
+      "status": "failed",
+      "durationSeconds": 324.694
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置恢复 Chunked Prefill Size",
+      "status": "passed",
+      "durationSeconds": 2.005
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值",
+      "status": "passed",
+      "durationSeconds": 2.096
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size",
+      "status": "failed",
+      "durationSeconds": 6.438
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size",
+      "status": "passed",
+      "durationSeconds": 2.017
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比可行结果",
+      "status": "passed",
+      "durationSeconds": 68.495
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比无可行解/OOM",
+      "status": "passed",
+      "durationSeconds": 28.422
+    },
+    {
+      "suite": "l1/inference-result.spec.ts",
+      "name": "@L1 推理结果筛选和多硬件切换",
+      "status": "passed",
+      "durationSeconds": 7.938
+    },
+    {
+      "suite": "l1/release-info.spec.ts",
+      "name": "@L1 版本信息当前和历史读取",
+      "status": "failed",
+      "durationSeconds": 15.611
+    },
+    {
+      "suite": "l1/release-info.spec.ts",
+      "name": "@L1 管理员编辑版本信息并恢复",
+      "status": "passed",
+      "durationSeconds": 1.606
+    },
+    {
+      "suite": "l1/route-proxy.spec.ts",
+      "name": "@L1 部署前缀和深层路由",
+      "status": "passed",
+      "durationSeconds": 4.36
+    },
+    {
+      "suite": "l1/statistics.spec.ts",
+      "name": "@L1 信息统计访问与导出",
+      "status": "passed",
+      "durationSeconds": 1.673
+    },
+    {
+      "suite": "l1/task-filter-history.spec.ts",
+      "name": "@L1 任务筛选、详情和历史 Run",
+      "status": "passed",
+      "durationSeconds": 10.215
+    },
+    {
+      "suite": "l1/task-lifecycle.spec.ts",
+      "name": "@L1 重跑、终止、单删和批删",
+      "status": "failed",
+      "durationSeconds": 26.804
+    },
+    {
+      "suite": "l1/training-batch-experiment.spec.ts",
+      "name": "@L1 批量训练实验服务闭环",
+      "status": "passed",
+      "durationSeconds": 8.044
+    },
+    {
+      "suite": "l1/training-compare.spec.ts",
+      "name": "@L1 训练多硬件性能对比",
+      "status": "failed",
+      "durationSeconds": 6.322
+    },
+    {
+      "suite": "l1/training-hardware-search.spec.ts",
+      "name": "@L1 训练硬件寻优",
+      "status": "failed",
+      "durationSeconds": 7.245
+    },
+    {
+      "suite": "l1/training-operator.spec.ts",
+      "name": "@L1 训练算子性能评估",
+      "status": "passed",
+      "durationSeconds": 8.269
+    },
+    {
+      "suite": "l1/training-strategy-search.spec.ts",
+      "name": "@L1 训练策略自动寻优",
+      "status": "failed",
+      "durationSeconds": 17.025
+    }
+  ],
+  "exitCode": 1,
+  "conclusion": "fail",
+  "reportError": "",
+  "latency": {
+    "thresholdMs": 500,
+    "total": 503,
+    "warnings": [
+      {
+        "method": "POST",
+        "path": "/api/user/decrypt",
+        "status": 200,
+        "durationMs": 3196,
+        "testTitle": "@L1 自定义算子 CRUD"
+      },
+      {
+        "method": "POST",
+        "path": "/api/user/decrypt",
+        "status": 200,
+        "durationMs": 584,
+        "testTitle": "@L1 新增算子失败显示错误并保持弹窗打开"
+      }
+    ]
+  }
+}
