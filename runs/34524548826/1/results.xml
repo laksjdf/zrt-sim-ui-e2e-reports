@@ -1,0 +1,634 @@
+<testsuites id="" name="" tests="59" failures="3" skipped="0" errors="6" time="1149.7975589999999">
+<testsuite name="l0/home.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="7.037" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/home.spec.ts" time="7.037">
+</testcase>
+</testsuite>
+<testsuite name="l0/inference-model.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.685" errors="0">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference-model.spec.ts" time="12.685">
+</testcase>
+</testsuite>
+<testsuite name="l0/service-availability.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.76" errors="0">
+<testcase name="@L0 服务读取链路的浏览器请求全部成功" classname="l0/service-availability.spec.ts" time="4.76">
+</testcase>
+</testsuite>
+<testsuite name="l0/task-history.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.428" errors="0">
+<testcase name="@L0 任务管理与历史结果回跳" classname="l0/task-history.spec.ts" time="28.428">
+</testcase>
+</testsuite>
+<testsuite name="l0/training-model-estimate.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.702" errors="0">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training-model-estimate.spec.ts" time="28.702">
+</testcase>
+</testsuite>
+<testsuite name="l0/unified-quant-ui.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="3" failures="0" skipped="0" time="7.435" errors="0">
+<testcase name="@L0 统一阶段联动、单独覆盖和 P/D 隔离" classname="l0/unified-quant-ui.spec.ts" time="3.404">
+</testcase>
+<testcase name="@L0 推理对比复用统一阶段并独立复制配置" classname="l0/unified-quant-ui.spec.ts" time="1.975">
+</testcase>
+<testcase name="@L0 批量 P/D 预检发送实际阶段精度而非界面草稿" classname="l0/unified-quant-ui.spec.ts" time="2.056">
+</testcase>
+</testsuite>
+<testsuite name="l0/user-manual-navigation.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.691" errors="0">
+<testcase name="@L0 普通用户可打开用户手册" classname="l0/user-manual-navigation.spec.ts" time="2.691">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-hardware.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.702" errors="0">
+<testcase name="@L1 硬件资产 CRUD 与内置保护" classname="l1/asset-hardware.spec.ts" time="2.702">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-model.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.255" errors="0">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/asset-model.spec.ts" time="5.255">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-module.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="8" failures="0" skipped="0" time="16.693" errors="0">
+<testcase name="@L1 Module 算子按需加载 › 乱序成功响应不覆盖当前场景，旧请求结束不提前关闭 loading" classname="l1/asset-module.spec.ts" time="1.729">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭重开后旧查询失败不清空新查询的选项" classname="l1/asset-module.spec.ts" time="1.885">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭旧编辑后迟到回调不改写新表单的 Spec JSON" classname="l1/asset-module.spec.ts" time="1.66">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首屏仅加载模块，新增时查询算子并随场景切换" classname="l1/asset-module.spec.ts" time="2.037">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首次编辑按模块场景读取算子并保留已选项和保存能力" classname="l1/asset-module.spec.ts" time="1.835">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 新增算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/asset-module.spec.ts" time="1.851">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 编辑算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/asset-module.spec.ts" time="1.745">
+</testcase>
+<testcase name="@L1 Module CRUD 与复用" classname="l1/asset-module.spec.ts" time="3.951">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-operator.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.845" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/asset-operator.spec.ts" time="3.959">
+</testcase>
+<testcase name="@L1 新增算子失败显示错误并保持弹窗打开" classname="l1/asset-operator.spec.ts" time="1.886">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-batch-experiment.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.163" errors="0">
+<testcase name="@L1 推理批量实验服务闭环" classname="l1/inference-batch-experiment.spec.ts" time="8.163">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-batch-optimization-toggle.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.547" errors="0">
+<testcase name="@L1 推理批量实验寻优开关可往返切换：strategy_search" classname="l1/inference-batch-optimization-toggle.spec.ts" time="2.818">
+</testcase>
+<testcase name="@L1 推理批量实验寻优开关可往返切换：hardware_sensitivity" classname="l1/inference-batch-optimization-toggle.spec.ts" time="2.729">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-compare.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="138.151" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference-compare.spec.ts" time="138.151">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-config-navigation.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="4" failures="0" skipped="0" time="39.238" errors="2">
+<testcase name="@L1 evaluate Decode 配置在前后步骤往返时完整保留" classname="l1/inference-config-navigation.spec.ts" time="17.43">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-config-navigation.spec.ts:35:3 › @L1 evaluate Decode 配置在前后步骤往返时完整保留 ────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('.quant-select').first()
+
+
+      39 |     const quant = page.locator('.quant-select')
+      40 |     const values = ['int8', 'bf16', 'fp4', 'int4', 'int8', 'bf16', 'int8']
+    > 41 |     for (const [index, value] of values.entries()) await quant.nth(index).selectOption(value)
+         |                                                                           ^
+      42 |     await page.locator('.req-card').filter({ has: page.locator('.req-label', { hasText: /^Input$/ }) }).locator('input').fill('4096')
+      43 |     const before = await configurationValues(page)
+      44 |     await page.getByRole('button', { name: '← 上一步', exact: true }).click()
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-config-navigation.spec.ts:41:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-config-naviga-4196a-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 optimize Decode 配置在前后步骤往返时完整保留" classname="l1/inference-config-navigation.spec.ts" time="17.31">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.selectOption: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-config-navigation.spec.ts:35:3 › @L1 optimize Decode 配置在前后步骤往返时完整保留 ────
+
+    TimeoutError: locator.selectOption: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('.quant-select').first()
+
+
+      39 |     const quant = page.locator('.quant-select')
+      40 |     const values = ['int8', 'bf16', 'fp4', 'int4', 'int8', 'bf16', 'int8']
+    > 41 |     for (const [index, value] of values.entries()) await quant.nth(index).selectOption(value)
+         |                                                                           ^
+      42 |     await page.locator('.req-card').filter({ has: page.locator('.req-label', { hasText: /^Input$/ }) }).locator('input').fill('4096')
+      43 |     const before = await configurationValues(page)
+      44 |     await page.getByRole('button', { name: '← 上一步', exact: true }).click()
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-config-navigation.spec.ts:41:75
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-config-naviga-f0529-imize-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=1 切分不增加总卡数并保留步骤编辑" classname="l1/inference-config-navigation.spec.ts" time="2.263">
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=2 切分不增加总卡数并保留步骤编辑" classname="l1/inference-config-navigation.spec.ts" time="2.235">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-custom-communication-tiers.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="17.529" errors="1">
+<testcase name="@L1 推理任务提交用户新增的通信中间层" classname="l1/inference-custom-communication-tiers.spec.ts" time="17.529">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="page.waitForResponse: Timeout 15000ms exceeded while waiting for event &quot;response&quot;" type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-custom-communication-tiers.spec.ts:5:1 › @L1 推理任务提交用户新增的通信中间层 ──────────
+
+    TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event "response"
+
+      36 |   await row.locator('input').nth(4).fill('2')
+      37 |
+    > 38 |   const submitted = page.waitForResponse((response) =>
+         |                          ^
+      39 |     response.request().method() === 'POST'
+      40 |     && response.url().includes('/api/infer/simulate')
+      41 |     && response.status() === 202,
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-custom-communication-tiers.spec.ts:38:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-custom-communication-tiers--L1-推理任务提交用户新增的通信中间层-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-hardware-editable.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.437" errors="0">
+<testcase name="@L1 推理任务提交修改后的硬件规格并生效" classname="l1/inference-hardware-editable.spec.ts" time="8.437">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-operator.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="16.9" errors="1">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference-operator.spec.ts" time="16.9">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-operator.spec.ts:5:1 › @L1 推理算子性能评估 ────────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('.inference-operator-trigger')
+
+
+      10 |
+      11 |   // 推理算子页使用自定义下拉，非 <select>
+    > 12 |   await page.locator('.inference-operator-trigger').click()
+         |                                                     ^
+      13 |   await page.locator('.inference-operator-option').filter({ hasText: 'matmul' }).first().click()
+      14 |   // 使用目录中第一个真实硬件（不再是 h100）
+      15 |   await selectOption(page.getByTestId('op-hardware-select'), { index: 1 })
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-operator.spec.ts:12:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-operator--L1-推理算子性能评估-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimal-table.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.239" errors="0">
+<testcase name="@L1 推理最优配置统计表硬件过滤与自适应高度" classname="l1/inference-optimal-table.spec.ts" time="2.254">
+</testcase>
+<testcase name="@L1 推理最优配置分档表硬件过滤与自适应高度" classname="l1/inference-optimal-table.spec.ts" time="1.985">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimize.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="5" failures="3" skipped="0" time="368.458" errors="1">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference-optimize.spec.ts" time="344.926">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference-optimize.spec.ts:5:1 › @L1 推理策略寻优与应用策略 ─────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for locator('.opt-candidates-wrap').filter({ has: getByRole('button', { name: '应用策略' }) }).locator('tbody tr').first()
+
+
+      42 |     has: page.getByRole('button', { name: '应用策略' }),
+      43 |   })
+    > 44 |   await optimalTable.locator('tbody tr').first().click()
+         |                                                  ^
+      45 |   await optimalTable.getByRole('button', { name: '应用策略' }).click()
+      46 |   await expect(page).toHaveURL(/\/infer\/performance\/model/)
+      47 | })
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:44:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-optimize--L1-推理策略寻优与应用策略-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 Prefill 重用配置恢复 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="2.072">
+</testcase>
+<testcase name="@L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值" classname="l1/inference-optimize.spec.ts" time="7.083">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveValue(expected) failed" type="expect.toHaveValue">
+<![CDATA[  [chromium] › l1/inference-optimize.spec.ts:107:1 › @L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值 ────────
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+    Expected: "int8"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+
+
+       95 |   for (const [index, label] of labels.entries()) {
+       96 |     const field = page.locator('.quant-item').filter({ has: page.locator('.quant-label', { hasText: label }) })
+    >  97 |     await expect(field.locator('select')).toHaveValue(values[index])
+          |                                           ^
+       98 |   }
+       99 | }
+      100 |
+        at expectRestoredQuant (/home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:97:43)
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:110:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-optimize--L1-Prefill-重用配置在第-2-→-1-→-2-步保留量化和编辑值-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="7.16">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveValue(expected) failed" type="expect.toHaveValue">
+<![CDATA[  [chromium] › l1/inference-optimize.spec.ts:118:3 › @L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size ────
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+    Expected: "int8"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+
+
+       95 |   for (const [index, label] of labels.entries()) {
+       96 |     const field = page.locator('.quant-item').filter({ has: page.locator('.quant-label', { hasText: label }) })
+    >  97 |     await expect(field.locator('select')).toHaveValue(values[index])
+          |                                           ^
+       98 |   }
+       99 | }
+      100 |
+        at expectRestoredQuant (/home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:97:43)
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:122:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-optimize--L1--d5f67-置兼容-禁用-Chunked-Prefill-Size-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="7.217">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveValue(expected) failed" type="expect.toHaveValue">
+<![CDATA[  [chromium] › l1/inference-optimize.spec.ts:118:3 › @L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size ────
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+    Expected: "int8"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('.quant-item').filter({ has: locator('.quant-label').filter({ hasText: '全局' }) }).locator('select')
+
+
+       95 |   for (const [index, label] of labels.entries()) {
+       96 |     const field = page.locator('.quant-item').filter({ has: page.locator('.quant-label', { hasText: label }) })
+    >  97 |     await expect(field.locator('select')).toHaveValue(values[index])
+          |                                           ^
+       98 |   }
+       99 | }
+      100 |
+        at expectRestoredQuant (/home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:97:43)
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference-optimize.spec.ts:122:11
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-optimize--L1--c02e6-置兼容-缺失-Chunked-Prefill-Size-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-pd-ratio.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="96.971" errors="0">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference-pd-ratio.spec.ts" time="68.61">
+</testcase>
+<testcase name="@L1 PD 配比无可行解/OOM" classname="l1/inference-pd-ratio.spec.ts" time="28.361">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-result.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.097" errors="0">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference-result.spec.ts" time="8.097">
+</testcase>
+</testsuite>
+<testsuite name="l1/release-info.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.079" errors="0">
+<testcase name="@L1 版本信息当前和历史读取" classname="l1/release-info.spec.ts" time="1.505">
+</testcase>
+<testcase name="@L1 管理员编辑版本信息并恢复" classname="l1/release-info.spec.ts" time="1.574">
+</testcase>
+</testsuite>
+<testsuite name="l1/route-proxy.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.604" errors="0">
+<testcase name="@L1 部署前缀和深层路由" classname="l1/route-proxy.spec.ts" time="4.604">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.601" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics.spec.ts" time="1.601">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-filter-history.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.526" errors="0">
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/task-filter-history.spec.ts" time="10.526">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-lifecycle.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="36.474" errors="0">
+<testcase name="@L1 重跑、终止、单删和批删" classname="l1/task-lifecycle.spec.ts" time="36.474">
+</testcase>
+</testsuite>
+<testsuite name="l1/task10-layout.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="15.731" errors="0">
+<testcase name="@L1 Task10 baseline renders server frames and hides failures" classname="l1/task10-layout.spec.ts" time="14.012">
+</testcase>
+<testcase name="@L1 Task10 desktop columns and responsive quant controls" classname="l1/task10-layout.spec.ts" time="1.719">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-analysis-progress.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="56.361" errors="0">
+<testcase name="@L1 真实训练分析 baseline 两帧进度与持久化结果" classname="l1/training-analysis-progress.spec.ts" time="17.673">
+</testcase>
+<testcase name="@L1 真实训练分析 compare 两帧进度与持久化结果" classname="l1/training-analysis-progress.spec.ts" time="38.688">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-batch-experiment.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.08" errors="0">
+<testcase name="@L1 批量训练实验服务闭环" classname="l1/training-batch-experiment.spec.ts" time="8.08">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-compare.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="73.954" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training-compare.spec.ts" time="73.954">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-hardware-search.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.647" errors="0">
+<testcase name="@L1 训练硬件寻优" classname="l1/training-hardware-search.spec.ts" time="13.647">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-operator.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.221" errors="0">
+<testcase name="@L1 训练算子性能评估" classname="l1/training-operator.spec.ts" time="10.221">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-strategy-search.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="1" failures="0" skipped="0" time="17.106" errors="1">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training-strategy-search.spec.ts" time="17.106">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.fill: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/training-strategy-search.spec.ts:26:1 › @L1 训练策略自动寻优 ─────────────────────────────
+
+    TimeoutError: locator.fill: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('strategy-nodes-input')
+
+
+      32 |   await selectModel(page.getByTestId('strategy-model-select'), /llama3.*70b/i)
+      33 |   await selectOption(page.getByTestId('strategy-hardware-select'), 'B200_Server')
+    > 34 |   await page.getByTestId('strategy-nodes-input').fill('8')
+         |                                                  ^
+      35 |   await page.getByTestId('strategy-gpus-per-node-input').fill('8')
+      36 |   await page.getByTestId('strategy-top-n-input').fill('3')
+      37 |   await page.getByTestId('strategy-auto-dimension').selectOption('none')
+        at /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training-strategy-search.spec.ts:34:50
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-strategy-search--L1-训练策略自动寻优-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="l1/training-task-progress.spec.ts" timestamp="2026-09-10T20:09:43.530Z" hostname="chromium" tests="2" failures="0" skipped="0" time="58.006" errors="0">
+<testcase name="@L1 训练strategy真实任务进度与结果" classname="l1/training-task-progress.spec.ts" time="28.421">
+</testcase>
+<testcase name="@L1 训练hardware真实任务进度与结果" classname="l1/training-task-progress.spec.ts" time="29.585">
+</testcase>
+</testsuite>
+</testsuites>
