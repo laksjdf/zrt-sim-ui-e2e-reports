@@ -1,0 +1,190 @@
+<testsuites id="" name="" tests="59" failures="0" skipped="0" errors="0" time="1065.31802">
+<testsuite name="l0/home.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.224" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/home.spec.ts" time="5.224">
+</testcase>
+</testsuite>
+<testsuite name="l0/inference-model.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.099" errors="0">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference-model.spec.ts" time="9.099">
+</testcase>
+</testsuite>
+<testsuite name="l0/service-availability.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.831" errors="0">
+<testcase name="@L0 服务读取链路的浏览器请求全部成功" classname="l0/service-availability.spec.ts" time="4.831">
+</testcase>
+</testsuite>
+<testsuite name="l0/task-history.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.681" errors="0">
+<testcase name="@L0 任务管理与历史结果回跳" classname="l0/task-history.spec.ts" time="28.681">
+</testcase>
+</testsuite>
+<testsuite name="l0/training-model-estimate.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.642" errors="0">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training-model-estimate.spec.ts" time="28.642">
+</testcase>
+</testsuite>
+<testsuite name="l0/unified-quant-ui.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="3" failures="0" skipped="0" time="7.336" errors="0">
+<testcase name="@L0 统一阶段联动、单独覆盖和 P/D 隔离" classname="l0/unified-quant-ui.spec.ts" time="3.284">
+</testcase>
+<testcase name="@L0 推理对比复用统一阶段并独立复制配置" classname="l0/unified-quant-ui.spec.ts" time="1.838">
+</testcase>
+<testcase name="@L0 批量 P/D 预检发送实际阶段精度而非界面草稿" classname="l0/unified-quant-ui.spec.ts" time="2.214">
+</testcase>
+</testsuite>
+<testsuite name="l0/user-manual-navigation.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.726" errors="0">
+<testcase name="@L0 普通用户可打开用户手册" classname="l0/user-manual-navigation.spec.ts" time="2.726">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-hardware.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.645" errors="0">
+<testcase name="@L1 硬件资产 CRUD 与内置保护" classname="l1/asset-hardware.spec.ts" time="2.645">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-model.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.175" errors="0">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/asset-model.spec.ts" time="5.175">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-module.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="8" failures="0" skipped="0" time="16.779" errors="0">
+<testcase name="@L1 Module 算子按需加载 › 乱序成功响应不覆盖当前场景，旧请求结束不提前关闭 loading" classname="l1/asset-module.spec.ts" time="1.883">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭重开后旧查询失败不清空新查询的选项" classname="l1/asset-module.spec.ts" time="1.742">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭旧编辑后迟到回调不改写新表单的 Spec JSON" classname="l1/asset-module.spec.ts" time="1.698">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首屏仅加载模块，新增时查询算子并随场景切换" classname="l1/asset-module.spec.ts" time="1.876">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首次编辑按模块场景读取算子并保留已选项和保存能力" classname="l1/asset-module.spec.ts" time="1.808">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 新增算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/asset-module.spec.ts" time="1.892">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 编辑算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/asset-module.spec.ts" time="1.93">
+</testcase>
+<testcase name="@L1 Module CRUD 与复用" classname="l1/asset-module.spec.ts" time="3.95">
+</testcase>
+</testsuite>
+<testsuite name="l1/asset-operator.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.792" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/asset-operator.spec.ts" time="4.004">
+</testcase>
+<testcase name="@L1 新增算子失败显示错误并保持弹窗打开" classname="l1/asset-operator.spec.ts" time="1.788">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-batch-experiment.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.069" errors="0">
+<testcase name="@L1 推理批量实验服务闭环" classname="l1/inference-batch-experiment.spec.ts" time="8.069">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-batch-optimization-toggle.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="5.406" errors="0">
+<testcase name="@L1 推理批量实验寻优开关可往返切换：strategy_search" classname="l1/inference-batch-optimization-toggle.spec.ts" time="2.809">
+</testcase>
+<testcase name="@L1 推理批量实验寻优开关可往返切换：hardware_sensitivity" classname="l1/inference-batch-optimization-toggle.spec.ts" time="2.597">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-compare.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="138.154" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference-compare.spec.ts" time="138.154">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-config-navigation.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="4" failures="0" skipped="0" time="9.452" errors="0">
+<testcase name="@L1 evaluate Decode 配置在前后步骤往返时完整保留" classname="l1/inference-config-navigation.spec.ts" time="2.67">
+</testcase>
+<testcase name="@L1 optimize Decode 配置在前后步骤往返时完整保留" classname="l1/inference-config-navigation.spec.ts" time="2.419">
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=1 切分不增加总卡数并保留步骤编辑" classname="l1/inference-config-navigation.spec.ts" time="2.111">
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=2 切分不增加总卡数并保留步骤编辑" classname="l1/inference-config-navigation.spec.ts" time="2.252">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-custom-communication-tiers.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.353" errors="0">
+<testcase name="@L1 推理任务提交用户新增的通信中间层" classname="l1/inference-custom-communication-tiers.spec.ts" time="8.353">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-hardware-editable.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.351" errors="0">
+<testcase name="@L1 推理任务提交修改后的硬件规格并生效" classname="l1/inference-hardware-editable.spec.ts" time="8.351">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-operator.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.152" errors="0">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference-operator.spec.ts" time="8.152">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimal-table.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.199" errors="0">
+<testcase name="@L1 推理最优配置统计表硬件过滤与自适应高度" classname="l1/inference-optimal-table.spec.ts" time="2.194">
+</testcase>
+<testcase name="@L1 推理最优配置分档表硬件过滤与自适应高度" classname="l1/inference-optimal-table.spec.ts" time="2.005">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-optimize.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="5" failures="0" skipped="0" time="327.543" errors="0">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference-optimize.spec.ts" time="319.13">
+</testcase>
+<testcase name="@L1 Prefill 重用配置恢复 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="2.057">
+</testcase>
+<testcase name="@L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值" classname="l1/inference-optimize.spec.ts" time="2.285">
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="1.953">
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size" classname="l1/inference-optimize.spec.ts" time="2.118">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-pd-ratio.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="97.049" errors="0">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference-pd-ratio.spec.ts" time="68.683">
+</testcase>
+<testcase name="@L1 PD 配比无可行解/OOM" classname="l1/inference-pd-ratio.spec.ts" time="28.366">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference-result.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.711" errors="0">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference-result.spec.ts" time="12.711">
+</testcase>
+</testsuite>
+<testsuite name="l1/release-info.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.202" errors="0">
+<testcase name="@L1 版本信息当前和历史读取" classname="l1/release-info.spec.ts" time="1.463">
+</testcase>
+<testcase name="@L1 管理员编辑版本信息并恢复" classname="l1/release-info.spec.ts" time="1.739">
+</testcase>
+</testsuite>
+<testsuite name="l1/route-proxy.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="4.576" errors="0">
+<testcase name="@L1 部署前缀和深层路由" classname="l1/route-proxy.spec.ts" time="4.576">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.606" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics.spec.ts" time="1.606">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-filter-history.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.302" errors="0">
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/task-filter-history.spec.ts" time="10.302">
+</testcase>
+</testsuite>
+<testsuite name="l1/task-lifecycle.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="36.486" errors="0">
+<testcase name="@L1 重跑、终止、单删和批删" classname="l1/task-lifecycle.spec.ts" time="36.486">
+</testcase>
+</testsuite>
+<testsuite name="l1/task10-layout.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="20.356" errors="0">
+<testcase name="@L1 Task10 baseline renders server frames and hides failures" classname="l1/task10-layout.spec.ts" time="18.498">
+</testcase>
+<testcase name="@L1 Task10 desktop columns and responsive quant controls" classname="l1/task10-layout.spec.ts" time="1.858">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-analysis-progress.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="56.401" errors="0">
+<testcase name="@L1 真实训练分析 baseline 两帧进度与持久化结果" classname="l1/training-analysis-progress.spec.ts" time="17.668">
+</testcase>
+<testcase name="@L1 真实训练分析 compare 两帧进度与持久化结果" classname="l1/training-analysis-progress.spec.ts" time="38.733">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-batch-experiment.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.058" errors="0">
+<testcase name="@L1 批量训练实验服务闭环" classname="l1/training-batch-experiment.spec.ts" time="8.058">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-compare.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="76.3" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training-compare.spec.ts" time="76.3">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-hardware-search.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="21.634" errors="0">
+<testcase name="@L1 训练硬件寻优" classname="l1/training-hardware-search.spec.ts" time="21.634">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-operator.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.189" errors="0">
+<testcase name="@L1 训练算子性能评估" classname="l1/training-operator.spec.ts" time="8.189">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-strategy-search.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.854" errors="0">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training-strategy-search.spec.ts" time="13.854">
+</testcase>
+</testsuite>
+<testsuite name="l1/training-task-progress.spec.ts" timestamp="2026-09-12T19:46:07.414Z" hostname="chromium" tests="2" failures="0" skipped="0" time="58.3" errors="0">
+<testcase name="@L1 训练strategy真实任务进度与结果" classname="l1/training-task-progress.spec.ts" time="28.254">
+</testcase>
+<testcase name="@L1 训练hardware真实任务进度与结果" classname="l1/training-task-progress.spec.ts" time="30.046">
+</testcase>
+</testsuite>
+</testsuites>
