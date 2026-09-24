@@ -1,0 +1,730 @@
+{
+  "total": 119,
+  "passed": 101,
+  "failed": 16,
+  "skipped": 2,
+  "cases": [
+    {
+      "suite": "l0/eagle-single-chain.spec.ts",
+      "name": "@L0 eagle decode 提交、算子结果与配置恢复",
+      "status": "passed",
+      "durationSeconds": 16.311
+    },
+    {
+      "suite": "l0/eagle-single-chain.spec.ts",
+      "name": "@L0 eagle3 decode 提交、算子结果与配置恢复",
+      "status": "passed",
+      "durationSeconds": 14.73
+    },
+    {
+      "suite": "l0/eagle-single-chain.spec.ts",
+      "name": "@L0 eagle3 prefill 提交、算子结果与配置恢复",
+      "status": "passed",
+      "durationSeconds": 14.668
+    },
+    {
+      "suite": "l0/home.spec.ts",
+      "name": "@L0 首页与核心入口可达",
+      "status": "passed",
+      "durationSeconds": 4.285
+    },
+    {
+      "suite": "l0/home.spec.ts",
+      "name": "@L0 显式开启时首页发送受控浏览器采集批次",
+      "status": "skipped",
+      "durationSeconds": 0
+    },
+    {
+      "suite": "l0/home.spec.ts",
+      "name": "@L0 真实后端接受首页浏览器采集批次",
+      "status": "skipped",
+      "durationSeconds": 0
+    },
+    {
+      "suite": "l0/inference-model.spec.ts",
+      "name": "@L0 推理模型性能评估完整闭环",
+      "status": "passed",
+      "durationSeconds": 30.503
+    },
+    {
+      "suite": "l0/service-availability.spec.ts",
+      "name": "@L0 服务读取链路的浏览器请求全部成功",
+      "status": "passed",
+      "durationSeconds": 5.369
+    },
+    {
+      "suite": "l0/task-history.spec.ts",
+      "name": "@L0 任务管理与历史结果回跳",
+      "status": "passed",
+      "durationSeconds": 30.04
+    },
+    {
+      "suite": "l0/training-model-estimate.spec.ts",
+      "name": "@L0 训练模型评估从浏览器提交到报告和任务历史",
+      "status": "passed",
+      "durationSeconds": 34.463
+    },
+    {
+      "suite": "l0/unified-quant-ui.spec.ts",
+      "name": "@L0 统一阶段联动、单独覆盖和 P/D 共用量化",
+      "status": "passed",
+      "durationSeconds": 3.446
+    },
+    {
+      "suite": "l0/unified-quant-ui.spec.ts",
+      "name": "@L0 推理对比复用统一阶段并独立复制配置",
+      "status": "passed",
+      "durationSeconds": 2.309
+    },
+    {
+      "suite": "l0/unified-quant-ui.spec.ts",
+      "name": "@L0 批量 P/D 预检发送实际阶段精度而非界面草稿",
+      "status": "passed",
+      "durationSeconds": 2.371
+    },
+    {
+      "suite": "l0/user-manual-navigation.spec.ts",
+      "name": "@L0 普通用户可打开用户手册",
+      "status": "passed",
+      "durationSeconds": 3.221
+    },
+    {
+      "suite": "l1/asset-hardware.spec.ts",
+      "name": "@L1 硬件资产 CRUD 与内置保护",
+      "status": "passed",
+      "durationSeconds": 2.734
+    },
+    {
+      "suite": "l1/asset-model-conflict.spec.ts",
+      "name": "@L1 手搓模型页同名保存显示客户端去重错误",
+      "status": "passed",
+      "durationSeconds": 2.548
+    },
+    {
+      "suite": "l1/asset-model-conflict.spec.ts",
+      "name": "@L1 手搓模型页 409 服务端冲突显示错误提示",
+      "status": "passed",
+      "durationSeconds": 2.584
+    },
+    {
+      "suite": "l1/asset-model-conflict.spec.ts",
+      "name": "@L1 训练提交配额超限展示错误提示",
+      "status": "passed",
+      "durationSeconds": 3.133
+    },
+    {
+      "suite": "l1/asset-model.spec.ts",
+      "name": "@L1 自定义模型 CRUD 与内置保护",
+      "status": "passed",
+      "durationSeconds": 6.06
+    },
+    {
+      "suite": "l1/asset-model.spec.ts",
+      "name": "@L1 不同用户可导入同名私有模型且只看到自己的版本",
+      "status": "passed",
+      "durationSeconds": 2.108
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 乱序成功响应不覆盖当前场景，旧请求结束不提前关闭 loading",
+      "status": "passed",
+      "durationSeconds": 2.281
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 关闭重开后旧查询失败不清空新查询的选项",
+      "status": "passed",
+      "durationSeconds": 2.219
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 关闭旧编辑后迟到回调不改写新表单的 Spec JSON",
+      "status": "passed",
+      "durationSeconds": 2.123
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 首屏仅加载模块，新增时查询算子并随场景切换",
+      "status": "passed",
+      "durationSeconds": 2.337
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 首次编辑按模块场景读取算子并保留已选项和保存能力",
+      "status": "passed",
+      "durationSeconds": 2.026
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 新增算子查询失败时结束加载，保留表单且再次打开可重试",
+      "status": "passed",
+      "durationSeconds": 2.181
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module 算子按需加载 › 编辑算子查询失败时结束加载，保留表单且再次打开可重试",
+      "status": "passed",
+      "durationSeconds": 2.092
+    },
+    {
+      "suite": "l1/asset-module.spec.ts",
+      "name": "@L1 Module CRUD 与复用",
+      "status": "passed",
+      "durationSeconds": 4.757
+    },
+    {
+      "suite": "l1/asset-operator.spec.ts",
+      "name": "@L1 自定义算子 CRUD",
+      "status": "passed",
+      "durationSeconds": 5.163
+    },
+    {
+      "suite": "l1/asset-operator.spec.ts",
+      "name": "@L1 新增算子失败显示错误并保持弹窗打开",
+      "status": "passed",
+      "durationSeconds": 2.11
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 evaluate Prefill 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 4.99
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 evaluate Decode 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 4.982
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 evaluate PD 混布 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 4.93
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 evaluate PD 分离 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 5.581
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 optimize Prefill 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 3.981
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 optimize Decode 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 3.964
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 optimize PD 混布 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 4.193
+    },
+    {
+      "suite": "l1/inference-auto-ep.spec.ts",
+      "name": "@L1 pd-ratio PD 分离 可编辑 EP 与自动 EDP",
+      "status": "passed",
+      "durationSeconds": 4.869
+    },
+    {
+      "suite": "l1/inference-batch-experiment.spec.ts",
+      "name": "@L1 推理批量实验服务闭环",
+      "status": "passed",
+      "durationSeconds": 8.439
+    },
+    {
+      "suite": "l1/inference-batch-optimization-toggle.spec.ts",
+      "name": "@L1 推理批量实验寻优开关可往返切换：strategy_search",
+      "status": "passed",
+      "durationSeconds": 2.835
+    },
+    {
+      "suite": "l1/inference-batch-optimization-toggle.spec.ts",
+      "name": "@L1 推理批量实验寻优开关可往返切换：hardware_sensitivity",
+      "status": "passed",
+      "durationSeconds": 3.03
+    },
+    {
+      "suite": "l1/inference-compare.spec.ts",
+      "name": "@L1 推理硬件性能对比",
+      "status": "passed",
+      "durationSeconds": 170.542
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 evaluate Decode 配置在前后步骤往返时完整保留",
+      "status": "passed",
+      "durationSeconds": 3.198
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 optimize Decode 配置在前后步骤往返时完整保留",
+      "status": "passed",
+      "durationSeconds": 2.983
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 独立 O-TP=2 CP=1 切分不增加总卡数并保留步骤编辑",
+      "status": "passed",
+      "durationSeconds": 2.573
+    },
+    {
+      "suite": "l1/inference-config-navigation.spec.ts",
+      "name": "@L1 独立 O-TP=2 CP=2 切分不增加总卡数并保留步骤编辑",
+      "status": "passed",
+      "durationSeconds": 2.641
+    },
+    {
+      "suite": "l1/inference-custom-communication-tiers.spec.ts",
+      "name": "@L1 推理任务提交用户新增的通信中间层",
+      "status": "passed",
+      "durationSeconds": 24.977
+    },
+    {
+      "suite": "l1/inference-hardware-editable.spec.ts",
+      "name": "@L1 推理任务提交修改后的硬件规格并生效",
+      "status": "passed",
+      "durationSeconds": 24.664
+    },
+    {
+      "suite": "l1/inference-hicache.spec.ts",
+      "name": "@L1 HiCache 配置恢复与性能评估结果",
+      "status": "passed",
+      "durationSeconds": 4.33
+    },
+    {
+      "suite": "l1/inference-hicache.spec.ts",
+      "name": "@L1 标准 KV Offload 配置恢复",
+      "status": "passed",
+      "durationSeconds": 4.183
+    },
+    {
+      "suite": "l1/inference-hicache.spec.ts",
+      "name": "@L1 HiCache 冻结最优解寻优结果",
+      "status": "passed",
+      "durationSeconds": 2.089
+    },
+    {
+      "suite": "l1/inference-hicache.spec.ts",
+      "name": "@L1 标准 KV Offload 冻结最优解带宽结果",
+      "status": "passed",
+      "durationSeconds": 2.212
+    },
+    {
+      "suite": "l1/inference-o-tp-errors.spec.ts",
+      "name": "@L1 O-TP 轮询错误展示 TASK.MODEL.O_TP_UNSUPPORTED",
+      "status": "passed",
+      "durationSeconds": 6.112
+    },
+    {
+      "suite": "l1/inference-o-tp-errors.spec.ts",
+      "name": "@L1 O-TP 轮询错误展示 TASK.MODEL.O_TP_GRAPH_INVALID",
+      "status": "passed",
+      "durationSeconds": 6.287
+    },
+    {
+      "suite": "l1/inference-o-tp-errors.spec.ts",
+      "name": "@L1 O-TP 轮询错误展示 TASK.CONFIG.O_TP_INVALID",
+      "status": "passed",
+      "durationSeconds": 6.21
+    },
+    {
+      "suite": "l1/inference-o-tp-errors.spec.ts",
+      "name": "@L1 O-TP 轮询错误展示 TASK.UNKNOWN",
+      "status": "passed",
+      "durationSeconds": 6.067
+    },
+    {
+      "suite": "l1/inference-operator.spec.ts",
+      "name": "@L1 推理算子性能评估",
+      "status": "passed",
+      "durationSeconds": 10.587
+    },
+    {
+      "suite": "l1/inference-optimal-table.spec.ts",
+      "name": "@L1 推理最优配置统计表硬件过滤与自适应高度",
+      "status": "passed",
+      "durationSeconds": 2.713
+    },
+    {
+      "suite": "l1/inference-optimal-table.spec.ts",
+      "name": "@L1 推理最优配置分档表硬件过滤与自适应高度",
+      "status": "passed",
+      "durationSeconds": 2.459
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 推理策略寻优与应用策略",
+      "status": "passed",
+      "durationSeconds": 20.529
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置恢复 Chunked Prefill Size",
+      "status": "passed",
+      "durationSeconds": 2.447
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值",
+      "status": "passed",
+      "durationSeconds": 2.578
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size",
+      "status": "passed",
+      "durationSeconds": 2.593
+    },
+    {
+      "suite": "l1/inference-optimize.spec.ts",
+      "name": "@L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size",
+      "status": "passed",
+      "durationSeconds": 2.33
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比可行结果",
+      "status": "failed",
+      "durationSeconds": 7.396
+    },
+    {
+      "suite": "l1/inference-pd-ratio.spec.ts",
+      "name": "@L1 PD 配比无可行解/OOM",
+      "status": "failed",
+      "durationSeconds": 7.307
+    },
+    {
+      "suite": "l1/inference-result.spec.ts",
+      "name": "@L1 推理结果筛选和多硬件切换",
+      "status": "passed",
+      "durationSeconds": 57.494
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 产品运行与洞察真实接口或未启用路径",
+      "status": "passed",
+      "durationSeconds": 1.587
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 MCP服务健康展示调用趋势和工具拆分",
+      "status": "passed",
+      "durationSeconds": 1.922
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 无权限不得展示敏感内容和入口",
+      "status": "passed",
+      "durationSeconds": 1.857
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 闭环与页面行为只展示后端聚合事实",
+      "status": "passed",
+      "durationSeconds": 2.008
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 日期竞态、筛选与实时独立口径",
+      "status": "passed",
+      "durationSeconds": 4.216
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 主题分页、排序、标签保留与Escape恢复焦点",
+      "status": "passed",
+      "durationSeconds": 2.3
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 局部失败、新鲜度和未知Worker不冒充空闲",
+      "status": "passed",
+      "durationSeconds": 2.193
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 账号切换立即清空并拒绝旧权限响应",
+      "status": "passed",
+      "durationSeconds": 2.723
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 弹窗返回保持原滚动位置",
+      "status": "passed",
+      "durationSeconds": 2.256
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 后台暂停轮询且离页后只保留轻量权限",
+      "status": "passed",
+      "durationSeconds": 2.229
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 多部门默认全量，409回首页，403撤回全部数据",
+      "status": "failed",
+      "durationSeconds": 6.97
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 R1 live刷新和全局草稿不重置主题第二页",
+      "status": "passed",
+      "durationSeconds": 2.357
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 R1 直达主题Escape只移除topic保留其他query",
+      "status": "passed",
+      "durationSeconds": 2.134
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 R1 跨上海午夜点击预设刷新服务端锚点而固定日期不漂移",
+      "status": "passed",
+      "durationSeconds": 2.497
+    },
+    {
+      "suite": "l1/operations-insights.spec.ts",
+      "name": "@L1 R1 排序实参和200无心跳Worker未知",
+      "status": "passed",
+      "durationSeconds": 1.972
+    },
+    {
+      "suite": "l1/release-info.spec.ts",
+      "name": "@L1 版本信息当前和历史读取",
+      "status": "passed",
+      "durationSeconds": 1.739
+    },
+    {
+      "suite": "l1/release-info.spec.ts",
+      "name": "@L1 管理员编辑版本信息并恢复",
+      "status": "passed",
+      "durationSeconds": 1.859
+    },
+    {
+      "suite": "l1/resource-quotas.spec.ts",
+      "name": "@L1 管理员角色配额与搜索页额度提示",
+      "status": "passed",
+      "durationSeconds": 4.122
+    },
+    {
+      "suite": "l1/resource-quotas.spec.ts",
+      "name": "@L1 本地普通用户遵守管理员配置的精度校准菜单禁用",
+      "status": "passed",
+      "durationSeconds": 3.229
+    },
+    {
+      "suite": "l1/route-proxy.spec.ts",
+      "name": "@L1 部署前缀和深层路由",
+      "status": "passed",
+      "durationSeconds": 5.458
+    },
+    {
+      "suite": "l1/statistics-edge.spec.ts",
+      "name": "@L1 信息统计空数据态展示暂无数据",
+      "status": "passed",
+      "durationSeconds": 2.014
+    },
+    {
+      "suite": "l1/statistics-edge.spec.ts",
+      "name": "@L1 信息统计部分子请求失败展示降级提示",
+      "status": "passed",
+      "durationSeconds": 1.981
+    },
+    {
+      "suite": "l1/statistics-edge.spec.ts",
+      "name": "@L1 信息统计导出失败展示错误提示",
+      "status": "passed",
+      "durationSeconds": 1.965
+    },
+    {
+      "suite": "l1/statistics.spec.ts",
+      "name": "@L1 信息统计访问与导出",
+      "status": "passed",
+      "durationSeconds": 2.379
+    },
+    {
+      "suite": "l1/task-failure-detail.spec.ts",
+      "name": "@L1 失败任务详情展示结构化错误卡片",
+      "status": "passed",
+      "durationSeconds": 1.98
+    },
+    {
+      "suite": "l1/task-failure-detail.spec.ts",
+      "name": "@L1 任务空列表态与筛选无结果",
+      "status": "passed",
+      "durationSeconds": 1.86
+    },
+    {
+      "suite": "l1/task-failure-detail.spec.ts",
+      "name": "@L1 进程启动失败展示后端异常原文",
+      "status": "failed",
+      "durationSeconds": 2.219
+    },
+    {
+      "suite": "l1/task-failure-detail.spec.ts",
+      "name": "@L1 历史遗留失败任务展示 legacy 错误信息",
+      "status": "passed",
+      "durationSeconds": 2.284
+    },
+    {
+      "suite": "l1/task-filter-history.spec.ts",
+      "name": "@L1 任务筛选、详情和历史 Run",
+      "status": "failed",
+      "durationSeconds": 29.187
+    },
+    {
+      "suite": "l1/task-lifecycle.spec.ts",
+      "name": "@L1 重跑、终止、单删和批删",
+      "status": "passed",
+      "durationSeconds": 43.32
+    },
+    {
+      "suite": "l1/task10-layout.spec.ts",
+      "name": "@L1 Task10 baseline renders server frames and hides failures",
+      "status": "passed",
+      "durationSeconds": 13.229
+    },
+    {
+      "suite": "l1/task10-layout.spec.ts",
+      "name": "@L1 Task10 desktop columns and responsive quant controls",
+      "status": "passed",
+      "durationSeconds": 2.305
+    },
+    {
+      "suite": "l1/training-analysis-progress.spec.ts",
+      "name": "@L1 真实训练分析 baseline 两帧进度与持久化结果",
+      "status": "passed",
+      "durationSeconds": 27.558
+    },
+    {
+      "suite": "l1/training-analysis-progress.spec.ts",
+      "name": "@L1 真实训练分析 compare 两帧进度与持久化结果",
+      "status": "passed",
+      "durationSeconds": 42.433
+    },
+    {
+      "suite": "l1/training-batch-experiment.spec.ts",
+      "name": "@L1 批量训练实验服务闭环",
+      "status": "passed",
+      "durationSeconds": 14.478
+    },
+    {
+      "suite": "l1/training-compare.spec.ts",
+      "name": "@L1 训练多硬件性能对比",
+      "status": "passed",
+      "durationSeconds": 91.735
+    },
+    {
+      "suite": "l1/training-hardware-search.spec.ts",
+      "name": "@L1 训练硬件寻优",
+      "status": "passed",
+      "durationSeconds": 24.251
+    },
+    {
+      "suite": "l1/training-operator.spec.ts",
+      "name": "@L1 训练算子性能评估",
+      "status": "passed",
+      "durationSeconds": 9.766
+    },
+    {
+      "suite": "l1/training-strategy-search.spec.ts",
+      "name": "@L1 训练策略自动寻优",
+      "status": "passed",
+      "durationSeconds": 11.231
+    },
+    {
+      "suite": "l1/training-task-progress.spec.ts",
+      "name": "@L1 训练strategy真实任务进度与结果",
+      "status": "passed",
+      "durationSeconds": 19.55
+    },
+    {
+      "suite": "l1/training-task-progress.spec.ts",
+      "name": "@L1 训练hardware真实任务进度与结果",
+      "status": "passed",
+      "durationSeconds": 21.157
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling构建候选提交、刷新恢复与诊断报告",
+      "status": "failed",
+      "durationSeconds": 22.965
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling构建候选期间修改批次使旧运行失效",
+      "status": "failed",
+      "durationSeconds": 23.098
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling构建候选显式终止后回到草稿",
+      "status": "failed",
+      "durationSeconds": 23.219
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling终止重载完成前不允许重试并保留新运行终止能力",
+      "status": "failed",
+      "durationSeconds": 23.286
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling构建候选同页关闭重开从服务器恢复",
+      "status": "failed",
+      "durationSeconds": 23.183
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling迟到打开版本响应不覆盖较新的构建候选",
+      "status": "failed",
+      "durationSeconds": 23.18
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling批次迟到错误不污染同版本或另一版本重开",
+      "status": "failed",
+      "durationSeconds": 17.194
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 Profiling追加导入迟到成功不关闭重开的弹窗",
+      "status": "failed",
+      "durationSeconds": 17.12
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 用户 Profiling CSV 私有批次导入与移除",
+      "status": "failed",
+      "durationSeconds": 17.263
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 旧草稿拟合响应不能污染新草稿报告",
+      "status": "failed",
+      "durationSeconds": 17.271
+    },
+    {
+      "suite": "l1/user-calibration.spec.ts",
+      "name": "@L1 用户手工校准工作台闭环",
+      "status": "failed",
+      "durationSeconds": 6.939
+    }
+  ],
+  "exitCode": 1,
+  "conclusion": "fail",
+  "reportError": "",
+  "latency": {
+    "thresholdMs": 500,
+    "total": 1576,
+    "warnings": []
+  }
+}
