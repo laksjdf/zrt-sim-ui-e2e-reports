@@ -1,0 +1,404 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: l1/user-calibration.spec.ts >> @L1 模拟补全的原始 kernel_details CSV 可导入并保留原件
+- Location: e2e/specs/l1/user-calibration.spec.ts:873:1
+
+# Error details
+
+```
+Error: Command failed: python3 /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/backend-repo/tests/calibration/generate_kernel_details_synthetic.py --source /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/backend-repo/tests/calibration/fixtures/kernel_details.csv --output /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/.e2e-tmp/zrt-raw-profile-JAJjmz/kernel_details.csv
+python3: can't open file '/home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/backend-repo/tests/calibration/generate_kernel_details_synthetic.py': [Errno 2] No such file or directory
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]: ZRT
+    - generic [ref=e6]: AI负载建模仿真平台
+    - generic [ref=e7]:
+      - link "返回主页" [ref=e8] [cursor=pointer]:
+        - /url: /zrt-sim/
+        - img [ref=e9]
+        - generic [ref=e12]: 返回主页
+      - link "任务管理" [ref=e13] [cursor=pointer]:
+        - /url: /zrt-sim/tasks
+      - link "资产管理" [ref=e14] [cursor=pointer]:
+        - /url: /zrt-sim/assets
+      - link "信息统计" [ref=e15] [cursor=pointer]:
+        - /url: /zrt-sim/statistics
+      - link "精度校准" [ref=e16] [cursor=pointer]:
+        - /url: /zrt-sim/calibration
+      - link "版本信息" [ref=e17] [cursor=pointer]:
+        - /url: /zrt-sim/release-notes
+      - link "用户管理" [ref=e18] [cursor=pointer]:
+        - /url: /zrt-sim/user-manage
+      - link "用户手册" [ref=e19] [cursor=pointer]:
+        - /url: /zrt-sim/user-manual
+      - button "pw_user_26_1790719102481" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+        - generic [ref=e24]: pw_user_26_1790719102481
+      - generic [ref=e26]: Calibration
+  - main [ref=e27]:
+    - generic [ref=e28]:
+      - link "首页" [ref=e29] [cursor=pointer]:
+        - /url: /zrt-sim/
+      - generic [ref=e30]: /
+      - generic [ref=e31]: 精度校准
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "用户精度校准" [level=1] [ref=e35]
+          - paragraph [ref=e36]: 管理仅自己可见的手工校准版本与 Profiling 导入批次；未验证数据不会用于任务。
+        - button "新建校准版本" [ref=e37] [cursor=pointer]
+      - note [ref=e38]:
+        - strong [ref=e39]: Profiling 校准
+        - generic [ref=e40]: 支持原始 kernel_details.csv 与规范 CSV/ZIP 增量导入；仅正式验证通过的 Profiling 版本可发布并用于后续训练任务。
+      - generic [ref=e41]:
+        - navigation "校准工作台导航" [ref=e42]:
+          - button "总览 资产与能力边界" [ref=e43] [cursor=pointer]:
+            - strong [ref=e44]: 总览
+            - generic [ref=e45]: 资产与能力边界
+          - button "我的校准版本 筛选、修订与启停" [ref=e46] [cursor=pointer]:
+            - strong [ref=e47]: 我的校准版本
+            - generic [ref=e48]: 筛选、修订与启停
+          - button "默认规则与预览 真实规则与命中结果" [ref=e49] [cursor=pointer]:
+            - strong [ref=e50]: 默认规则与预览
+            - generic [ref=e51]: 真实规则与命中结果
+        - main [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - heading "总览" [level=2] [ref=e56]
+                - paragraph [ref=e57]: 账户聚合来自数据库，不从当前页推算；启用和自动应用不代表任务已实际命中。
+              - button "刷新" [ref=e58] [cursor=pointer]
+            - generic [ref=e59]:
+              - article [ref=e60]:
+                - generic [ref=e61]: 账户版本总数
+                - strong [ref=e62]: "0"
+              - article [ref=e63]:
+                - generic [ref=e64]: 已启用版本
+                - strong [ref=e65]: "0"
+              - article [ref=e66]:
+                - generic [ref=e67]: 已启用版本明确覆盖的算子
+                - strong [ref=e68]: "0"
+              - article [ref=e69]:
+                - generic [ref=e70]: 开启自动应用的规则范围
+                - strong [ref=e71]: "0"
+            - generic [ref=e72]:
+              - article [ref=e73]:
+                - heading "已启用版本" [level=3] [ref=e74]
+                - paragraph [ref=e75]: 仅表示允许被规则引用，不表示已作用于任务。
+              - article [ref=e76]:
+                - heading "自动应用范围" [level=3] [ref=e77]
+                - paragraph [ref=e78]: 新任务仍需范围匹配及提交时校验，实际数值以任务详情为准。
+            - article [ref=e79]:
+              - generic [ref=e80]:
+                - heading "开始一次校准" [level=3] [ref=e81]
+                - paragraph [ref=e82]: 选择手工利用率，或导入具体硬件、模型和阶段的实测批次。
+              - button "新建校准版本" [ref=e83] [cursor=pointer]
+            - article [ref=e84]:
+              - strong [ref=e85]: Profiling 可构建并验证
+              - paragraph [ref=e86]: 可追加原始或规范 CSV/ZIP、查看 Shape 与 t0 对照；验证通过后再发布和启用。
+    - dialog "新建校准版本" [ref=e88]:
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - heading "新建校准版本" [level=2] [ref=e91]
+          - paragraph [ref=e92]: 校准资产仅自己可见，仅用于自己的任务。
+        - button "关闭" [ref=e93] [cursor=pointer]
+      - generic "校准来源" [ref=e94]:
+        - button "手工填写 按具体算子填写利用率" [ref=e95] [cursor=pointer]:
+          - strong [ref=e96]: 手工填写
+          - generic [ref=e97]: 按具体算子填写利用率
+        - button "导入 Profiling 当前支持训练所有已定义算子类型；先选择硬件和模型，再导入 CSV/ZIP 批次" [pressed] [ref=e98] [cursor=pointer]:
+          - strong [ref=e99]: 导入 Profiling
+          - generic [ref=e100]: 当前支持训练所有已定义算子类型；先选择硬件和模型，再导入 CSV/ZIP 批次
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - text: 版本名称
+          - textbox "版本名称" [ref=e103]:
+            - /placeholder: 例如：A3 BF16 算子校准
+            - text: E2E原始CSV-1790719102507
+        - generic [ref=e104]:
+          - text: 阶段范围
+          - combobox "阶段范围" [ref=e106]: train
+        - generic [ref=e107]:
+          - text: 硬件标识
+          - combobox "硬件标识" [ref=e109]: H100_Server
+        - generic [ref=e110]:
+          - text: 模型范围
+          - generic [ref=e111]:
+            - combobox "模型范围 llama3-70b" [expanded] [active] [ref=e112]: llama3-70b
+            - listbox [ref=e113]:
+              - option "llama3-70b" [selected] [ref=e114]:
+                - strong [ref=e115]: llama3-70b
+      - generic [ref=e116]:
+        - paragraph [ref=e117]: 流程：导入批次 → 检查数据质量 → 可选诊断预览 → 选择成功源任务并检查兼容性 → 构建正式候选 → 查看验证报告 → 发布启用。
+        - paragraph [ref=e118]: 有效 0 行、无效 0 行；尚无可比较的系统基线，不能发布。
+        - region "构建候选状态" [ref=e119]:
+          - generic [ref=e121]:
+            - heading "构建候选" [level=3] [ref=e122]
+            - paragraph [ref=e123]: 状态：待构建
+          - paragraph [ref=e124]: 需要本人已成功完成的源训练任务 ID。构建后按独立 Shape 留出与 t0 比较；仅通过正式验证的版本可发布。
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - text: 选择已完成的源训练任务
+              - combobox "选择已完成的源训练任务" [ref=e127]:
+                - option "选择任务" [selected]
+            - generic [ref=e128]:
+              - text: 或输入源训练任务 ID（预览可选）
+              - textbox "或输入源训练任务 ID（预览可选）" [ref=e129]:
+                - /placeholder: 本人已完成的评估任务
+            - button "生成构建候选" [disabled] [ref=e130]
+        - generic [ref=e132]:
+          - heading "导入实测文件" [level=3] [ref=e133]
+          - paragraph [ref=e134]: 每次导入保存独立采集来源；批次保存后可生成诊断候选，不影响任务。
+        - generic [ref=e135]:
+          - text: 导入 kernel_details.csv
+          - button "导入 kernel_details.csv" [ref=e136]
+        - paragraph [ref=e137]: 可执行构建支持训练已定义算子的受限 Shape、dtype 与布局组合。
+        - group [ref=e138]:
+          - generic "支持格式与限制" [ref=e139] [cursor=pointer]
+        - strong [ref=e140]: 采集时实际并行策略
+        - paragraph [ref=e141]: TP/DP/PP/EP/CP 必须与采集任务一致，构建时还会与源训练任务核对；下方默认 1 仅是输入初值，请逐项核实。
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - text: TP
+            - spinbutton "TP" [ref=e144]: "1"
+          - generic [ref=e145]:
+            - text: DP
+            - spinbutton "DP" [ref=e146]: "1"
+          - generic [ref=e147]:
+            - text: PP
+            - spinbutton "PP" [ref=e148]: "1"
+          - generic [ref=e149]:
+            - text: EP
+            - spinbutton "EP" [ref=e150]: "1"
+          - generic [ref=e151]:
+            - text: CP
+            - spinbutton "CP" [ref=e152]: "1"
+        - generic [ref=e153]:
+          - checkbox "我已核对以上数值为本批次采集时的实际并行策略" [ref=e154]
+          - text: 我已核对以上数值为本批次采集时的实际并行策略
+        - group [ref=e155]:
+          - generic "可选采集环境信息" [ref=e156] [cursor=pointer]
+        - paragraph [ref=e157]: 文件限 20 MiB。每个转换后算子/Shape 组裁剪后至少 21 条有效采样；正式验证还需同组至少 5 个独立 Shape。原始记录通常需要更多行；解析失败会返回成员、行号和字段诊断。
+      - generic [ref=e158]:
+        - button "取消" [ref=e159] [cursor=pointer]
+        - button "创建草稿并导入" [disabled] [ref=e160]
+```
+
+# Test source
+
+```ts
+  135 |   await expect(result).toContainText('部分 dtype 命中')
+  136 |   await expect(result).toContainText('BF16')
+  137 |   await expect(result).toContainText('30%')
+  138 |   await expect(result).toContainText('FP16')
+  139 |   await expect(result).toContainText('FP32')
+  140 |   await expect(result).toContainText('INT8')
+  141 |   await expect(result.getByText('系统回退')).toHaveCount(3)
+  142 | })
+  143 | 
+  144 | test('@L1 规则预览输入改变后忽略旧响应且可立即重查', async ({ page, api, catalogs }) => {
+  145 |   // 观测点：旧算子请求未返回时，新算子可以提交；迟到结果不能覆盖当前输入。
+  146 |   const version = await api.createManualCalibration({
+  147 |     name: `预览竞态-${Date.now()}`,
+  148 |     hardware_id: catalogs.train.hardwareName, model_id: catalogs.train.modelId,
+  149 |     phase: 'train', operator: 'MatMulV3', unit: 'Cube', dtype: 'bf16', utilization: 0.3,
+  150 |   })
+  151 |   await api.publishEnableAndSetDefault(
+  152 |     `${catalogs.train.hardwareName}:${catalogs.train.modelId}:train`, version,
+  153 |   )
+  154 |   let releaseOld: (() => void) | undefined
+  155 |   let signalOld: (() => void) | undefined
+  156 |   const oldStarted = new Promise<void>(resolve => { signalOld = resolve })
+  157 |   await page.route('**/api/calibrations/preview/dtypes', async route => {
+  158 |     if (route.request().postDataJSON().operator !== 'MatMulV3') return route.continue()
+  159 |     const response = await route.fetch()
+  160 |     await new Promise<void>(resolve => { releaseOld = resolve; signalOld?.() })
+  161 |     await route.fulfill({ response })
+  162 |   })
+  163 |   await page.goto('/zrt-sim/calibration')
+  164 |   await page.getByTestId('calibration-nav-rules').click()
+  165 |   await page.getByTestId('calibration-rule-phase').fill('train')
+  166 |   await page.getByTestId('calibration-rule-hardware').fill(catalogs.train.hardwareName)
+  167 |   await page.getByTestId('calibration-rule-model').fill(catalogs.train.modelId)
+  168 |   await expect(page.getByTestId('calibration-rule-selected')).toContainText(version.name)
+  169 |   const operator = page.getByTestId('calibration-preview-operator')
+  170 |   await operator.fill('MatMulV3')
+  171 |   await page.getByTestId('calibration-preview-run').click()
+  172 |   await oldStarted
+  173 |   const oldResponse = page.waitForResponse(response => response.url().endsWith('/api/calibrations/preview/dtypes')
+  174 |     && response.request().postDataJSON()?.operator === 'MatMulV3')
+  175 |   try {
+  176 |     await operator.fill('MissingOperator')
+  177 |     await expect(page.getByTestId('calibration-preview-run')).toBeEnabled()
+  178 |     await page.getByTestId('calibration-preview-run').click()
+  179 |     await expect(page.getByTestId('calibration-preview-result')).toContainText('上述四种 dtype 均回退系统')
+  180 |   } finally {
+  181 |     releaseOld?.()
+  182 |   }
+  183 |   await oldResponse
+  184 |   await expect(page.getByTestId('calibration-preview-result')).not.toContainText('30%')
+  185 | })
+  186 | 
+  187 | test('@L1 修改采集并行策略后必须重新确认', async ({ page, catalogs }) => {
+  188 |   // 观测点：用户确认过的数值一旦改变，上传按钮重新禁用直到再次确认。
+  189 |   await page.goto('/zrt-sim/calibration')
+  190 |   await page.getByTestId('calibration-create-open').click()
+  191 |   await page.getByRole('button', { name: /导入 Profiling/ }).click()
+  192 |   await page.getByTestId('calibration-version-name').fill(`策略确认-${Date.now()}`)
+  193 |   await page.getByTestId('calibration-version-hardware').fill(catalogs.train.hardwareName)
+  194 |   await page.getByTestId('calibration-version-model').fill(catalogs.train.modelId)
+  195 |   await page.getByTestId('calibration-profile-file').setInputFiles({
+  196 |     name: 'MatMulV3.csv', mimeType: 'text/csv', buffer: readFileSync(profilingFixture),
+  197 |   })
+  198 |   const dialog = page.getByRole('dialog', { name: '新建校准版本' })
+  199 |   const confirmed = page.getByTestId('calibration-source-strategy-confirmed')
+  200 |   const save = page.getByTestId('calibration-version-save')
+  201 |   await confirmed.check()
+  202 |   await expect(save).toBeEnabled()
+  203 |   await dialog.getByRole('spinbutton', { name: 'TP' }).fill('2')
+  204 |   await expect(confirmed).not.toBeChecked()
+  205 |   await expect(save).toBeDisabled()
+  206 |   await confirmed.check()
+  207 |   await expect(save).toBeEnabled()
+  208 | })
+  209 | 
+  210 | test('@L1 Profiling 首批导入后原弹框继续完成构建准备', async ({ page, catalogs }) => {
+  211 |   // 观测点：导入成功只推进草稿状态，不关闭弹框或要求再次保存。
+  212 |   await page.goto('/zrt-sim/calibration')
+  213 |   await page.getByTestId('calibration-create-open').click()
+  214 |   await page.getByRole('button', { name: /导入 Profiling/ }).click()
+  215 |   await page.getByTestId('calibration-version-name').fill(`连续导入-${Date.now()}`)
+  216 |   await page.getByTestId('calibration-version-hardware').fill(catalogs.train.hardwareName)
+  217 |   await page.getByTestId('calibration-version-model').fill(catalogs.train.modelId)
+  218 |   await page.getByTestId('calibration-profile-file').setInputFiles({
+  219 |     name: 'MatMulV3.csv', mimeType: 'text/csv', buffer: readFileSync(profilingFixture),
+  220 |   })
+  221 |   await page.getByTestId('calibration-source-strategy-confirmed').check()
+  222 |   await page.getByTestId('calibration-version-save').click()
+  223 |   await expect(page.getByRole('dialog', { name: '新建校准版本' })).toBeVisible()
+  224 |   await expect(page.getByText('有效 5 / 总 5')).toBeVisible()
+  225 |   await expect(page.getByTestId('calibration-source-task-id')).toBeVisible()
+  226 |   await expect(page.getByTestId('calibration-build-candidate')).toBeVisible()
+  227 | })
+  228 | 
+  229 | function syntheticRawProfiling(): Buffer {
+  230 |   const root = process.env.E2E_BACKEND_ROOT
+  231 |   if (!root) throw new Error('E2E_BACKEND_ROOT is required')
+  232 |   const directory = mkdtempSync(join(tmpdir(), 'zrt-raw-profile-'))
+  233 |   const output = join(directory, 'kernel_details.csv')
+  234 |   try {
+> 235 |     execFileSync('python3', [join(root, 'tests/calibration/generate_kernel_details_synthetic.py'),
+      |     ^ Error: Command failed: python3 /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/backend-repo/tests/calibration/generate_kernel_details_synthetic.py --source /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/backend-repo/tests/calibration/fixtures/kernel_details.csv --output /home/administrator/actions-runner/_work/zrt-sim-ui/zrt-sim-ui/.e2e-tmp/zrt-raw-profile-JAJjmz/kernel_details.csv
+  236 |       '--source', rawProfilingFixture, '--output', output])
+  237 |     return readFileSync(output)
+  238 |   } finally {
+  239 |     rmSync(directory, { recursive: true })
+  240 |   }
+  241 | }
+  242 | 
+  243 | function multimodalProfileFixture(model: Record<string, unknown>, modelName: string): { hardware: Record<string, unknown>; config: string; csv: Buffer } {
+  244 |   const root = process.env.E2E_BACKEND_ROOT
+  245 |   if (!root) throw new Error('E2E_BACKEND_ROOT is required')
+  246 |   const template = readFileSync(join(root, 'backend/train/zrt/training/configs/multimodal_phase1_moe_example.yaml'), 'utf8')
+  247 |   const config = template.replace('name: qwen3-vl-30b-a3b', `name: ${modelName}`)
+  248 |   const hardwarePath = join(root, 'backend/hardware/train/Ascend-Adevice03-Server.yaml')
+  249 |   const hardware = JSON.parse(execFileSync('python3', ['-c',
+  250 |     'import json,sys,yaml; print(json.dumps(yaml.safe_load(open(sys.argv[1]))))', hardwarePath], { cwd: root }).toString())
+  251 |   const directory = mkdtempSync(join(tmpdir(), 'zrt-profile-source-'))
+  252 |   try {
+  253 |     const configPath = join(directory, 'source.yaml')
+  254 |     writeFileSync(configPath, config)
+  255 |     const csv = execFileSync('python3', ['-c',
+  256 |       'import json,sys; from backend.web.services.training_task_baseline import _replay_multimodal_baseline; from tests.server.test_user_calibration_profile_integration import _synthetic_graph_csv; model=json.load(sys.stdin); index,_=_replay_multimodal_baseline(sys.argv[1],model); sys.stdout.buffer.write(_synthetic_graph_csv(index))',
+  257 |       configPath], { cwd: root, input: JSON.stringify(model), maxBuffer: 10_000_000 })
+  258 |     return { hardware, config, csv }
+  259 |   } finally {
+  260 |     rmSync(directory, { recursive: true })
+  261 |   }
+  262 | }
+  263 | 
+  264 | async function acceptWorkbenchConfirmation(page: Page) {
+  265 |   const confirmation = page.getByRole('dialog', { name: '提示' }).last()
+  266 |   await expect(confirmation).toBeVisible()
+  267 |   await confirmation.getByRole('button', { name: '继续', exact: true }).click()
+  268 | }
+  269 | 
+  270 | async function prepareCandidateHardware(page: Page, api: TestFixtures['api'], owner: TestFixtures['testOwner']) {
+  271 |   if (!backend) throw new Error('E2E_BACKEND_URL is required')
+  272 |   const hardware = await api.getTrainHardware()
+  273 |   const base = hardware.find(row => row.name === 'H100_Server') as Record<string, unknown> | undefined
+  274 |   expect(base).toBeTruthy()
+  275 |   const fields = [
+  276 |     'borrowed_from', 'chip_name', 'compute', 'device_type', 'ep_overlap_waves',
+  277 |     'flash_attention_bwd_coefficient', 'flash_attention_fwd_coefficient',
+  278 |     'gpus_per_node', 'host_dma', 'interconnect', 'memory', 'nodes', 'overlap_ratio', 'vendor',
+  279 |   ]
+  280 |   const name = `Candidate_${owner.account}`
+  281 |   const spec = Object.fromEntries(fields.filter(field => base![field] !== undefined)
+  282 |     .map(field => [field, base![field]]))
+  283 |   const created = await page.request.post(`${backend}/api/assets/hardwares`, {
+  284 |     headers: buildTestUserHeaders(owner),
+  285 |     data: { name, vendor: base!.vendor, domain: 'train', spec_format: 'json',
+  286 |       spec_json: { ...spec, name, label: name } },
+  287 |   })
+  288 |   expect(created.ok(), await created.text()).toBe(true)
+  289 |   return name
+  290 | }
+  291 | 
+  292 | async function prepareCandidateSource(
+  293 |   page: Page, api: TestFixtures['api'], catalogs: TestFixtures['catalogs'], owner: TestFixtures['testOwner'],
+  294 |   useBuiltin = false,
+  295 | ): Promise<{ taskId: number; hardwareName: string; requestBody: Record<string, unknown> }> {
+  296 |   if (!backend) throw new Error('E2E_BACKEND_URL is required')
+  297 |   const hardwareName = useBuiltin ? catalogs.train.hardwareName : await prepareCandidateHardware(page, api, owner)
+  298 |   const models = await api.getTrainModels()
+  299 |   const selected = models.find(model => String(model.key || model.id) === catalogs.train.modelId)
+  300 |   expect(selected).toBeTruthy()
+  301 |   const response = await page.request.get(`${backend}/api/assets/models/${selected!.id}`, {
+  302 |     headers: buildTestUserHeaders(owner),
+  303 |   })
+  304 |   expect(response.ok(), await response.text()).toBe(true)
+  305 |   const asset = await response.json()
+  306 |   const spec = asset.model_spec_json
+  307 |   const modelJson = {
+  308 |     ...spec, name: spec.name ?? catalogs.train.modelId,
+  309 |     domain: spec.domain ?? 'train', hf_config_json: spec.hf_config_json ?? {},
+  310 |   }
+  311 |   const devices = catalogs.train.hardwareNodes * catalogs.train.hardwareGpusPerNode
+  312 |   const config = `model: {base: "${catalogs.train.modelId}", layers: "[dense]*32", seq_len: 128}
+  313 | system: {hw: "${hardwareName}", nodes: ${catalogs.train.hardwareNodes}, gpus_per_node: ${catalogs.train.hardwareGpusPerNode}, host_mem_gb: 2048}
+  314 | strategy: {tp: 1, cp: 1, pp: 1, ep: 1, dp: ${devices}, micro_batch: 1, global_batch: ${devices}, pp_schedule: 1f1b, zero_stage: 1, recompute: {per_layer: {dense: [], moe: []}}, optimizer: adam}
+  315 | `
+  316 |   const requestBody = { config_content: config, model_name: catalogs.train.modelId, model_json: modelJson,
+  317 |     account: owner.account, username: owner.username }
+  318 |   const submitted = await page.request.post(`${backend}/api/train/estimate`, {
+  319 |     headers: buildTestUserHeaders(owner),
+  320 |     data: requestBody,
+  321 |   })
+  322 |   expect(submitted.status(), await submitted.text()).toBe(202)
+  323 |   const job = await submitted.json()
+  324 |   await api.waitForJob(String(job.run_id), 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
+  325 |   return { taskId: Number(job.task_id), hardwareName, requestBody }
+  326 | }
+  327 | 
+  328 | async function openCandidateDraft(page: Page, catalogs: TestFixtures['catalogs'], hardwareName: string, name: string) {
+  329 |   await page.goto('/zrt-sim/calibration')
+  330 |   await page.getByTestId('calibration-create-open').click()
+  331 |   await page.getByRole('button', { name: /导入 Profiling/ }).click()
+  332 |   await page.getByTestId('calibration-version-name').fill(name)
+  333 |   await page.getByTestId('calibration-version-hardware').fill(hardwareName)
+  334 |   await page.getByTestId('calibration-version-model').fill(catalogs.train.modelId)
+  335 |   await page.getByTestId('calibration-version-phase').fill('train')
+```
