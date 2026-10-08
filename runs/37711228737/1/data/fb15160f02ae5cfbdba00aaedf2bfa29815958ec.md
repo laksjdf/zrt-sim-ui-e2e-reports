@@ -1,0 +1,179 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: l1/user-calibration.spec.ts >> @L1 Profiling构建候选同页关闭重开从服务器恢复
+- Location: e2e/specs/l1/user-calibration.spec.ts:822:1
+
+# Error details
+
+```
+Error: 任务 48-1 进入 failed 终态：配置格式或内容不正确。
+```
+
+# Test source
+
+```ts
+  80  |     const payload = await this.requestJson('/api/assets/models?domain=infer')
+  81  |     const values = Array.isArray(payload) ? payload : payload.models || []
+  82  |     const first = values.find(value => value.name || value.key)
+  83  |     if (!first) throw new Error('Inference model catalog is empty')
+  84  |     return { id: first.id, name: String(first.name || first.key) }
+  85  |   }
+  86  | 
+  87  |   async createManualCalibration(input: {
+  88  |     name: string
+  89  |     hardware_id: string
+  90  |     model_id: string
+  91  |     phase: string
+  92  |     operator: string
+  93  |     unit: string
+  94  |     dtype: string
+  95  |     utilization: number
+  96  |   }): Promise<any> {
+  97  |     return this.requestJson('/api/calibrations/versions', {
+  98  |       method: 'POST',
+  99  |       body: JSON.stringify({
+  100 |         name: input.name,
+  101 |         source_kind: 'manual',
+  102 |         hardware_id: input.hardware_id,
+  103 |         model_id: input.model_id,
+  104 |         phase: input.phase,
+  105 |         scope: {
+  106 |           hardware: input.hardware_id,
+  107 |           model: input.model_id,
+  108 |           phase: input.phase,
+  109 |         },
+  110 |         entries: [{
+  111 |           operator: input.operator,
+  112 |           unit: input.unit,
+  113 |           dtype: input.dtype,
+  114 |           utilization: input.utilization,
+  115 |         }],
+  116 |       }),
+  117 |     })
+  118 |   }
+  119 | 
+  120 |   async publishEnableAndSetDefault(scopeKey: string, version: any): Promise<void> {
+  121 |     await this.requestJson(`/api/calibrations/versions/${version.id}/publish`, {
+  122 |       method: 'POST', body: JSON.stringify({ revision: version.revision }),
+  123 |     })
+  124 |     await this.requestJson(`/api/calibrations/versions/${version.id}/enabled`, {
+  125 |       method: 'PUT', body: JSON.stringify({ enabled: true }),
+  126 |     })
+  127 |     await this.requestJson(`/api/calibrations/rules/${encodeURIComponent(scopeKey)}`, {
+  128 |       method: 'PUT',
+  129 |       body: JSON.stringify({
+  130 |         scope: version.scope,
+  131 |         policy: { mode: 'personal', fallback: 'system', version_ids: [version.id] },
+  132 |       }),
+  133 |     })
+  134 |   }
+  135 | 
+  136 |   async previewCalibration(scopeKey: string, phase: string): Promise<any> {
+  137 |     return this.requestJson('/api/calibrations/preview', {
+  138 |       method: 'POST',
+  139 |       body: JSON.stringify({
+  140 |         scope_key: scopeKey,
+  141 |         operator: 'E2EProbe',
+  142 |         unit: 'Cube',
+  143 |         dtype: 'bf16',
+  144 |         query_length: phase === 'prefill' ? 128 : null,
+  145 |         kv_length: phase === 'prefill' ? 128 : null,
+  146 |       }),
+  147 |     })
+  148 |   }
+  149 | 
+  150 |   async retryTask(taskId: number): Promise<any> {
+  151 |     return this.requestJson(`/api/tasks/${taskId}/retry`, {
+  152 |       method: 'POST', body: JSON.stringify({}),
+  153 |     })
+  154 |   }
+  155 | 
+  156 |   async submitTrainEstimate(configContent: string): Promise<JobSnapshot> {
+  157 |     const res = await fetch(this.url('/api/train/estimate'), {
+  158 |       method: 'POST',
+  159 |       headers: this.headers(),
+  160 |       body: this.body({ config_content: configContent }),
+  161 |     })
+  162 |     if (!res.ok) throw new Error(`POST /api/train/estimate failed: ${res.status} ${await res.text()}`)
+  163 |     return res.json()
+  164 |   }
+  165 | 
+  166 |   async getJob(runId: string): Promise<JobSnapshot> {
+  167 |     return this.requestJson(`/api/jobs/${runId}`)
+  168 |   }
+  169 | 
+  170 |   async waitForJob(runId: string, targetStatus: string, timeoutMs = E2E_TASK_TIMEOUT_MS, intervalMs = 3000): Promise<JobSnapshot> {
+  171 |     const started = Date.now()
+  172 |     let lastJob: JobSnapshot | undefined
+  173 |     while (Date.now() - started < timeoutMs) {
+  174 |       const job = await this.getJob(runId)
+  175 |       lastJob = job
+  176 |       if (job.status === targetStatus) {
+  177 |         return job
+  178 |       }
+  179 |       if (['failed', 'cancelled'].includes(job.status)) {
+> 180 |         throw new Error(formatJobFailure(runId, job))
+      |               ^ Error: 任务 48-1 进入 failed 终态：配置格式或内容不正确。
+  181 |       }
+  182 |       await new Promise(r => setTimeout(r, intervalMs))
+  183 |     }
+  184 |     const state = lastJob ? `当前状态 ${lastJob.status}` : '尚未读取到任务状态'
+  185 |     const detail = lastJob?.error ? `：${lastJob.error}` : ''
+  186 |     throw new Error(`等待任务 ${runId} 达到 ${targetStatus} 超时（${timeoutMs / 1000}s，${state}${detail}）`)
+  187 |   }
+  188 | 
+  189 |   async getArtifact(runId: string, filename: string): Promise<Response> {
+  190 |     return fetch(this.url(`/api/jobs/${runId}/artifacts/${filename}`), {
+  191 |       headers: this.headers(),
+  192 |     })
+  193 |   }
+  194 | 
+  195 |   async listTasks(params: Record<string, string> = {}): Promise<{ items?: any[]; total?: number }> {
+  196 |     const qs = new URLSearchParams(params).toString()
+  197 |     return this.requestJson(`/api/tasks${qs ? '?' + qs : ''}`)
+  198 |   }
+  199 | 
+  200 |   async getTask(taskId: number): Promise<any> {
+  201 |     return this.requestJson(`/api/tasks/${taskId}`)
+  202 |   }
+  203 | 
+  204 |   async deleteTask(taskId: number): Promise<void> {
+  205 |     await this.requestJson(`/api/tasks/${taskId}`, { method: 'DELETE' })
+  206 |   }
+  207 | 
+  208 |   private async requestJson(path: string, init: RequestInit = {}): Promise<any> {
+  209 |     const response = await fetch(this.url(path), {
+  210 |       ...init,
+  211 |       headers: { ...this.headers(), ...(init.headers || {}) },
+  212 |     })
+  213 |     const payload = await response.json().catch(() => null)
+  214 |     if (!response.ok) {
+  215 |       throw new Error(`${init.method || 'GET'} ${path} failed: ${response.status} ${JSON.stringify(payload)}`)
+  216 |     }
+  217 |     return payload
+  218 |   }
+  219 | }
+  220 | 
+  221 | function formatJobFailure(runId: string, job: JobSnapshot): string {
+  222 |   const detail = job.error || formatErrorInfo(job.error_info)
+  223 |   return `任务 ${runId} 进入 ${job.status} 终态${detail ? `：${detail}` : ''}`
+  224 | }
+  225 | 
+  226 | function formatErrorInfo(errorInfo: Record<string, unknown> | null | undefined): string {
+  227 |   if (!errorInfo) return ''
+  228 |   const message = errorInfo.message || errorInfo.error_message || errorInfo.detail
+  229 |   if (typeof message === 'string' && message.trim()) return message
+  230 |   try {
+  231 |     return JSON.stringify(errorInfo)
+  232 |   } catch {
+  233 |     return ''
+  234 |   }
+  235 | }
+  236 | 
+```
