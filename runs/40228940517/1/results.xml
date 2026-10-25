@@ -1,0 +1,1739 @@
+<testsuites id="" name="" tests="195" failures="12" skipped="2" errors="5" time="1504.542802">
+<testsuite name="l0/inference/inference-model.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.592" errors="0">
+<testcase name="@L0 推理模型性能评估完整闭环" classname="l0/inference/inference-model.spec.ts" time="15.592">
+</testcase>
+</testsuite>
+<testsuite name="l0/shell/home.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.201" errors="0">
+<testcase name="@L0 首页与核心入口可达" classname="l0/shell/home.spec.ts" time="9.201">
+</testcase>
+</testsuite>
+<testsuite name="l0/shell/service-availability.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="5.228" errors="0">
+<testcase name="@L0 服务读取链路的浏览器请求全部成功" classname="l0/shell/service-availability.spec.ts" time="5.228">
+</testcase>
+</testsuite>
+<testsuite name="l0/shell/user-manual-navigation.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.325" errors="0">
+<testcase name="@L0 普通用户可打开用户手册" classname="l0/shell/user-manual-navigation.spec.ts" time="3.325">
+</testcase>
+</testsuite>
+<testsuite name="l0/training/training-model-estimate.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="30.393" errors="0">
+<testcase name="@L0 训练模型评估从浏览器提交到报告和任务历史" classname="l0/training/training-model-estimate.spec.ts" time="30.393">
+</testcase>
+</testsuite>
+<testsuite name="l0/training/training-operator.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.217" errors="0">
+<testcase name="@L0 训练算子性能评估" classname="l0/training/training-operator.spec.ts" time="9.217">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-hardware-import.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="7" failures="0" skipped="0" time="31.046" errors="1">
+<testcase name="@L1 infer两层硬件文件导入后编辑与保存保持有效规格" classname="l1/assets/asset-hardware-import.spec.ts" time="2.304">
+</testcase>
+<testcase name="@L1 train两层硬件文件导入后编辑与保存保持有效规格" classname="l1/assets/asset-hardware-import.spec.ts" time="2.273">
+</testcase>
+<testcase name="@L1 新建硬件仅提供四种拓扑，Clos 选择可往返 YAML" classname="l1/assets/asset-hardware-import.spec.ts" time="2.372">
+</testcase>
+<testcase name="@L1 双场景硬件芯片型号在表单与高级YAML及保存间同步" classname="l1/assets/asset-hardware-import.spec.ts" time="2.384">
+</testcase>
+<testcase name="@L1 infer旧硬件未配置芯片型号可保存及重新编辑" classname="l1/assets/asset-hardware-import.spec.ts" time="2.355">
+</testcase>
+<testcase name="@L1 train旧硬件未配置芯片型号可保存及重新编辑" classname="l1/assets/asset-hardware-import.spec.ts" time="17.077">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/assets/asset-hardware-import.spec.ts:185:3 › @L1 train旧硬件未配置芯片型号可保存及重新编辑 ─────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '新增硬件' }).first()
+
+
+      187 |     await mockHardwareApi(page)
+      188 |     await page.goto('/zrt-sim/assets?section=hardware-management')
+    > 189 |     await page.getByRole('button', { name: '新增硬件' }).first().click()
+          |                                                              ^
+      190 |     const dialog = page.getByRole('dialog')
+      191 |     const source: Record<string, unknown> = domain === 'train,infer'
+      192 |       ? { ...serverSource('infer'), ...serverSource('train').train,
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/assets/asset-hardware-import.spec.ts:189:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-assets-asset-hardware-import--L1-train旧硬件未配置芯片型号可保存及重新编辑-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 train,infer旧硬件未配置芯片型号可保存及重新编辑" classname="l1/assets/asset-hardware-import.spec.ts" time="2.281">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-hardware.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.842" errors="0">
+<testcase name="@L1 硬件资产 CRUD 与内置保护" classname="l1/assets/asset-hardware.spec.ts" time="2.842">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-model-conflict.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="8.837" errors="0">
+<testcase name="@L1 手搓模型页同名保存显示客户端去重错误" classname="l1/assets/asset-model-conflict.spec.ts" time="2.694">
+</testcase>
+<testcase name="@L1 手搓模型页 409 服务端冲突显示错误提示" classname="l1/assets/asset-model-conflict.spec.ts" time="2.794">
+</testcase>
+<testcase name="@L1 训练提交配额超限展示错误提示" classname="l1/assets/asset-model-conflict.spec.ts" time="3.349">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-model.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="16.101" errors="0">
+<testcase name="@L1 自定义模型 CRUD 与内置保护" classname="l1/assets/asset-model.spec.ts" time="8.57">
+</testcase>
+<testcase name="@L1 模型初始化完成前不可输入且加载后保存名称不丢失" classname="l1/assets/asset-model.spec.ts" time="5.621">
+</testcase>
+<testcase name="@L1 不同用户可导入同名私有模型且只看到自己的版本" classname="l1/assets/asset-model.spec.ts" time="1.91">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-module.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="8" failures="0" skipped="0" time="20.028" errors="0">
+<testcase name="@L1 Module 算子按需加载 › 乱序成功响应不覆盖当前场景，旧请求结束不提前关闭 loading" classname="l1/assets/asset-module.spec.ts" time="2.134">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭重开后旧查询失败不清空新查询的选项" classname="l1/assets/asset-module.spec.ts" time="2.159">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 关闭旧编辑后迟到回调不改写新表单的 Spec JSON" classname="l1/assets/asset-module.spec.ts" time="2.135">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首屏仅加载模块，新增时查询算子并随场景切换" classname="l1/assets/asset-module.spec.ts" time="2.277">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 首次编辑按模块场景读取算子并保留已选项和保存能力" classname="l1/assets/asset-module.spec.ts" time="2.045">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 新增算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/assets/asset-module.spec.ts" time="2.147">
+</testcase>
+<testcase name="@L1 Module 算子按需加载 › 编辑算子查询失败时结束加载，保留表单且再次打开可重试" classname="l1/assets/asset-module.spec.ts" time="2.128">
+</testcase>
+<testcase name="@L1 Module CRUD 与复用" classname="l1/assets/asset-module.spec.ts" time="5.003">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/asset-operator.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="7.19" errors="0">
+<testcase name="@L1 自定义算子 CRUD" classname="l1/assets/asset-operator.spec.ts" time="5.113">
+</testcase>
+<testcase name="@L1 新增算子失败显示错误并保持弹窗打开" classname="l1/assets/asset-operator.spec.ts" time="2.077">
+</testcase>
+</testsuite>
+<testsuite name="l1/assets/table-search.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="4" failures="1" skipped="0" time="13.815" errors="0">
+<testcase name="@L1 model-management 跨页搜索、表头联合筛选和清空恢复" classname="l1/assets/table-search.spec.ts" time="2.355">
+</testcase>
+<testcase name="@L1 hardware-management 跨页搜索、表头联合筛选和清空恢复" classname="l1/assets/table-search.spec.ts" time="6.35">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveCount(expected) failed" type="expect.toHaveCount">
+<![CDATA[  [chromium] › l1/assets/table-search.spec.ts:46:3 › @L1 hardware-management 跨页搜索、表头联合筛选和清空恢复 ──────
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('tbody tr')
+    Expected: 10
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" with timeout 5000ms
+      - waiting for locator('tbody tr')
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      57 |     await page.goto(`/zrt-sim/assets?section=${scenario.section}`)
+      58 |     const bodyRows = page.locator('tbody tr')
+    > 59 |     await expect(bodyRows).toHaveCount(10)
+         |                            ^
+      60 |     await page.getByRole('button', { name: '下一页', exact: true }).click()
+      61 |     await expect(bodyRows).toHaveCount(2)
+      62 |     await page.getByTestId('table-search').fill('ITEM-2 推理')
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/assets/table-search.spec.ts:59:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-assets-table-search--L1-b8606-management-跨页搜索、表头联合筛选和清空恢复-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 operator-management 跨页搜索、表头联合筛选和清空恢复" classname="l1/assets/table-search.spec.ts" time="2.611">
+</testcase>
+<testcase name="@L1 module-management 跨页搜索、表头联合筛选和清空恢复" classname="l1/assets/table-search.spec.ts" time="2.499">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration-batch.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.695" errors="0">
+<testcase name="@L1 可行批量训练子结果必须命中冻结的用户校准" classname="l1/calibration/user-calibration-batch.spec.ts" time="8.695">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration-inference-batch.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="28.978" errors="0">
+<testcase name="@L1 decode 批量任务使用冻结硬件身份命中校准" classname="l1/calibration/user-calibration-inference-batch.spec.ts" time="14.648">
+</testcase>
+<testcase name="@L1 prefill 批量任务使用冻结硬件身份命中校准" classname="l1/calibration/user-calibration-inference-batch.spec.ts" time="14.33">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration-inference.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.439" errors="0">
+<testcase name="@L1 推理默认手工校准从页面提交到实际利用率命中" classname="l1/calibration/user-calibration-inference.spec.ts" time="12.439">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration-overview.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="6.047" errors="0">
+<testcase name="@L1 校准总览区分启用版本和自动规则" classname="l1/calibration/user-calibration-overview.spec.ts" time="2.112">
+</testcase>
+<testcase name="@L1 版本列表保持整宽并可找回归档版本" classname="l1/calibration/user-calibration-overview.spec.ts" time="1.916">
+</testcase>
+<testcase name="@L1 关闭详情后迟到的读取不能重新打开面板" classname="l1/calibration/user-calibration-overview.spec.ts" time="2.019">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration-task-drawer.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.503" errors="0">
+<testcase name="@L1 训练任务一次性校准从设置抽屉进入执行与结果" classname="l1/calibration/user-calibration-task-drawer.spec.ts" time="9.503">
+</testcase>
+</testsuite>
+<testsuite name="l1/calibration/user-calibration.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="32" failures="1" skipped="0" time="247.029" errors="2">
+<testcase name="@L1 手工校准和规则预览的算子候选随阶段筛选" classname="l1/calibration/user-calibration.spec.ts" time="2.204">
+</testcase>
+<testcase name="@L1 校准优先顺序可调整保存且预览命中首个同级版本" classname="l1/calibration/user-calibration.spec.ts" time="2.578">
+</testcase>
+<testcase name="@L1 校准已选阶段不隐藏其他候选" classname="l1/calibration/user-calibration.spec.ts" time="2.213">
+</testcase>
+<testcase name="@L1 阶段先选后仅显示同域资产并清除失效选择" classname="l1/calibration/user-calibration.spec.ts" time="2.606">
+</testcase>
+<testcase name="@L1 校准算子目录可搜索原始 key 且支持手输" classname="l1/calibration/user-calibration.spec.ts" time="2.141">
+</testcase>
+<testcase name="@L1 全部 dtype 预览逐项显示局部命中而不误报全回退" classname="l1/calibration/user-calibration.spec.ts" time="2.247">
+</testcase>
+<testcase name="@L1 规则预览输入改变后忽略旧响应且可立即重查" classname="l1/calibration/user-calibration.spec.ts" time="2.255">
+</testcase>
+<testcase name="@L1 修改采集并行策略后必须重新确认" classname="l1/calibration/user-calibration.spec.ts" time="1.879">
+</testcase>
+<testcase name="@L1 Profiling 首批导入后原弹框继续完成构建准备" classname="l1/calibration/user-calibration.spec.ts" time="2.234">
+</testcase>
+<testcase name="@L1 Profiling受控构建中刷新恢复保持运行身份" classname="l1/calibration/user-calibration.spec.ts" time="5.295">
+</testcase>
+<testcase name="@L1 Profiling构建候选完成后刷新恢复与精确报告" classname="l1/calibration/user-calibration.spec.ts" time="19.706">
+</testcase>
+<testcase name="@L1 单条Profiling无源任务构建仅精确Shape候选" classname="l1/calibration/user-calibration.spec.ts" time="8.625">
+</testcase>
+<testcase name="@L1 源任务不兼容在构建前解释原因且不创建构建任务" classname="l1/calibration/user-calibration.spec.ts" time="2.325">
+</testcase>
+<testcase name="@L1 手输源任务仅确认后诊断且失败可重试" classname="l1/calibration/user-calibration.spec.ts" time="16.879">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/calibration/user-calibration.spec.ts:675:1 › @L1 手输源任务仅确认后诊断且失败可重试 ───────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('calibration-create-open')
+
+
+      428 | async function openCandidateDraft(page: Page, catalogs: TestFixtures['catalogs'], hardwareName: string, name: string) {
+      429 |   await page.goto('/zrt-sim/calibration')
+    > 430 |   await page.getByTestId('calibration-create-open').click()
+          |                                                     ^
+      431 |   await page.getByRole('button', { name: /导入 Profiling/ }).click()
+      432 |   await page.getByTestId('calibration-version-name').fill(name)
+      433 |   await page.getByTestId('calibration-version-hardware').fill(hardwareName)
+        at openCandidateDraft (/home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/calibration/user-calibration.spec.ts:430:53)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/calibration/user-calibration.spec.ts:677:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-calibration-user-calibration--L1-手输源任务仅确认后诊断且失败可重试-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 手输任务切换到下拉任务只检查最终选择" classname="l1/calibration/user-calibration.spec.ts" time="2.679">
+</testcase>
+<testcase name="@L1 重查源任务失败后不沿用旧的兼容性通过状态" classname="l1/calibration/user-calibration.spec.ts" time="8.774">
+</testcase>
+<testcase name="@L1 真实训练页面任务可作为 Profiling 候选来源" classname="l1/calibration/user-calibration.spec.ts" time="33.086">
+</testcase>
+<testcase name="@L1 Profiling构建候选期间修改批次使旧运行失效" classname="l1/calibration/user-calibration.spec.ts" time="8.97">
+</testcase>
+<testcase name="@L1 Profiling构建候选显式终止后回到草稿" classname="l1/calibration/user-calibration.spec.ts" time="14.773">
+</testcase>
+<testcase name="@L1 Profiling终止重载完成前不允许重试并保留新运行终止能力" classname="l1/calibration/user-calibration.spec.ts" time="8.783">
+</testcase>
+<testcase name="@L1 Profiling构建候选同页关闭重开从服务器恢复" classname="l1/calibration/user-calibration.spec.ts" time="14.802">
+</testcase>
+<testcase name="@L1 Profiling迟到打开版本响应不覆盖较新的构建候选" classname="l1/calibration/user-calibration.spec.ts" time="15.139">
+</testcase>
+<testcase name="@L1 Profiling批次迟到错误不污染同版本或另一版本重开" classname="l1/calibration/user-calibration.spec.ts" time="5.983">
+</testcase>
+<testcase name="@L1 Profiling追加导入迟到成功不关闭重开的弹窗" classname="l1/calibration/user-calibration.spec.ts" time="2.876">
+</testcase>
+<testcase name="@L1 用户 Profiling CSV 私有批次导入与移除" classname="l1/calibration/user-calibration.spec.ts" time="3.29">
+</testcase>
+<testcase name="@L1 Profiling 导入明确格式与采集来源" classname="l1/calibration/user-calibration.spec.ts" time="1.908">
+</testcase>
+<testcase name="@L1 模拟补全的原始 kernel_details CSV 可导入并保留原件" classname="l1/calibration/user-calibration.spec.ts" time="2.379">
+<system-err>
+</system-err>
+</testcase>
+<testcase name="@L1 原始Profiling首次导入失败不遗留空草稿" classname="l1/calibration/user-calibration.spec.ts" time="2.083">
+</testcase>
+<testcase name="@L1 旧草稿拟合响应不能污染新草稿报告" classname="l1/calibration/user-calibration.spec.ts" time="2.373">
+</testcase>
+<testcase name="@L1 用户手工校准工作台闭环" classname="l1/calibration/user-calibration.spec.ts" time="19.575">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/calibration/user-calibration.spec.ts:1228:1 › @L1 用户手工校准工作台闭环 ────────────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('calibration-nav-versions')
+
+
+      1281 |
+      1282 |   await page.goto('/zrt-sim/calibration')
+    > 1283 |   await page.getByTestId('calibration-nav-versions').click()
+           |                                                      ^
+      1284 |   const frozenRow = page.locator('tbody tr').filter({ hasText: versionName })
+      1285 |   await clickVersionAction(page, frozenRow, '停用')
+      1286 |   await expect(frozenRow).toContainText('未启用')
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/calibration/user-calibration.spec.ts:1283:54
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-calibration-user-calibration--L1-用户手工校准工作台闭环-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 工作台自动规则作用于普通训练任务且失效前置决策" classname="l1/calibration/user-calibration.spec.ts" time="15.603">
+</testcase>
+<testcase name="@L1 模拟原始Profiling从浏览器发布并作用于下一次训练" classname="l1/calibration/user-calibration.spec.ts" time="10.766">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/trace.zip]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[tilesim simulator not available (pip install tilesim?): No module named 'core'
+]]>
+</system-err>
+<failure message="expect(received).toEqual(expected) // deep equality" type="expect.toEqual">
+<![CDATA[  [chromium] › l1/calibration/user-calibration.spec.ts:1390:1 › @L1 模拟原始Profiling从浏览器发布并作用于下一次训练 ───
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 35
+    + Received  + 35
+
+    @@ -4,10 +4,18 @@
+          Object {
+            "from": 0,
+            "to": 3,
+          },
+          Object {
+    +       "from": 0,
+    +       "to": 8,
+    +     },
+    +     Object {
+    +       "from": 1,
+    +       "to": 2,
+    +     },
+    +     Object {
+            "from": 3,
+            "to": 4,
+          },
+          Object {
+            "from": 4,
+    @@ -16,19 +24,19 @@
+          Object {
+            "from": 4,
+            "to": 5,
+          },
+          Object {
+    -       "from": 5,
+    +       "from": 4,
+            "to": 6,
+          },
+          Object {
+            "from": 5,
+            "to": 6,
+          },
+          Object {
+    -       "from": 4,
+    +       "from": 5,
+            "to": 6,
+          },
+          Object {
+            "from": 6,
+            "to": 7,
+    @@ -36,28 +44,28 @@
+          Object {
+            "from": 7,
+            "to": 8,
+          },
+          Object {
+    -       "from": 0,
+    -       "to": 8,
+    +       "from": 8,
+    +       "to": 9,
+          },
+          Object {
+            "from": 8,
+    -       "to": 9,
+    +       "to": 17,
+          },
+          Object {
+            "from": 9,
+            "to": 10,
+          },
+          Object {
+    +       "from": 9,
+    +       "to": 12,
+    +     },
+    +     Object {
+            "from": 10,
+            "to": 11,
+    -     },
+    -     Object {
+    -       "from": 9,
+    -       "to": 12,
+          },
+          Object {
+            "from": 12,
+            "to": 13,
+          },
+    @@ -75,18 +83,10 @@
+          },
+          Object {
+            "from": 16,
+            "to": 17,
+          },
+    -     Object {
+    -       "from": 8,
+    -       "to": 17,
+    -     },
+    -     Object {
+    -       "from": 1,
+    -       "to": 2,
+    -     },
+        ],
+        "hf_config_json": Object {
+          "model_type": "qwen3_vl_30b_a3b",
+          "text_config": Object {
+            "head_dim": 128,
+    @@ -176,11 +176,11 @@
+        "num_edges": 21,
+        "num_layers": 48,
+        "num_ops": 18,
+        "operators": Array [
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "input_ids",
+    @@ -200,11 +200,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x",
+    @@ -224,11 +224,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x_final",
+    @@ -248,11 +248,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x",
+    @@ -272,11 +272,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x_ln1",
+    @@ -296,11 +296,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "qkv",
+    @@ -330,11 +330,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "q_rope",
+    @@ -364,11 +364,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "attn_out",
+    @@ -388,11 +388,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "attn_proj",
+    @@ -417,11 +417,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x_attn",
+    @@ -441,11 +441,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x_ln2",
+    @@ -465,11 +465,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "router_logits",
+    @@ -494,11 +494,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "x_ln2",
+    @@ -518,11 +518,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "L0.routed_x_ln2",
+    @@ -542,11 +542,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "L0.routed_gate_up",
+    @@ -566,11 +566,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "L0.routed_swiglu_out",
+    @@ -590,11 +590,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "routed_ffn_out",
+    @@ -614,11 +614,11 @@
+            ],
+            "params": Array [],
+            "rank_idx": 0,
+          },
+          Object {
+    -       "compute_flops": "0",
+    +       "compute_flops": Object {},
+            "compute_unit": "cube",
+            "inputs": Array [
+              Object {
+                "dtype": "BF16",
+                "name": "ffn_out",
+
+      1429 |   delete snapshotHardware._registry_aliases
+      1430 |   expect(taskHardware).toEqual(snapshotHardware)
+    > 1431 |   expect(savedSource.model_json).toEqual(model)
+           |                                  ^
+      1432 |
+      1433 |   const versionName = `E2E完整Profiling-${Date.now()}`
+      1434 |   await page.goto('/zrt-sim/calibration')
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/calibration/user-calibration.spec.ts:1431:34
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-calibration-user-calibr-75d20-拟原始Profiling从浏览器发布并作用于下一次训练-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="l1/configuration/unified-quant-ui.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="7.876" errors="0">
+<testcase name="@L1 统一阶段联动、单独覆盖和 P/D 共用量化" classname="l1/configuration/unified-quant-ui.spec.ts" time="3.433">
+</testcase>
+<testcase name="@L1 推理对比复用统一阶段并独立复制配置" classname="l1/configuration/unified-quant-ui.spec.ts" time="2.202">
+</testcase>
+<testcase name="@L1 批量 P/D 预检发送实际阶段精度而非界面草稿" classname="l1/configuration/unified-quant-ui.spec.ts" time="2.241">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/eagle-single-chain.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="35.316" errors="0">
+<testcase name="@L1 eagle decode 提交、算子结果与配置恢复" classname="l1/inference/eagle-single-chain.spec.ts" time="11.786">
+</testcase>
+<testcase name="@L1 eagle3 decode 提交、算子结果与配置恢复" classname="l1/inference/eagle-single-chain.spec.ts" time="11.627">
+</testcase>
+<testcase name="@L1 eagle3 prefill 提交、算子结果与配置恢复" classname="l1/inference/eagle-single-chain.spec.ts" time="11.903">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-auto-ep.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="8" failures="0" skipped="0" time="36.679" errors="0">
+<testcase name="@L1 evaluate Prefill 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="4.828">
+</testcase>
+<testcase name="@L1 evaluate Decode 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="4.909">
+</testcase>
+<testcase name="@L1 evaluate PD 混布 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="4.793">
+</testcase>
+<testcase name="@L1 evaluate PD 分离 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="5.462">
+</testcase>
+<testcase name="@L1 optimize Prefill 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="3.972">
+</testcase>
+<testcase name="@L1 optimize Decode 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="3.945">
+</testcase>
+<testcase name="@L1 optimize PD 混布 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="4.076">
+</testcase>
+<testcase name="@L1 pd-ratio PD 分离 可编辑 EP 与自动 EDP" classname="l1/inference/inference-auto-ep.spec.ts" time="4.694">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-batch-experiment.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.342" errors="0">
+<testcase name="@L1 推理批量实验服务闭环" classname="l1/inference/inference-batch-experiment.spec.ts" time="8.342">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-batch-optimization-toggle.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.039" errors="0">
+<testcase name="@L1 推理批量实验寻优开关可往返切换：strategy_search" classname="l1/inference/inference-batch-optimization-toggle.spec.ts" time="2.997">
+</testcase>
+<testcase name="@L1 推理批量实验寻优开关可往返切换：hardware_sensitivity" classname="l1/inference/inference-batch-optimization-toggle.spec.ts" time="3.042">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-compare.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="78.584" errors="0">
+<testcase name="@L1 推理硬件性能对比" classname="l1/inference/inference-compare.spec.ts" time="78.584">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-config-navigation.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="8" failures="0" skipped="0" time="33.908" errors="1">
+<testcase name="@L1 evaluate Decode 配置在前后步骤往返时完整保留" classname="l1/inference/inference-config-navigation.spec.ts" time="16.64">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/inference/inference-config-navigation.spec.ts:55:3 › @L1 evaluate Decode 配置在前后步骤往返时完整保留 
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByTestId('infer-step-1-continue')
+
+
+      21 |   const path = mode === 'evaluate' ? 'performance/model' : 'optimize/strategy'
+      22 |   await page.goto(`/zrt-sim/infer/${path}`)
+    > 23 |   await page.getByTestId('infer-step-1-continue').click()
+         |                                                   ^
+      24 |   await page.locator('.scene-pill').filter({ hasText: /^Decode/ }).click()
+      25 | }
+      26 |
+        at openConfiguration (/home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference/inference-config-navigation.spec.ts:23:51)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/inference/inference-config-navigation.spec.ts:57:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-inference-inference-con-dd666-luate-Decode-配置在前后步骤往返时完整保留-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 optimize Decode 配置在前后步骤往返时完整保留" classname="l1/inference/inference-config-navigation.spec.ts" time="3.036">
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=1 切分不增加总卡数并保留步骤编辑" classname="l1/inference/inference-config-navigation.spec.ts" time="2.532">
+</testcase>
+<testcase name="@L1 独立 O-TP=2 CP=2 切分不增加总卡数并保留步骤编辑" classname="l1/inference/inference-config-navigation.spec.ts" time="2.597">
+</testcase>
+<testcase name="@L1 CP 能力延迟返回不覆盖任务恢复中的并行配置" classname="l1/inference/inference-config-navigation.spec.ts" time="2.319">
+</testcase>
+<testcase name="@L1 缺少跨 P 能力字段时保留 CP 控件并明确禁用跨 P 传输" classname="l1/inference/inference-config-navigation.spec.ts" time="2.37">
+</testcase>
+<testcase name="@L1 能力请求失败时 CP 与跨 P 均给出失败提示" classname="l1/inference/inference-config-navigation.spec.ts" time="2.212">
+</testcase>
+<testcase name="@L1 Diffusion 的序列并行仍受模型图 CP 能力约束" classname="l1/inference/inference-config-navigation.spec.ts" time="2.202">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-custom-communication-tiers.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.976" errors="0">
+<testcase name="@L1 推理任务提交用户新增的通信中间层" classname="l1/inference/inference-custom-communication-tiers.spec.ts" time="9.976">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-diffusion-pipeline-api.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.025" errors="0">
+<testcase name="@L1 MiniMax-H3 PP2 真实任务返回两个 stage 并展示去噪结果" classname="l1/inference/inference-diffusion-pipeline-api.spec.ts" time="10.025">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-diffusion-pipeline.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.792" errors="0">
+<testcase name="@L1 Diffusion PP3 恢复后可编辑并提交，组件候选不跨 stage" classname="l1/inference/inference-diffusion-pipeline.spec.ts" time="2.792">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-hardware-editable.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="9.981" errors="0">
+<testcase name="@L1 推理任务提交修改后的硬件规格并生效" classname="l1/inference/inference-hardware-editable.spec.ts" time="9.981">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-hicache.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="4" failures="0" skipped="0" time="12.524" errors="0">
+<testcase name="@L1 HiCache 配置恢复与性能评估结果" classname="l1/inference/inference-hicache.spec.ts" time="4.387">
+</testcase>
+<testcase name="@L1 标准 KV Offload 配置恢复" classname="l1/inference/inference-hicache.spec.ts" time="4.239">
+</testcase>
+<testcase name="@L1 HiCache 冻结最优解寻优结果" classname="l1/inference/inference-hicache.spec.ts" time="2.046">
+</testcase>
+<testcase name="@L1 标准 KV Offload 冻结最优解带宽结果" classname="l1/inference/inference-hicache.spec.ts" time="1.852">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-o-tp-errors.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="4" failures="0" skipped="0" time="24.352" errors="0">
+<testcase name="@L1 O-TP 轮询错误展示 TASK.MODEL.O_TP_UNSUPPORTED" classname="l1/inference/inference-o-tp-errors.spec.ts" time="6.16">
+</testcase>
+<testcase name="@L1 O-TP 轮询错误展示 TASK.MODEL.O_TP_GRAPH_INVALID" classname="l1/inference/inference-o-tp-errors.spec.ts" time="5.98">
+</testcase>
+<testcase name="@L1 O-TP 轮询错误展示 TASK.CONFIG.O_TP_INVALID" classname="l1/inference/inference-o-tp-errors.spec.ts" time="6.121">
+</testcase>
+<testcase name="@L1 O-TP 轮询错误展示 TASK.UNKNOWN" classname="l1/inference/inference-o-tp-errors.spec.ts" time="6.091">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-operator.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="13.689" errors="0">
+<testcase name="@L1 推理算子性能评估" classname="l1/inference/inference-operator.spec.ts" time="13.689">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-optimal-table.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="4.888" errors="0">
+<testcase name="@L1 推理最优配置统计表硬件过滤与自适应高度" classname="l1/inference/inference-optimal-table.spec.ts" time="2.566">
+</testcase>
+<testcase name="@L1 推理最优配置分档表硬件过滤与自适应高度" classname="l1/inference/inference-optimal-table.spec.ts" time="2.322">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-optimize.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="5" failures="0" skipped="0" time="130.936" errors="0">
+<testcase name="@L1 推理策略寻优与应用策略" classname="l1/inference/inference-optimize.spec.ts" time="121.396">
+</testcase>
+<testcase name="@L1 Prefill 重用配置恢复 Chunked Prefill Size" classname="l1/inference/inference-optimize.spec.ts" time="2.273">
+</testcase>
+<testcase name="@L1 Prefill 重用配置在第 2 → 1 → 2 步保留量化和编辑值" classname="l1/inference/inference-optimize.spec.ts" time="2.533">
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 禁用 Chunked Prefill Size" classname="l1/inference/inference-optimize.spec.ts" time="2.332">
+</testcase>
+<testcase name="@L1 Prefill 重用配置兼容 缺失 Chunked Prefill Size" classname="l1/inference/inference-optimize.spec.ts" time="2.402">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-pd-ratio.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="99.012" errors="0">
+<testcase name="@L1 PD 配比可行结果" classname="l1/inference/inference-pd-ratio.spec.ts" time="80.126">
+</testcase>
+<testcase name="@L1 PD 配比显存不足时无可行解" classname="l1/inference/inference-pd-ratio.spec.ts" time="18.886">
+</testcase>
+</testsuite>
+<testsuite name="l1/inference/inference-result.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="19.512" errors="0">
+<testcase name="@L1 推理结果筛选和多硬件切换" classname="l1/inference/inference-result.spec.ts" time="19.512">
+</testcase>
+</testsuite>
+<testsuite name="l1/operations-access-ready.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="1" skipped="0" time="13.405" errors="0">
+<testcase name="@L1 首次进入等待慢解密和慢管理员角色查询，不提前请求 access" classname="l1/operations-access-ready.spec.ts" time="5.296">
+</testcase>
+<testcase name="@L1 普通用户首次进入不请求 access，不产生观测接口403" classname="l1/operations-access-ready.spec.ts" time="6.254">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › l1/operations-access-ready.spec.ts:68:1 › @L1 普通用户首次进入不请求 access，不产生观测接口403 ─────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('未启用或无权限访问')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByText('未启用或无权限访问')
+
+
+      81 |   })
+      82 |   await page.goto('/zrt-sim/operations-insights')
+    > 83 |   await expect(page.getByText('未启用或无权限访问')).toBeVisible()
+         |                                             ^
+      84 |   await expect(page.getByTestId('metric-runs')).toHaveCount(0)
+      85 |   await expect(page.locator('.hdr-link', { hasText: '产品运行与洞察' })).toHaveCount(0)
+      86 |   expect(observationRequests).toBe(0)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/operations-access-ready.spec.ts:83:45
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-operations-access-ready--L1-普通用户首次进入不请求-access，不产生观测接口403-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 真实后端管理员首次进入 access 成功，且角色查询先完成" classname="l1/operations-access-ready.spec.ts" time="1.855">
+</testcase>
+</testsuite>
+<testsuite name="l1/shell/release-info.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.576" errors="0">
+<testcase name="@L1 版本信息当前和历史读取" classname="l1/shell/release-info.spec.ts" time="1.722">
+</testcase>
+<testcase name="@L1 管理员版本信息 › 编辑版本信息并恢复" classname="l1/shell/release-info.spec.ts" time="1.854">
+</testcase>
+</testsuite>
+<testsuite name="l1/shell/theme.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="5" failures="5" skipped="0" time="28.979" errors="0">
+<testcase name="@L1 共享主题默认浅色、持久化、跨标签页与键盘切换" classname="l1/shell/theme.spec.ts" time="5.689">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveAttribute(expected) failed" type="expect.toHaveAttribute">
+<![CDATA[  [chromium] › l1/shell/theme.spec.ts:34:1 › @L1 共享主题默认浅色、持久化、跨标签页与键盘切换 ────────────────────────────
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('html')
+    Expected: "light"
+    Received: ""
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for locator('html')
+        12 × locator resolved to <html lang="zh-CN">…</html>
+           - unexpected value "null"
+
+
+      35 |   await page.emulateMedia({ colorScheme: 'dark' })
+      36 |   await page.goto('/zrt-sim/')
+    > 37 |   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light')
+         |                                      ^
+      38 |   await expect(toggle(page)).toHaveAttribute('aria-pressed', 'false')
+      39 |   await expect(page.locator('.portal-grid .entry-card')).toHaveCount(3)
+      40 |   const anchors = ['.page', '.home-hero', '.portal-grid', '.entry-card.task-train']
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/shell/theme.spec.ts:37:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-shell-theme--L1-共享主题默认浅色、持久化、跨标签页与键盘切换-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 推理主题切换保持模型、负载、量化与硬件编辑流程" classname="l1/shell/theme.spec.ts" time="6.244">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveValue(expected) failed" type="expect.toHaveValue">
+<![CDATA[  [chromium] › l1/shell/theme.spec.ts:58:1 › @L1 推理主题切换保持模型、负载、量化与硬件编辑流程 ───────────────────────────
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: locator('#model-select-name')
+    Expected: "theme-fixture-model"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" with timeout 5000ms
+      - waiting for locator('#model-select-name')
+
+
+      60 |   page.on('pageerror', e => errors.push(e.message))
+      61 |   await page.goto('/zrt-sim/infer/performance/model?step=select')
+    > 62 |   await expect(page.locator('#model-select-name')).toHaveValue('theme-fixture-model')
+         |                                                    ^
+      63 |   await page.getByTestId('infer-step-1-continue').click()
+      64 |   await expect(page.getByTestId('infer-step-2-continue')).toBeEnabled()
+      65 |   const selectors = ['.app-header', '.config-card', '.workflow-action-bar']
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/shell/theme.spec.ts:62:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-shell-theme--L1-推理主题切换保持模型、负载、量化与硬件编辑流程-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 训练/资产/图表共用主题且切换不提交请求" classname="l1/shell/theme.spec.ts" time="5.723">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toContainText(expected) failed" type="expect.toContainText">
+<![CDATA[  [chromium] › l1/shell/theme.spec.ts:87:1 › @L1 训练/资产/图表共用主题且切换不提交请求 ──────────────────────────────
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByTestId('estimate-hardware-select')
+    Expected substring: "Theme A6"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for getByTestId('estimate-hardware-select')
+
+
+      91 |   })
+      92 |   await page.goto('/zrt-sim/train/performance/model')
+    > 93 |   await expect(page.getByTestId('estimate-hardware-select')).toContainText('Theme A6')
+         |                                                              ^
+      94 |   const selectors = ['.hero', '.case-shell', '.page-action-dock']
+      95 |   const before = await snapshot(page, selectors)
+      96 |   await toggle(page).click()
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/shell/theme.spec.ts:93:62
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-shell-theme--L1-训练-资产-图表共用主题且切换不提交请求-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 独立模型编辑页和移动端复用主题入口" classname="l1/shell/theme.spec.ts" time="5.629">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › l1/shell/theme.spec.ts:121:1 › @L1 独立模型编辑页和移动端复用主题入口 ────────────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('theme-toggle')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for getByTestId('theme-toggle')
+
+
+      122 |   await page.setViewportSize({ width: 390, height: 844 })
+      123 |   await page.goto('/zrt-sim/')
+    > 124 |   await expect(toggle(page)).toBeVisible()
+          |                              ^
+      125 |   await toggle(page).click()
+      126 |   await page.goto('/zrt-sim/manual-model.html')
+      127 |   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/shell/theme.spec.ts:124:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-shell-theme--L1-独立模型编辑页和移动端复用主题入口-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 深色统计图打印使用浅色画布且结束后恢复原偏好" classname="l1/shell/theme.spec.ts" time="5.694">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › l1/shell/theme.spec.ts:133:1 › @L1 深色统计图打印使用浅色画布且结束后恢复原偏好 ───────────────────────────
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: locator('#orgUserChart canvas').first()
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('#orgUserChart canvas').first()
+
+
+      135 |   await page.goto('/zrt-sim/statistics')
+      136 |   const canvas = page.locator('#orgUserChart canvas').first()
+    > 137 |   await expect(canvas).toBeVisible()
+          |                        ^
+      138 |   const month = await page.locator('select').first().inputValue()
+      139 |   const chartCount = await page.locator('canvas').count()
+      140 |   const labels = (startPrint = false) => canvas.evaluate((element, dispatchPrint) => {
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/shell/theme.spec.ts:137:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-shell-theme--L1-深色统计图打印使用浅色画布且结束后恢复原偏好-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics/operations-insights.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="22" failures="0" skipped="0" time="64.582" errors="1">
+<testcase name="@L1 详细看板P95复用一位小数格式和未知状态" classname="l1/statistics/operations-insights.spec.ts" time="2.089">
+</testcase>
+<testcase name="@L1 行为筛选不支持时不给全量表格并解释恢复路径" classname="l1/statistics/operations-insights.spec.ts" time="2.196">
+</testcase>
+<testcase name="@L1 用户行为口径显示可理解类别且不冒充真实登录" classname="l1/statistics/operations-insights.spec.ts" time="1.931">
+</testcase>
+<testcase name="@L1 下钻 MCP/API 标签和错误码继承筛选" classname="l1/statistics/operations-insights.spec.ts" time="2.183">
+</testcase>
+<testcase name="@L1 下钻任务到执行逐层返回保留父主题" classname="l1/statistics/operations-insights.spec.ts" time="2.326">
+</testcase>
+<testcase name="@L1 下钻用户会话返回后保留用户选择" classname="l1/statistics/operations-insights.spec.ts" time="17.326">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/trace.zip]]
+]]>
+</system-out>
+<error message="locator.click: Timeout 15000ms exceeded." type="TimeoutError">
+<![CDATA[  [chromium] › l1/statistics/operations-insights.spec.ts:131:1 › @L1 下钻用户会话返回后保留用户选择 ───────────────
+
+    TimeoutError: locator.click: Timeout 15000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: '展开用户行为', exact: true })
+
+
+      141 |   await page.route(`**/api/observability/sessions/${session}?*`, route => route.fulfill({ json: { session: { id: session, actor: 'alice', department: 'Research' }, events: [{ name: 'page_view', page: 'train-model', source: 'web', occurred_at: '2026-09-12T00:00:00Z' }] } }))
+      142 |   await page.goto('/zrt-sim/operations-insights')
+    > 143 |   await page.getByRole('button', { name: '展开用户行为', exact: true }).click()
+          |                                                                   ^
+      144 |   const dialog = page.getByRole('dialog')
+      145 |   await dialog.getByRole('button', { name: '查看会话', exact: true }).click()
+      146 |   await dialog.getByRole('button', { name: '查看轨迹', exact: true }).click()
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/statistics/operations-insights.spec.ts:143:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-statistics-operations-insights--L1-下钻用户会话返回后保留用户选择-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="@L1 个人会话权限撤销后不继续展示观测内容" classname="l1/statistics/operations-insights.spec.ts" time="2.205">
+</testcase>
+<testcase name="@L1 产品运行与洞察真实接口或未启用路径" classname="l1/statistics/operations-insights.spec.ts" time="1.646">
+</testcase>
+<testcase name="@L1 MCP服务健康展示调用趋势和工具拆分" classname="l1/statistics/operations-insights.spec.ts" time="1.956">
+</testcase>
+<testcase name="@L1 无权限不得展示敏感内容和入口" classname="l1/statistics/operations-insights.spec.ts" time="1.912">
+</testcase>
+<testcase name="@L1 闭环与页面行为只展示后端聚合事实" classname="l1/statistics/operations-insights.spec.ts" time="2.293">
+</testcase>
+<testcase name="@L1 日期竞态、筛选与实时独立口径" classname="l1/statistics/operations-insights.spec.ts" time="4.123">
+</testcase>
+<testcase name="@L1 主题分页、排序、标签保留与Escape恢复焦点" classname="l1/statistics/operations-insights.spec.ts" time="2.144">
+</testcase>
+<testcase name="@L1 局部失败、新鲜度和未知Worker不冒充空闲" classname="l1/statistics/operations-insights.spec.ts" time="2.05">
+</testcase>
+<testcase name="@L1 账号切换立即清空并拒绝旧权限响应" classname="l1/statistics/operations-insights.spec.ts" time="2.721">
+</testcase>
+<testcase name="@L1 弹窗返回保持原滚动位置" classname="l1/statistics/operations-insights.spec.ts" time="2.052">
+</testcase>
+<testcase name="@L1 后台暂停轮询且离页后只保留轻量权限" classname="l1/statistics/operations-insights.spec.ts" time="2.125">
+</testcase>
+<testcase name="@L1 多部门默认全量，409回首页，403撤回全部数据" classname="l1/statistics/operations-insights.spec.ts" time="2.375">
+</testcase>
+<testcase name="@L1 R1 live刷新和全局草稿不重置主题第二页" classname="l1/statistics/operations-insights.spec.ts" time="2.307">
+</testcase>
+<testcase name="@L1 R1 直达主题Escape只移除topic保留其他query" classname="l1/statistics/operations-insights.spec.ts" time="2.018">
+</testcase>
+<testcase name="@L1 R1 跨上海午夜点击预设刷新服务端锚点而固定日期不漂移" classname="l1/statistics/operations-insights.spec.ts" time="2.365">
+</testcase>
+<testcase name="@L1 R1 排序实参和200无心跳Worker未知" classname="l1/statistics/operations-insights.spec.ts" time="2.239">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics/statistics-edge.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="3" failures="0" skipped="0" time="5.697" errors="0">
+<testcase name="@L1 信息统计空数据态展示暂无数据" classname="l1/statistics/statistics-edge.spec.ts" time="1.743">
+</testcase>
+<testcase name="@L1 信息统计部分子请求失败展示降级提示" classname="l1/statistics/statistics-edge.spec.ts" time="1.928">
+</testcase>
+<testcase name="@L1 信息统计导出失败展示错误提示" classname="l1/statistics/statistics-edge.spec.ts" time="2.026">
+</testcase>
+</testsuite>
+<testsuite name="l1/statistics/statistics.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.917" errors="0">
+<testcase name="@L1 信息统计访问与导出" classname="l1/statistics/statistics.spec.ts" time="1.917">
+</testcase>
+</testsuite>
+<testsuite name="l1/tasks/resource-quotas.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="6.459" errors="0">
+<testcase name="@L1 管理员角色配额与搜索页额度提示" classname="l1/tasks/resource-quotas.spec.ts" time="3.635">
+</testcase>
+<testcase name="@L1 本地普通用户遵守管理员配置的精度校准菜单禁用" classname="l1/tasks/resource-quotas.spec.ts" time="2.824">
+</testcase>
+</testsuite>
+<testsuite name="l1/tasks/task-failure-detail.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="4" failures="0" skipped="0" time="7.94" errors="0">
+<testcase name="@L1 失败任务详情展示结构化错误卡片" classname="l1/tasks/task-failure-detail.spec.ts" time="2.064">
+</testcase>
+<testcase name="@L1 任务空列表态与筛选无结果" classname="l1/tasks/task-failure-detail.spec.ts" time="1.924">
+</testcase>
+<testcase name="@L1 进程启动失败展示后端异常原文" classname="l1/tasks/task-failure-detail.spec.ts" time="1.965">
+</testcase>
+<testcase name="@L1 历史遗留失败任务展示 legacy 错误信息" classname="l1/tasks/task-failure-detail.spec.ts" time="1.987">
+</testcase>
+</testsuite>
+<testsuite name="l1/tasks/task-filter-history.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="13.727" errors="0">
+<testcase name="@L1 任务管理只请求业务任务列表" classname="l1/tasks/task-filter-history.spec.ts" time="1.672">
+</testcase>
+<testcase name="@L1 任务筛选、详情和历史 Run" classname="l1/tasks/task-filter-history.spec.ts" time="12.055">
+</testcase>
+</testsuite>
+<testsuite name="l1/tasks/task-lifecycle.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="39.971" errors="0">
+<testcase name="@L1 重跑、单删和批删" classname="l1/tasks/task-lifecycle.spec.ts" time="39.971">
+</testcase>
+</testsuite>
+<testsuite name="l1/tasks/task-table-search.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="7.349" errors="0">
+<testcase name="@L1 任务联合搜索防抖请求、分页与清空" classname="l1/tasks/task-table-search.spec.ts" time="4.391">
+</testcase>
+<testcase name="@L1 任务重置回到第一页并丢弃旧条件的延迟响应" classname="l1/tasks/task-table-search.spec.ts" time="2.958">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/task10-layout.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="18.919" errors="0">
+<testcase name="@L1 Task10 baseline renders server frames and hides failures" classname="l1/training/task10-layout.spec.ts" time="16.855">
+</testcase>
+<testcase name="@L1 Task10 desktop columns and responsive quant controls" classname="l1/training/task10-layout.spec.ts" time="2.064">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-analysis-progress.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="54.497" errors="0">
+<testcase name="@L1 真实训练分析 baseline 进度帧与持久化结果" classname="l1/training/training-analysis-progress.spec.ts" time="24.29">
+</testcase>
+<testcase name="@L1 真实训练分析 compare 进度帧与持久化结果" classname="l1/training/training-analysis-progress.spec.ts" time="30.207">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-batch-experiment.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="14.411" errors="0">
+<testcase name="@L1 批量训练实验服务闭环" classname="l1/training/training-batch-experiment.spec.ts" time="14.411">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-compare.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="28.526" errors="0">
+<testcase name="@L1 训练多硬件性能对比" classname="l1/training/training-compare.spec.ts" time="28.526">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-hardware-search.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="15.838" errors="0">
+<testcase name="@L1 训练硬件寻优" classname="l1/training/training-hardware-search.spec.ts" time="15.838">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-multimodal-pp-submit.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="45.258" errors="0">
+<testcase name="@L1 多模态训练 PP1 与 PP8 均能提交并完成评估" classname="l1/training/training-multimodal-pp-submit.spec.ts" time="45.258">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-recompute-label.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="12" failures="4" skipped="0" time="41.895" errors="0">
+<testcase name="@L1 training strategy recompute dense-full at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="2.202">
+</testcase>
+<testcase name="@L1 training strategy recompute dense-attention at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="2.153">
+</testcase>
+<testcase name="@L1 training strategy recompute legacy at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="6.39">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveAttribute(expected) failed" type="expect.toHaveAttribute">
+<![CDATA[  [chromium] › l1/training/training-recompute-label.spec.ts:12:7 › @L1 training strategy recompute legacy at 1440px 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByTestId('strategy-job-status')
+    Expected: "Success"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for getByTestId('strategy-job-status')
+
+
+      35 |         await page.goto(`/zrt-sim/train/optimize/${kind}?task_id=recompute-test&history=1`)
+      36 |         const result = page.getByTestId(`${kind}-job-status`)
+    > 37 |         await expect(result).toHaveAttribute('data-status', 'Success')
+         |                              ^
+      38 |         const expected = `TP1 CP1 PP2 DP4 R:${variant.label ?? 'custom'}`
+      39 |         const metric = result.locator('.metric').nth(2)
+      40 |         await expect(metric.locator(kind === 'strategy' ? '.metric-v' : '.metric-n')).toHaveText(expected)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training/training-recompute-label.spec.ts:37:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-training-recom-fbf53--recompute-legacy-at-1440px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 training strategy recompute dense-full at 390px" classname="l1/training/training-recompute-label.spec.ts" time="2.145">
+</testcase>
+<testcase name="@L1 training strategy recompute dense-attention at 390px" classname="l1/training/training-recompute-label.spec.ts" time="2.142">
+</testcase>
+<testcase name="@L1 training strategy recompute legacy at 390px" classname="l1/training/training-recompute-label.spec.ts" time="6.646">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveAttribute(expected) failed" type="expect.toHaveAttribute">
+<![CDATA[  [chromium] › l1/training/training-recompute-label.spec.ts:12:7 › @L1 training strategy recompute legacy at 390px 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByTestId('strategy-job-status')
+    Expected: "Success"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for getByTestId('strategy-job-status')
+
+
+      35 |         await page.goto(`/zrt-sim/train/optimize/${kind}?task_id=recompute-test&history=1`)
+      36 |         const result = page.getByTestId(`${kind}-job-status`)
+    > 37 |         await expect(result).toHaveAttribute('data-status', 'Success')
+         |                              ^
+      38 |         const expected = `TP1 CP1 PP2 DP4 R:${variant.label ?? 'custom'}`
+      39 |         const metric = result.locator('.metric').nth(2)
+      40 |         await expect(metric.locator(kind === 'strategy' ? '.metric-v' : '.metric-n')).toHaveText(expected)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training/training-recompute-label.spec.ts:37:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-training-recom-c219a-y-recompute-legacy-at-390px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 training hardware recompute dense-full at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="2.118">
+</testcase>
+<testcase name="@L1 training hardware recompute dense-attention at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="2.071">
+</testcase>
+<testcase name="@L1 training hardware recompute legacy at 1440px" classname="l1/training/training-recompute-label.spec.ts" time="5.552">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveAttribute(expected) failed" type="expect.toHaveAttribute">
+<![CDATA[  [chromium] › l1/training/training-recompute-label.spec.ts:12:7 › @L1 training hardware recompute legacy at 1440px 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByTestId('hardware-job-status')
+    Expected: "Success"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for getByTestId('hardware-job-status')
+
+
+      35 |         await page.goto(`/zrt-sim/train/optimize/${kind}?task_id=recompute-test&history=1`)
+      36 |         const result = page.getByTestId(`${kind}-job-status`)
+    > 37 |         await expect(result).toHaveAttribute('data-status', 'Success')
+         |                              ^
+      38 |         const expected = `TP1 CP1 PP2 DP4 R:${variant.label ?? 'custom'}`
+      39 |         const metric = result.locator('.metric').nth(2)
+      40 |         await expect(metric.locator(kind === 'strategy' ? '.metric-v' : '.metric-n')).toHaveText(expected)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training/training-recompute-label.spec.ts:37:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-training-recom-30ca4--recompute-legacy-at-1440px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 training hardware recompute dense-full at 390px" classname="l1/training/training-recompute-label.spec.ts" time="6.426">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toHaveAttribute(expected) failed" type="expect.toHaveAttribute">
+<![CDATA[  [chromium] › l1/training/training-recompute-label.spec.ts:12:7 › @L1 training hardware recompute dense-full at 390px 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator: getByTestId('hardware-job-status')
+    Expected: "Success"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveAttribute" with timeout 5000ms
+      - waiting for getByTestId('hardware-job-status')
+
+
+      35 |         await page.goto(`/zrt-sim/train/optimize/${kind}?task_id=recompute-test&history=1`)
+      36 |         const result = page.getByTestId(`${kind}-job-status`)
+    > 37 |         await expect(result).toHaveAttribute('data-status', 'Success')
+         |                              ^
+      38 |         const expected = `TP1 CP1 PP2 DP4 R:${variant.label ?? 'custom'}`
+      39 |         const metric = result.locator('.metric').nth(2)
+      40 |         await expect(metric.locator(kind === 'strategy' ? '.metric-v' : '.metric-n')).toHaveText(expected)
+        at /home/administrator/actions-runner-zrt-sim-ui-ci/_work/zrt-sim-ui/zrt-sim-ui/e2e/specs/l1/training/training-recompute-label.spec.ts:37:30
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/l1-training-training-recom-2a661-compute-dense-full-at-390px-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="@L1 training hardware recompute dense-attention at 390px" classname="l1/training/training-recompute-label.spec.ts" time="2.042">
+</testcase>
+<testcase name="@L1 training hardware recompute legacy at 390px" classname="l1/training/training-recompute-label.spec.ts" time="2.008">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-strategy-search.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.011" errors="0">
+<testcase name="@L1 训练策略自动寻优" classname="l1/training/training-strategy-search.spec.ts" time="12.011">
+</testcase>
+</testsuite>
+<testsuite name="l1/training/training-task-progress.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="0" time="38.541" errors="0">
+<testcase name="@L1 训练strategy真实任务进度与结果" classname="l1/training/training-task-progress.spec.ts" time="18.574">
+</testcase>
+<testcase name="@L1 训练hardware真实任务进度与结果" classname="l1/training/training-task-progress.spec.ts" time="19.967">
+</testcase>
+</testsuite>
+<testsuite name="l2/shell/observability.spec.ts" timestamp="2026-10-25T20:05:48.251Z" hostname="chromium" tests="2" failures="0" skipped="2" time="0.28" errors="0">
+<testcase name="@L2 显式开启时首页发送受控浏览器采集批次" classname="l2/shell/observability.spec.ts">
+<properties>
+<property name="skip" value="默认关闭浏览器采集">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="@L2 真实后端接受首页浏览器采集批次" classname="l2/shell/observability.spec.ts">
+<properties>
+<property name="skip" value="需要配置已启用 observability intake 的真实后端">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>
