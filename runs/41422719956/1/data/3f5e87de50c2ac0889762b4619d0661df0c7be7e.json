@@ -1,0 +1,56 @@
+{
+  "before": {
+    "colors": [
+      {
+        "color": "rgb(238, 234, 228)",
+        "background": "rgb(27, 28, 30)",
+        "inline": "border-color: var(--theme-border-strong, #1a1a1a); background: var(--theme-surface, #fff); color: var(--theme-text, #1a1a1a);"
+      },
+      {
+        "color": "rgb(36, 28, 18)",
+        "background": "rgb(166, 161, 154)",
+        "inline": "border-color: var(--theme-border-strong, #fff); background: var(--theme-muted, #1a1a1a); color: var(--theme-on-accent, #fff);"
+      }
+    ],
+    "theme": "dark",
+    "preference": "dark"
+  },
+  "after": {
+    "colors": [
+      {
+        "color": "rgb(238, 234, 228)",
+        "background": "rgb(27, 28, 30)",
+        "inline": "border-color: var(--theme-border-strong, #1a1a1a); background: var(--theme-surface, #fff); color: var(--theme-text, #1a1a1a);"
+      },
+      {
+        "color": "rgb(36, 28, 18)",
+        "background": "rgb(166, 161, 154)",
+        "inline": "border-color: var(--theme-border-strong, #fff); background: var(--theme-muted, #1a1a1a); color: var(--theme-on-accent, #fff);"
+      }
+    ],
+    "theme": "dark",
+    "preference": "dark"
+  },
+  "results": [
+    {
+      "name": "START",
+      "cloneStyle": {
+        "color": "rgb(26, 26, 26)",
+        "background": "rgb(255, 255, 255)"
+      },
+      "black": 140,
+      "white": 35255,
+      "gray": 1
+    },
+    {
+      "name": "END",
+      "cloneStyle": {
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(26, 26, 26)"
+      },
+      "black": 35381,
+      "white": 109,
+      "gray": 0
+    }
+  ]
+}
