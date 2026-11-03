@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: l1/calibration/user-calibration.spec.ts >> @L1 Profiling构建候选同页关闭重开从服务器恢复
-- Location: e2e/specs/l1/calibration/user-calibration.spec.ts:904:1
+- Name: l1/calibration/user-calibration.spec.ts >> @L1 Profiling迟到打开版本响应不覆盖较新的构建候选
+- Location: e2e/specs/l1/calibration/user-calibration.spec.ts:922:1
 
 # Error details
 
@@ -21,15 +21,18 @@ Call log:
   - waiting for getByTestId('calibration-build-candidate')
     - locator resolved to <button disabled type="button" data-v-8844ad3b="" class="primary-button" data-testid="calibration-build-candidate">生成构建候选</button>
   - attempting click action
-    2 × waiting for element to be visible, enabled and stable
-      - element is not enabled
-    - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is not enabled
+  - retrying click action
     - waiting 20ms
     2 × waiting for element to be visible, enabled and stable
       - element is not enabled
     - retrying click action
       - waiting 100ms
-    28 × waiting for element to be visible, enabled and stable
+    29 × waiting for element to be visible, enabled and stable
        - element is not enabled
      - retrying click action
        - waiting 500ms
@@ -64,9 +67,9 @@ Call log:
         - /url: /zrt-sim/user-manual
       - button "切换至深色模式" [ref=e20] [cursor=pointer]:
         - img [ref=e21]
-      - button "pw_user_6_1793714727609" [ref=e23] [cursor=pointer]:
+      - button "pw_user_7_1793746026872" [ref=e23] [cursor=pointer]:
         - img [ref=e24]
-        - generic [ref=e27]: pw_user_6_1793714727609
+        - generic [ref=e27]: pw_user_7_1793746026872
       - generic [ref=e29]: Calibration
   - main [ref=e30]:
     - generic [ref=e31]:
@@ -160,23 +163,23 @@ Call log:
                     - columnheader "更新时间" [ref=e99]
                     - columnheader "操作" [ref=e100]
                 - rowgroup [ref=e101]:
-                  - row "Profiling重开-1793714733701 修订版本 v1 Profiling Candidate_pw_6_1793714727609 / llama3-70b / train 草稿 Profiling 已导入 · 尚未生成诊断候选 2026/11/3 22:05:34 查看/管理" [ref=e102]:
-                    - cell "Profiling重开-1793714733701 修订版本 v1" [ref=e103]:
-                      - button "Profiling重开-1793714733701" [ref=e104] [cursor=pointer]
+                  - row "Profiling迟到打开-1793746032975 修订版本 v1 Profiling Candidate_pw_7_1793746026872 / llama3-70b / train 草稿 Profiling 已导入 · 尚未生成诊断候选 2026/11/4 06:47:13 查看/管理" [ref=e102]:
+                    - cell "Profiling迟到打开-1793746032975 修订版本 v1" [ref=e103]:
+                      - button "Profiling迟到打开-1793746032975" [ref=e104] [cursor=pointer]
                       - generic "同一校准方案的修订编号；编号大小不决定生效优先级" [ref=e105]: 修订版本 v1
-                    - cell "Profiling Candidate_pw_6_1793714727609 / llama3-70b / train" [ref=e106]:
+                    - cell "Profiling Candidate_pw_7_1793746026872 / llama3-70b / train" [ref=e106]:
                       - generic [ref=e107]: Profiling
-                      - generic "Candidate_pw_6_1793714727609 / llama3-70b / train" [ref=e108]
+                      - generic "Candidate_pw_7_1793746026872 / llama3-70b / train" [ref=e108]
                     - cell "草稿 Profiling 已导入 · 尚未生成诊断候选" [ref=e109]:
                       - generic [ref=e110]: 草稿
                       - generic [ref=e111]: Profiling 已导入 · 尚未生成诊断候选
-                    - cell "2026/11/3 22:05:34" [ref=e112]
+                    - cell "2026/11/4 06:47:13" [ref=e112]
                     - cell "查看/管理" [ref=e113]:
                       - button "查看/管理" [ref=e114] [cursor=pointer]
               - dialog "版本详情" [ref=e115]:
                 - button "关闭详情" [ref=e116] [cursor=pointer]
                 - generic [ref=e118]:
-                  - heading "Profiling重开-1793714733701" [level=3] [ref=e119]
+                  - heading "Profiling迟到打开-1793746032975" [level=3] [ref=e119]
                   - paragraph [ref=e120]: 完整详情来自版本详情接口。
                 - generic [ref=e121]:
                   - button "编辑/管理草稿" [ref=e122] [cursor=pointer]
@@ -187,7 +190,7 @@ Call log:
                   - term [ref=e127]: 状态
                   - definition [ref=e128]: 草稿
                   - term [ref=e129]: 范围
-                  - definition [ref=e130]: Candidate_pw_6_1793714727609 / llama3-70b / train
+                  - definition [ref=e130]: Candidate_pw_7_1793746026872 / llama3-70b / train
                   - term [ref=e131]: 诊断状态
                   - definition [ref=e132]:
                     - generic [ref=e133]: 待构建
@@ -212,13 +215,13 @@ Call log:
           - text: 版本名称
           - textbox "版本名称" [disabled] [ref=e153]:
             - /placeholder: 例如：A3 BF16 算子校准
-            - text: Profiling重开-1793714733701
+            - text: Profiling迟到打开-1793746032975
         - generic [ref=e154]:
           - text: 阶段范围
           - combobox "阶段范围" [disabled] [ref=e156]: train
         - generic [ref=e157]:
           - text: 硬件标识
-          - combobox "硬件标识" [disabled] [ref=e159]: Candidate_pw_6_1793714727609
+          - combobox "硬件标识" [disabled] [ref=e159]: Candidate_pw_7_1793746026872
         - generic [ref=e160]:
           - text: 模型范围
           - combobox "模型范围" [disabled] [ref=e162]: llama3-70b
@@ -235,12 +238,12 @@ Call log:
               - text: 源训练任务（可选）
               - combobox "源训练任务（可选）" [ref=e174]:
                 - option "不选择（仅精确 Shape）"
-                - option "#18 「llama3-70b」性能评估 · 11/3/2026, 10:05:27 PM" [selected]
+                - option "#19 「llama3-70b」性能评估 · 11/4/2026, 6:47:06 AM" [selected]
             - generic [ref=e175]:
               - text: 或输入源训练任务 ID（可选）
               - textbox "或输入源训练任务 ID（可选）" [ref=e176]:
                 - /placeholder: 留空则构建仅精确 Shape 校准
-                - text: "18"
+                - text: "19"
             - paragraph [ref=e177]: 不选择任务也可构建候选：仅已测 Shape 生效，其他 Shape 回退系统；不会声称跨 Shape 精度改善。
             - alert [ref=e178]: 构建前检查未通过：源任务硬件快照与校准版本不匹配。 请选择硬件规格相同的成功任务。
             - button "生成构建候选" [disabled] [ref=e179]
@@ -280,7 +283,7 @@ Call log:
         - article [ref=e208]:
           - generic [ref=e209]:
             - strong [ref=e210]: MatMulV3.csv
-            - generic [ref=e211]: 有效 5 / 总 5 · 无效 0 · 11/3/2026, 10:05:34 PM
+            - generic [ref=e211]: 有效 5 / 总 5 · 无效 0 · 11/4/2026, 6:47:13 AM
           - generic [ref=e212]: 格式：规范算子 CSV
           - generic [ref=e213]: 来源：TP 1 / DP 1 / PP 1 · CANN 未记录
           - button "下载原始文件" [ref=e214] [cursor=pointer]
@@ -293,7 +296,7 @@ Call log:
         - generic [ref=e220]:
           - strong [ref=e221]: 输入准备检查不等于精度验证，当前版本仍不能发布
           - paragraph [ref=e222]: 当前资产声明：已找到当前阶段唯一资产；一致也不能证明真机采集来源。
-          - paragraph [ref=e223]: 批次 b8bb0d4c：导入时已绑定选中资产，当前规格一致；未填写指纹。资产绑定不证明真机采集来源。
+          - paragraph [ref=e223]: 批次 c94d469f：导入时已绑定选中资产，当前规格一致；未填写指纹。资产绑定不证明真机采集来源。
           - paragraph [ref=e224]: 草稿修订 2 · 批次 1 · 原始 5 行 · 重复 0 行 · 隔离 0 行
           - paragraph [ref=e225]: MatMulV3 / bf16 · 来源 TP 1 / DP 1 / PP 1：5 个独立 Shape、5 条观测；缺少来源硬件或模型指纹
       - generic [ref=e226]:
@@ -304,31 +307,6 @@ Call log:
 # Test source
 
 ```ts
-  811  |   expect(building.validation.active_run_id).toBe(Number(build.internal_run_id))
-  812  |   await removeBuildingBatch(page, version.id)
-  813  |   await expect(page.getByText('有效 5 / 总 5')).toHaveCount(0)
-  814  |   await expect(page.getByTestId('calibration-build-candidate-report')).toHaveCount(0)
-  815  |   await expect.poll(async () => (await api.getJob(String(build.run_id))).status, {
-  816  |     timeout: 30_000,
-  817  |   }).toMatch(/^(succeeded|failed|cancelled)$/)
-  818  |   const persisted = await page.request.get(`${backend}/api/calibrations/versions/${version.id}`, {
-  819  |     headers: buildTestUserHeaders(testOwner),
-  820  |   })
-  821  |   const detail = await persisted.json()
-  822  |   expect(detail.lifecycle).toBe('draft')
-  823  |   expect(detail.compiled).toEqual({})
-  824  |   expect(detail.validation.status).toBe('stale')
-  825  |   expect(detail.validation).not.toHaveProperty('active_run_id')
-  826  | })
-  827  | 
-  828  | test('@L1 Profiling构建候选显式终止后回到草稿', async ({ page, api, catalogs, testOwner }) => {
-  829  |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
-  830  |   if (!backend) throw new Error('E2E_BACKEND_URL is required')
-  831  |   const { taskId, hardwareName } = await prepareCandidateSource(page, api, catalogs, testOwner)
-  832  |   const versionName = `Profiling终止-${Date.now()}`
-  833  |   await openCandidateDraft(page, catalogs, hardwareName, versionName)
-  834  |   await commitSourceTaskId(page, taskId)
-  835  |   const submitted = page.waitForResponse(response => response.request().method() === 'POST'
   836  |     && response.url().includes('/build-candidate'))
   837  |   await page.getByTestId('calibration-build-candidate').click()
   838  |   const buildResponse = await submitted
@@ -404,8 +382,7 @@ Call log:
   908  |   await commitSourceTaskId(page, taskId)
   909  |   const submitted = page.waitForResponse(item => item.request().method() === 'POST'
   910  |     && item.url().includes('/build-candidate'))
-> 911  |   await page.getByTestId('calibration-build-candidate').click()
-       |                                                         ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  911  |   await page.getByTestId('calibration-build-candidate').click()
   912  |   const build = await (await submitted).json()
   913  |   await page.getByRole('button', { name: '取消' }).click()
   914  |   await expect(page.getByRole('dialog')).toHaveCount(0)
@@ -430,7 +407,8 @@ Call log:
   933  |   await commitSourceTaskId(page, taskId)
   934  |   const submitted = page.waitForResponse(response => response.request().method() === 'POST'
   935  |     && response.url().includes('/build-candidate'))
-  936  |   await page.getByTestId('calibration-build-candidate').click()
+> 936  |   await page.getByTestId('calibration-build-candidate').click()
+       |                                                         ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
   937  |   const build = await (await submitted).json()
   938  |   await api.waitForJob(String(build.run_id), 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
   939  |   const report = page.getByTestId('calibration-build-candidate-report')
@@ -506,4 +484,29 @@ Call log:
   1009 |   await page.getByRole('button', { name: '取消' }).click()
   1010 |   await page.getByRole('dialog', { name: '版本详情' }).getByRole('button', { name: '编辑/管理草稿' }).click()
   1011 |   await expect(page.getByText('有效 5 / 总 5')).toHaveCount(2)
+  1012 |   const oldResponse = page.waitForResponse(item => item.request().method() === 'POST'
+  1013 |     && item.url().includes('/batches?'))
+  1014 |   release?.()
+  1015 |   expect((await oldResponse).status()).toBe(201)
+  1016 |   await page.waitForTimeout(300)
+  1017 |   await expect(page.getByRole('dialog', { name: '追加 Profiling 批次' })).toBeVisible()
+  1018 | })
+  1019 | 
+  1020 | test('@L1 用户 Profiling CSV 私有批次导入与移除', async ({ page, catalogs }) => {
+  1021 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
+  1022 |   const versionName = `E2E-Profiling-${Date.now()}`
+  1023 |   const csv = Buffer.from(
+  1024 |     'op_type,op_name,op_state,tasktype,torch_input_params,input_shapes,input_data_types,input_formats,output_shapes,output_data_types,output_formats,task_duration_us,trimmed_sample_count\n'
+  1025 |     + 'MatMulV3,aclnnMatmul,dynamic,AI_CORE,"{""x1"": {""shape"": [8, 16]}, ""x2"": {""shape"": [16, 4]}, ""transpose_x1"": false, ""transpose_x2"": false}","8,16;16,4",DT_BF16;DT_BF16,ND;ND,"8,4",DT_BF16,ND,"{""mean"": 12.5}",21\n',
+  1026 |   )
+  1027 | 
+  1028 |   await page.goto('/zrt-sim/calibration')
+  1029 |   await page.getByTestId('calibration-create-open').click()
+  1030 |   await page.getByRole('button', { name: /导入 Profiling/ }).click()
+  1031 |   await page.getByTestId('calibration-version-name').fill(versionName)
+  1032 |   await page.getByTestId('calibration-version-hardware').fill(catalogs.train.hardwareName)
+  1033 |   await page.getByTestId('calibration-version-model').fill(catalogs.train.modelId)
+  1034 |   await page.getByTestId('calibration-version-phase').fill('train')
+  1035 |   await page.getByTestId('calibration-profile-file').setInputFiles({
+  1036 |     name: 'MatMulV3.csv', mimeType: 'text/csv', buffer: csv,
 ```
