@@ -38,9 +38,9 @@
         "color": "rgb(26, 26, 26)",
         "background": "rgb(255, 255, 255)"
       },
-      "black": 239,
-      "white": 35119,
-      "gray": 5
+      "black": 140,
+      "white": 35255,
+      "gray": 1
     },
     {
       "name": "END",
@@ -48,8 +48,8 @@
         "color": "rgb(255, 255, 255)",
         "background": "rgb(26, 26, 26)"
       },
-      "black": 35284,
-      "white": 180,
+      "black": 35381,
+      "white": 109,
       "gray": 0
     }
   ]
