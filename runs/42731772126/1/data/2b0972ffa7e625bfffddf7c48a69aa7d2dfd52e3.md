@@ -6,8 +6,8 @@
 
 # Test info
 
-- Name: l1/calibration/user-calibration.spec.ts >> @L1 Profiling构建候选期间修改批次使旧运行失效
-- Location: e2e/specs/l1/calibration/user-calibration.spec.ts:787:1
+- Name: l1/calibration/user-calibration.spec.ts >> @L1 Profiling终止重载完成前不允许重试并保留新运行终止能力
+- Location: e2e/specs/l1/calibration/user-calibration.spec.ts:872:1
 
 # Error details
 
@@ -29,7 +29,7 @@ Call log:
       - element is not enabled
     - retrying click action
       - waiting 100ms
-    28 × waiting for element to be visible, enabled and stable
+    29 × waiting for element to be visible, enabled and stable
        - element is not enabled
      - retrying click action
        - waiting 500ms
@@ -64,9 +64,9 @@ Call log:
         - /url: /zrt-sim/user-manual
       - button "切换至深色模式" [ref=e20] [cursor=pointer]:
         - img [ref=e21]
-      - button "pw_user_3_1794044358725" [ref=e23] [cursor=pointer]:
+      - button "pw_user_5_1794273542498" [ref=e23] [cursor=pointer]:
         - img [ref=e24]
-        - generic [ref=e27]: pw_user_3_1794044358725
+        - generic [ref=e27]: pw_user_5_1794273542498
       - generic [ref=e29]: Calibration
   - main [ref=e30]:
     - generic [ref=e31]:
@@ -160,23 +160,23 @@ Call log:
                     - columnheader "更新时间" [ref=e99]
                     - columnheader "操作" [ref=e100]
                 - rowgroup [ref=e101]:
-                  - row "Profiling失效-1794044364813 修订版本 v1 Profiling Candidate_pw_3_1794044358725 / llama3-70b / train 草稿 Profiling 已导入 · 尚未生成诊断候选 2026/11/7 17:39:25 查看/管理" [ref=e102]:
-                    - cell "Profiling失效-1794044364813 修订版本 v1" [ref=e103]:
-                      - button "Profiling失效-1794044364813" [ref=e104] [cursor=pointer]
+                  - row "Profiling终止重载-1794273548603 修订版本 v1 Profiling Candidate_pw_5_1794273542498 / llama3-70b / train 草稿 Profiling 已导入 · 尚未生成诊断候选 2026/11/10 09:19:09 查看/管理" [ref=e102]:
+                    - cell "Profiling终止重载-1794273548603 修订版本 v1" [ref=e103]:
+                      - button "Profiling终止重载-1794273548603" [ref=e104] [cursor=pointer]
                       - generic "同一校准方案的修订编号；编号大小不决定生效优先级" [ref=e105]: 修订版本 v1
-                    - cell "Profiling Candidate_pw_3_1794044358725 / llama3-70b / train" [ref=e106]:
+                    - cell "Profiling Candidate_pw_5_1794273542498 / llama3-70b / train" [ref=e106]:
                       - generic [ref=e107]: Profiling
-                      - generic "Candidate_pw_3_1794044358725 / llama3-70b / train" [ref=e108]
+                      - generic "Candidate_pw_5_1794273542498 / llama3-70b / train" [ref=e108]
                     - cell "草稿 Profiling 已导入 · 尚未生成诊断候选" [ref=e109]:
                       - generic [ref=e110]: 草稿
                       - generic [ref=e111]: Profiling 已导入 · 尚未生成诊断候选
-                    - cell "2026/11/7 17:39:25" [ref=e112]
+                    - cell "2026/11/10 09:19:09" [ref=e112]
                     - cell "查看/管理" [ref=e113]:
                       - button "查看/管理" [ref=e114] [cursor=pointer]
               - dialog "版本详情" [ref=e115]:
                 - button "关闭详情" [ref=e116] [cursor=pointer]
                 - generic [ref=e118]:
-                  - heading "Profiling失效-1794044364813" [level=3] [ref=e119]
+                  - heading "Profiling终止重载-1794273548603" [level=3] [ref=e119]
                   - paragraph [ref=e120]: 完整详情来自版本详情接口。
                 - generic [ref=e121]:
                   - button "编辑/管理草稿" [ref=e122] [cursor=pointer]
@@ -187,7 +187,7 @@ Call log:
                   - term [ref=e127]: 状态
                   - definition [ref=e128]: 草稿
                   - term [ref=e129]: 范围
-                  - definition [ref=e130]: Candidate_pw_3_1794044358725 / llama3-70b / train
+                  - definition [ref=e130]: Candidate_pw_5_1794273542498 / llama3-70b / train
                   - term [ref=e131]: 诊断状态
                   - definition [ref=e132]:
                     - generic [ref=e133]: 待构建
@@ -212,13 +212,13 @@ Call log:
           - text: 版本名称
           - textbox "版本名称" [disabled] [ref=e153]:
             - /placeholder: 例如：A3 BF16 算子校准
-            - text: Profiling失效-1794044364813
+            - text: Profiling终止重载-1794273548603
         - generic [ref=e154]:
           - text: 阶段范围
           - combobox "阶段范围" [disabled] [ref=e156]: train
         - generic [ref=e157]:
           - text: 硬件标识
-          - combobox "硬件标识" [disabled] [ref=e159]: Candidate_pw_3_1794044358725
+          - combobox "硬件标识" [disabled] [ref=e159]: Candidate_pw_5_1794273542498
         - generic [ref=e160]:
           - text: 模型范围
           - combobox "模型范围" [disabled] [ref=e162]: llama3-70b
@@ -235,12 +235,12 @@ Call log:
               - text: 源训练任务（可选）
               - combobox "源训练任务（可选）" [ref=e174]:
                 - option "不选择（仅精确 Shape）"
-                - option "#15 「llama3-70b」性能评估 · 11/7/2026, 5:39:18 PM" [selected]
+                - option "#17 「llama3-70b」性能评估 · 11/10/2026, 9:19:02 AM" [selected]
             - generic [ref=e175]:
               - text: 或输入源训练任务 ID（可选）
               - textbox "或输入源训练任务 ID（可选）" [ref=e176]:
                 - /placeholder: 留空则构建仅精确 Shape 校准
-                - text: "15"
+                - text: "17"
             - paragraph [ref=e177]: 不选择任务也可构建候选：仅已测 Shape 生效，其他 Shape 回退系统；不会声称跨 Shape 精度改善。
             - alert [ref=e178]: 构建前检查未通过：源任务硬件快照与校准版本不匹配。 请选择硬件规格相同的成功任务。
             - button "生成构建候选" [disabled] [ref=e179]
@@ -280,7 +280,7 @@ Call log:
         - article [ref=e208]:
           - generic [ref=e209]:
             - strong [ref=e210]: MatMulV3.csv
-            - generic [ref=e211]: 有效 5 / 总 5 · 无效 0 · 11/7/2026, 5:39:25 PM
+            - generic [ref=e211]: 有效 5 / 总 5 · 无效 0 · 11/10/2026, 9:19:09 AM
           - generic [ref=e212]: 格式：规范算子 CSV
           - generic [ref=e213]: 来源：TP 1 / DP 1 / PP 1 · CANN 未记录
           - button "下载原始文件" [ref=e214] [cursor=pointer]
@@ -293,7 +293,7 @@ Call log:
         - generic [ref=e220]:
           - strong [ref=e221]: 输入准备检查不等于精度验证，当前版本仍不能发布
           - paragraph [ref=e222]: 当前资产声明：已找到当前阶段唯一资产；一致也不能证明真机采集来源。
-          - paragraph [ref=e223]: 批次 bf96060c：导入时已绑定选中资产，当前规格一致；未填写指纹。资产绑定不证明真机采集来源。
+          - paragraph [ref=e223]: 批次 65495c73：导入时已绑定选中资产，当前规格一致；未填写指纹。资产绑定不证明真机采集来源。
           - paragraph [ref=e224]: 草稿修订 2 · 批次 1 · 原始 5 行 · 重复 0 行 · 隔离 0 行
           - paragraph [ref=e225]: MatMulV3 / bf16 · 来源 TP 1 / DP 1 / PP 1：5 个独立 Shape、5 条观测；缺少来源硬件或模型指纹
       - generic [ref=e226]:
@@ -304,91 +304,6 @@ Call log:
 # Test source
 
 ```ts
-  696 |   // 观测点：输入框失焦到任务下拉时不重放旧 ID，仅为最终选中的任务做一次检查。
-  697 |   await page.route('**/api/tasks?domain=train&operation=estimate&status=succeeded&page_size=50', route => route.fulfill({
-  698 |     json: { items: [{ id: 777, title: '切换目标', created_at: new Date().toISOString() }] },
-  699 |   }))
-  700 |   await openCandidateDraft(page, catalogs, catalogs.train.hardwareName, `Profiling任务切换-${Date.now()}`)
-  701 |   const checked: string[] = []
-  702 |   await page.route('**/api/calibrations/versions/*/shape-fit-preview?source_task_id=*', async route => {
-  703 |     checked.push(route.request().url())
-  704 |     await route.fulfill({ status: 404, json: { detail: '源任务不存在或无权访问。' } })
-  705 |   })
-  706 |   const input = page.getByTestId('calibration-source-task-id')
-  707 |   const select = page.getByTestId('calibration-source-task-select')
-  708 |   await input.fill('999')
-  709 |   await select.click()
-  710 |   await select.selectOption('777')
-  711 |   await expect.poll(() => checked.length).toBe(1)
-  712 |   expect(checked[0]).toContain('source_task_id=777')
-  713 | })
-  714 | 
-  715 | test('@L1 重查源任务失败后不沿用旧的兼容性通过状态', async ({ page, api, catalogs, testOwner }) => {
-  716 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
-  717 |   const { taskId, hardwareName } = await prepareCandidateSource(page, api, catalogs, testOwner, true)
-  718 |   await openCandidateDraft(page, catalogs, hardwareName, `Profiling重查-${Date.now()}`)
-  719 |   await commitSourceTaskId(page, taskId)
-  720 |   await expect(page.getByTestId('calibration-build-candidate')).toBeEnabled({ timeout: 60_000 })
-  721 |   await page.route('**/api/calibrations/versions/*/shape-fit-preview?source_task_id=*', async route => {
-  722 |     await route.fulfill({ status: 409, contentType: 'application/json', body: JSON.stringify({
-  723 |       detail: '源任务硬件快照与校准版本不匹配。',
-  724 |       error_info: { code: 'CALIBRATION.SOURCE_HARDWARE_MISMATCH', action: '请选择硬件规格相同的任务。' },
-  725 |     }) })
-  726 |   })
-  727 |   await page.getByTestId('calibration-source-task-id').fill('')
-  728 |   await commitSourceTaskId(page, taskId)
-  729 |   await expect(page.getByTestId('calibration-source-task-error')).toContainText('请选择硬件规格相同的任务。')
-  730 |   await expect(page.getByTestId('calibration-build-candidate')).toBeDisabled()
-  731 | })
-  732 | 
-  733 | test('@L1 真实训练页面任务可作为 Profiling 候选来源', async ({ page, api, catalogs, testOwner }) => {
-  734 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
-  735 |   if (!backend) throw new Error('E2E_BACKEND_URL is required')
-  736 |   const trainingPage = new TrainingModelPage(page)
-  737 |   await trainingPage.goto()
-  738 |   await trainingPage.fillForm({
-  739 |     modelId: catalogs.train.modelId, presetId: catalogs.train.hardwareId,
-  740 |     tp: 1, pp: 1, ep: 1, cp: 1,
-  741 |   })
-  742 |   await trainingPage.expectReadyToSubmit()
-  743 |   const accepted = await submitAndExpectAccepted(page, '/api/train/estimate', () => trainingPage.runButton.click())
-  744 |   expect(accepted.request().postDataJSON().model_json).toBeUndefined()
-  745 |   const task = await accepted.json()
-  746 |   await api.waitForJob(task.run_id, 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
-  747 |   const taskResponse = await page.request.get(`${backend}/api/tasks/${task.task_id}`, {
-  748 |     headers: buildTestUserHeaders(testOwner),
-  749 |   })
-  750 |   expect(taskResponse.ok(), await taskResponse.text()).toBe(true)
-  751 |   const frozenTask = await taskResponse.json()
-  752 |   const configResponse = await page.request.get(`${backend}/api/configs/${frozenTask.config_id}`, {
-  753 |     headers: buildTestUserHeaders(testOwner),
-  754 |   })
-  755 |   expect(configResponse.ok(), await configResponse.text()).toBe(true)
-  756 |   const frozenModel = (await configResponse.json()).config_json.model_json
-  757 |   expect(frozenModel).toBeTruthy()
-  758 |   expect(Object.hasOwn(frozenModel, 'domain')).toBe(false)
-  759 | 
-  760 |   await openCandidateDraft(page, catalogs, catalogs.train.hardwareName, `Profiling真实任务-${Date.now()}`)
-  761 |   const preview = page.waitForResponse(response => response.request().method() === 'GET'
-  762 |     && response.url().includes(`/shape-fit-preview?source_task_id=${task.task_id}`))
-  763 |   await commitSourceTaskId(page, task.task_id)
-  764 |   expect((await preview).status()).toBe(200)
-  765 |   await expect(page.getByTestId('calibration-build-candidate')).toBeEnabled({ timeout: 60_000 })
-  766 |   const submission = page.waitForResponse(response => response.request().method() === 'POST'
-  767 |     && response.url().includes('/build-candidate'))
-  768 |   await page.getByTestId('calibration-build-candidate').click()
-  769 |   const build = await submission
-  770 |   expect(build.status(), await build.text()).toBe(202)
-  771 |   const run = await build.json()
-  772 |   await api.waitForJob(run.run_id, 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
-  773 |   await expect(page.getByTestId('calibration-build-candidate-report'))
-  774 |     .toContainText(`来源训练任务 #${task.task_id}`, { timeout: 30_000 })
-  775 | })
-  776 | 
-  777 | async function removeBuildingBatch(page: Page, versionId: string) {
-  778 |   await page.getByRole('button', { name: '从草稿移除' }).click()
-  779 |   const confirmation = page.getByRole('alertdialog', { name: '确认修改批次' })
-  780 |   await expect(confirmation).toContainText('修改批次会使当前构建失效')
   781 |   const removed = page.waitForResponse(response => response.request().method() === 'DELETE'
   782 |     && new URL(response.url()).pathname.includes(`/api/calibrations/versions/${versionId}/batches/`))
   783 |   await confirmation.getByRole('button', { name: '继续修改' }).click()
@@ -404,8 +319,7 @@ Call log:
   793 |   await commitSourceTaskId(page, sourceTaskId)
   794 |   const submitted = page.waitForResponse(response => response.request().method() === 'POST'
   795 |     && response.url().includes('/build-candidate'))
-> 796 |   await page.getByTestId('calibration-build-candidate').click()
-      |                                                         ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
+  796 |   await page.getByTestId('calibration-build-candidate').click()
   797 |   const buildResponse = await submitted
   798 |   expect(buildResponse.status(), await buildResponse.text()).toBe(202)
   799 |   const build = await buildResponse.json()
@@ -490,7 +404,8 @@ Call log:
   878 |   await commitSourceTaskId(page, taskId)
   879 |   const submitted = page.waitForResponse(response => response.request().method() === 'POST'
   880 |     && response.url().includes('/build-candidate'))
-  881 |   await page.getByTestId('calibration-build-candidate').click()
+> 881 |   await page.getByTestId('calibration-build-candidate').click()
+      |                                                         ^ TimeoutError: locator.click: Timeout 15000ms exceeded.
   882 |   const first = await (await submitted).json()
   883 |   await expect(page.getByTestId('calibration-build-cancel')).toBeVisible()
   884 |   const delayed = await holdFirstVersionRead(page, versionId)
@@ -506,4 +421,89 @@ Call log:
   894 |   await expect(retry).toBeEnabled()
   895 |   const retried = page.waitForResponse(response => response.request().method() === 'POST'
   896 |     && response.url().includes('/build-candidate'))
+  897 |   await retry.click()
+  898 |   const second = await (await retried).json()
+  899 |   expect(second.run_id).not.toBe(first.run_id)
+  900 |   await expect(page.getByTestId('calibration-build-cancel')).toBeVisible()
+  901 |   await expect(page.getByTestId('calibration-build-cancel')).toBeEnabled()
+  902 | })
+  903 | 
+  904 | test('@L1 Profiling构建候选同页关闭重开从服务器恢复', async ({ page, api, catalogs, testOwner }) => {
+  905 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
+  906 |   const { taskId, hardwareName } = await prepareCandidateSource(page, api, catalogs, testOwner)
+  907 |   await openCandidateDraft(page, catalogs, hardwareName, `Profiling重开-${Date.now()}`)
+  908 |   await commitSourceTaskId(page, taskId)
+  909 |   const submitted = page.waitForResponse(item => item.request().method() === 'POST'
+  910 |     && item.url().includes('/build-candidate'))
+  911 |   await page.getByTestId('calibration-build-candidate').click()
+  912 |   const build = await (await submitted).json()
+  913 |   await page.getByRole('button', { name: '取消' }).click()
+  914 |   await expect(page.getByRole('dialog')).toHaveCount(0)
+  915 |   await page.getByRole('dialog', { name: '版本详情' }).getByRole('button', { name: '编辑/管理草稿' }).click()
+  916 |   await expect(page.getByTestId('calibration-build-progress')).toContainText(`运行 #${build.internal_run_id}`)
+  917 |   await api.waitForJob(String(build.run_id), 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
+  918 |   await expect(page.getByTestId('calibration-build-candidate-report'))
+  919 |     .toContainText('仅已测 Shape 生效／其他 Shape 回退系统', { timeout: 30_000 })
+  920 | })
+  921 | 
+  922 | test('@L1 Profiling迟到打开版本响应不覆盖较新的构建候选', async ({ page, api, catalogs, testOwner }) => {
+  923 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
+  924 |   const { taskId, hardwareName } = await prepareCandidateSource(page, api, catalogs, testOwner)
+  925 |   const name = `Profiling迟到打开-${Date.now()}`
+  926 |   await openCandidateDraft(page, catalogs, hardwareName, name)
+  927 |   const versionId = await candidateVersionId(page, testOwner, name)
+  928 |   await page.getByRole('button', { name: '取消' }).click()
+  929 |   const delayed = await holdFirstVersionRead(page, versionId)
+  930 |   await page.getByRole('dialog', { name: '版本详情' }).getByRole('button', { name: '编辑/管理草稿' }).click()
+  931 |   await delayed.held
+  932 |   await expect(page.getByText('有效 5 / 总 5')).toBeVisible()
+  933 |   await commitSourceTaskId(page, taskId)
+  934 |   const submitted = page.waitForResponse(response => response.request().method() === 'POST'
+  935 |     && response.url().includes('/build-candidate'))
+  936 |   await page.getByTestId('calibration-build-candidate').click()
+  937 |   const build = await (await submitted).json()
+  938 |   await api.waitForJob(String(build.run_id), 'succeeded', E2E_MULTI_TASK_TIMEOUT_MS)
+  939 |   const report = page.getByTestId('calibration-build-candidate-report')
+  940 |   await expect(report).toContainText(build.input_hash, { timeout: 30_000 })
+  941 |   const staleDelivered = page.waitForResponse(response => response.request().method() === 'GET'
+  942 |     && response.url().endsWith(`/api/calibrations/versions/${versionId}`))
+  943 |   delayed.release()
+  944 |   expect((await staleDelivered).ok()).toBe(true)
+  945 |   await page.waitForTimeout(300)
+  946 |   await expect(report).toContainText(build.input_hash)
+  947 |   await expect(report).toContainText('仅已测 Shape 生效／其他 Shape 回退系统')
+  948 |   await expect(page.getByText('状态：精确 Shape 可执行')).toBeVisible()
+  949 | })
+  950 | 
+  951 | test('@L1 Profiling批次迟到错误不污染同版本或另一版本重开', async ({ page, catalogs }) => {
+  952 |   test.setTimeout(E2E_MULTI_TASK_TIMEOUT_MS)
+  953 |   const nameA = `Profiling迟到A-${Date.now()}`
+  954 |   const rowA = await openCandidateDraft(page, catalogs, catalogs.train.hardwareName, nameA)
+  955 |   await page.getByRole('button', { name: '取消' }).click()
+  956 |   const rowB = await openCandidateDraft(page, catalogs, catalogs.train.hardwareName, `Profiling迟到B-${Date.now()}`)
+  957 |   await page.getByRole('button', { name: '取消' }).click()
+  958 |   await clickVersionAction(page, rowA, '管理草稿与批次')
+  959 |   for (const sameVersion of [true, false]) {
+  960 |     let release: (() => void) | undefined
+  961 |     let intercepted: (() => void) | undefined
+  962 |     const held = new Promise<void>(resolve => { intercepted = resolve })
+  963 |     await page.route('**/api/calibrations/versions/**/batches/**', async route => {
+  964 |       if (route.request().method() !== 'DELETE') return route.continue()
+  965 |       await new Promise<void>(resolve => { release = resolve; intercepted?.() })
+  966 |       await route.fulfill({ status: 500, contentType: 'application/json',
+  967 |         body: JSON.stringify({ detail: 'old batch request failed' }) })
+  968 |     })
+  969 |     await page.getByRole('button', { name: '从草稿移除' }).click()
+  970 |     await held
+  971 |     await page.getByRole('button', { name: '取消' }).click()
+  972 |     await clickVersionAction(page, sameVersion ? rowA : rowB, '管理草稿与批次')
+  973 |     await expect(page.getByRole('dialog', { name: '追加 Profiling 批次' })).toBeVisible()
+  974 |     await expect(page.getByText('有效 5 / 总 5')).toBeVisible()
+  975 |     const oldResponse = page.waitForResponse(item => item.request().method() === 'DELETE'
+  976 |       && item.url().includes('/batches/'))
+  977 |     release?.()
+  978 |     const delayedResponse = await oldResponse
+  979 |     expect(delayedResponse.status()).toBe(500)
+  980 |     await page.waitForTimeout(300)
+  981 |     await expect(page.getByText('old batch request failed')).toHaveCount(0)
 ```
