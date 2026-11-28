@@ -99,7 +99,7 @@ Call log:
                   - generic [ref=e76]: 操作
           - table [ref=e81]:
             - rowgroup [ref=e88]:
-              - row "local-admin 本地管理员 管理员 管理员 2026-11-27 07:09:36 移除" [ref=e89]:
+              - row "local-admin 本地管理员 管理员 管理员 2026-11-28 08:49:28 移除" [ref=e89]:
                 - cell "local-admin" [ref=e90]:
                   - generic [ref=e91]: local-admin
                 - cell "本地管理员" [ref=e92]:
@@ -112,11 +112,11 @@ Call log:
                       - option "开发运维"
                       - option "普通用户"
                     - button "管理员" [ref=e97] [cursor=pointer]
-                - cell "2026-11-27 07:09:36" [ref=e98]:
-                  - generic [ref=e99]: 2026-11-27 07:09:36
+                - cell "2026-11-28 08:49:28" [ref=e98]:
+                  - generic [ref=e99]: 2026-11-28 08:49:28
                 - cell "移除" [ref=e100]:
                   - button "移除" [ref=e102] [cursor=pointer]
-              - row "e2e-admin E2E Admin 管理员 管理员 2026-11-27 07:09:41 移除" [ref=e103]:
+              - row "e2e-admin E2E Admin 管理员 管理员 2026-11-28 08:49:32 移除" [ref=e103]:
                 - cell "e2e-admin" [ref=e104]:
                   - generic [ref=e105]: e2e-admin
                 - cell "E2E Admin" [ref=e106]:
@@ -129,15 +129,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户"
                     - button "管理员" [ref=e111] [cursor=pointer]
-                - cell "2026-11-27 07:09:41" [ref=e112]:
-                  - generic [ref=e113]: 2026-11-27 07:09:41
+                - cell "2026-11-28 08:49:32" [ref=e112]:
+                  - generic [ref=e113]: 2026-11-28 08:49:32
                 - cell "移除" [ref=e114]:
                   - button "移除" [ref=e116] [cursor=pointer]
-              - row "pw_0_1795734586193 pw_user_0_1795734586193 普通用户 普通用户 2026-11-27 07:09:51 移除" [ref=e117]:
-                - cell "pw_0_1795734586193" [ref=e118]:
-                  - generic [ref=e119]: pw_0_1795734586193
-                - cell "pw_user_0_1795734586193" [ref=e120]:
-                  - generic [ref=e121]: pw_user_0_1795734586193
+              - row "pw_0_1795826976365 pw_user_0_1795826976365 普通用户 普通用户 2026-11-28 08:49:38 移除" [ref=e117]:
+                - cell "pw_0_1795826976365" [ref=e118]:
+                  - generic [ref=e119]: pw_0_1795826976365
+                - cell "pw_user_0_1795826976365" [ref=e120]:
+                  - generic [ref=e121]: pw_user_0_1795826976365
                 - cell "普通用户 普通用户" [ref=e122]:
                   - generic [ref=e123]:
                     - combobox [ref=e124] [cursor=pointer]:
@@ -146,15 +146,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e125] [cursor=pointer]
-                - cell "2026-11-27 07:09:51" [ref=e126]:
-                  - generic [ref=e127]: 2026-11-27 07:09:51
+                - cell "2026-11-28 08:49:38" [ref=e126]:
+                  - generic [ref=e127]: 2026-11-28 08:49:38
                 - cell "移除" [ref=e128]:
                   - button "移除" [ref=e130] [cursor=pointer]
-              - row "pw_0_1795734611629 pw_user_0_1795734611629 普通用户 普通用户 2026-11-27 07:10:12 移除" [ref=e131]:
-                - cell "pw_0_1795734611629" [ref=e132]:
-                  - generic [ref=e133]: pw_0_1795734611629
-                - cell "pw_user_0_1795734611629" [ref=e134]:
-                  - generic [ref=e135]: pw_user_0_1795734611629
+              - row "pw_0_1795826991801 pw_user_0_1795826991801 普通用户 普通用户 2026-11-28 08:49:52 移除" [ref=e131]:
+                - cell "pw_0_1795826991801" [ref=e132]:
+                  - generic [ref=e133]: pw_0_1795826991801
+                - cell "pw_user_0_1795826991801" [ref=e134]:
+                  - generic [ref=e135]: pw_user_0_1795826991801
                 - cell "普通用户 普通用户" [ref=e136]:
                   - generic [ref=e137]:
                     - combobox [ref=e138] [cursor=pointer]:
@@ -163,15 +163,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e139] [cursor=pointer]
-                - cell "2026-11-27 07:10:12" [ref=e140]:
-                  - generic [ref=e141]: 2026-11-27 07:10:12
+                - cell "2026-11-28 08:49:52" [ref=e140]:
+                  - generic [ref=e141]: 2026-11-28 08:49:52
                 - cell "移除" [ref=e142]:
                   - button "移除" [ref=e144] [cursor=pointer]
-              - row "pw_0_1795734614896 pw_user_0_1795734614896 普通用户 普通用户 2026-11-27 07:10:15 移除" [ref=e145]:
-                - cell "pw_0_1795734614896" [ref=e146]:
-                  - generic [ref=e147]: pw_0_1795734614896
-                - cell "pw_user_0_1795734614896" [ref=e148]:
-                  - generic [ref=e149]: pw_user_0_1795734614896
+              - row "pw_0_1795826992993 pw_user_0_1795826992993 普通用户 普通用户 2026-11-28 08:49:53 移除" [ref=e145]:
+                - cell "pw_0_1795826992993" [ref=e146]:
+                  - generic [ref=e147]: pw_0_1795826992993
+                - cell "pw_user_0_1795826992993" [ref=e148]:
+                  - generic [ref=e149]: pw_user_0_1795826992993
                 - cell "普通用户 普通用户" [ref=e150]:
                   - generic [ref=e151]:
                     - combobox [ref=e152] [cursor=pointer]:
@@ -180,15 +180,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e153] [cursor=pointer]
-                - cell "2026-11-27 07:10:15" [ref=e154]:
-                  - generic [ref=e155]: 2026-11-27 07:10:15
+                - cell "2026-11-28 08:49:53" [ref=e154]:
+                  - generic [ref=e155]: 2026-11-28 08:49:53
                 - cell "移除" [ref=e156]:
                   - button "移除" [ref=e158] [cursor=pointer]
-              - row "pw_0_1795734616952 pw_user_0_1795734616952 普通用户 普通用户 2026-11-27 07:10:17 移除" [ref=e159]:
-                - cell "pw_0_1795734616952" [ref=e160]:
-                  - generic [ref=e161]: pw_0_1795734616952
-                - cell "pw_user_0_1795734616952" [ref=e162]:
-                  - generic [ref=e163]: pw_user_0_1795734616952
+              - row "pw_0_1795826994006 pw_user_0_1795826994006 普通用户 普通用户 2026-11-28 08:49:54 移除" [ref=e159]:
+                - cell "pw_0_1795826994006" [ref=e160]:
+                  - generic [ref=e161]: pw_0_1795826994006
+                - cell "pw_user_0_1795826994006" [ref=e162]:
+                  - generic [ref=e163]: pw_user_0_1795826994006
                 - cell "普通用户 普通用户" [ref=e164]:
                   - generic [ref=e165]:
                     - combobox [ref=e166] [cursor=pointer]:
@@ -197,15 +197,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e167] [cursor=pointer]
-                - cell "2026-11-27 07:10:17" [ref=e168]:
-                  - generic [ref=e169]: 2026-11-27 07:10:17
+                - cell "2026-11-28 08:49:54" [ref=e168]:
+                  - generic [ref=e169]: 2026-11-28 08:49:54
                 - cell "移除" [ref=e170]:
                   - button "移除" [ref=e172] [cursor=pointer]
-              - row "pw_0_1795734618381 pw_user_0_1795734618381 普通用户 普通用户 2026-11-27 07:10:19 移除" [ref=e173]:
-                - cell "pw_0_1795734618381" [ref=e174]:
-                  - generic [ref=e175]: pw_0_1795734618381
-                - cell "pw_user_0_1795734618381" [ref=e176]:
-                  - generic [ref=e177]: pw_user_0_1795734618381
+              - row "pw_0_1795826994626 pw_user_0_1795826994626 普通用户 普通用户 2026-11-28 08:49:54 移除" [ref=e173]:
+                - cell "pw_0_1795826994626" [ref=e174]:
+                  - generic [ref=e175]: pw_0_1795826994626
+                - cell "pw_user_0_1795826994626" [ref=e176]:
+                  - generic [ref=e177]: pw_user_0_1795826994626
                 - cell "普通用户 普通用户" [ref=e178]:
                   - generic [ref=e179]:
                     - combobox [ref=e180] [cursor=pointer]:
@@ -214,15 +214,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e181] [cursor=pointer]
-                - cell "2026-11-27 07:10:19" [ref=e182]:
-                  - generic [ref=e183]: 2026-11-27 07:10:19
+                - cell "2026-11-28 08:49:54" [ref=e182]:
+                  - generic [ref=e183]: 2026-11-28 08:49:54
                 - cell "移除" [ref=e184]:
                   - button "移除" [ref=e186] [cursor=pointer]
-              - row "pw_0_1795734649635 pw_user_0_1795734649635 普通用户 普通用户 2026-11-27 07:10:50 移除" [ref=e187]:
-                - cell "pw_0_1795734649635" [ref=e188]:
-                  - generic [ref=e189]: pw_0_1795734649635
-                - cell "pw_user_0_1795734649635" [ref=e190]:
-                  - generic [ref=e191]: pw_user_0_1795734649635
+              - row "pw_0_1795827018438 pw_user_0_1795827018438 普通用户 普通用户 2026-11-28 08:50:18 移除" [ref=e187]:
+                - cell "pw_0_1795827018438" [ref=e188]:
+                  - generic [ref=e189]: pw_0_1795827018438
+                - cell "pw_user_0_1795827018438" [ref=e190]:
+                  - generic [ref=e191]: pw_user_0_1795827018438
                 - cell "普通用户 普通用户" [ref=e192]:
                   - generic [ref=e193]:
                     - combobox [ref=e194] [cursor=pointer]:
@@ -231,15 +231,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e195] [cursor=pointer]
-                - cell "2026-11-27 07:10:50" [ref=e196]:
-                  - generic [ref=e197]: 2026-11-27 07:10:50
+                - cell "2026-11-28 08:50:18" [ref=e196]:
+                  - generic [ref=e197]: 2026-11-28 08:50:18
                 - cell "移除" [ref=e198]:
                   - button "移除" [ref=e200] [cursor=pointer]
-              - row "pw_0_1795734681033 pw_user_0_1795734681033 普通用户 普通用户 2026-11-27 07:11:21 移除" [ref=e201]:
-                - cell "pw_0_1795734681033" [ref=e202]:
-                  - generic [ref=e203]: pw_0_1795734681033
-                - cell "pw_user_0_1795734681033" [ref=e204]:
-                  - generic [ref=e205]: pw_user_0_1795734681033
+              - row "pw_0_1795827040465 pw_user_0_1795827040465 普通用户 普通用户 2026-11-28 08:50:40 移除" [ref=e201]:
+                - cell "pw_0_1795827040465" [ref=e202]:
+                  - generic [ref=e203]: pw_0_1795827040465
+                - cell "pw_user_0_1795827040465" [ref=e204]:
+                  - generic [ref=e205]: pw_user_0_1795827040465
                 - cell "普通用户 普通用户" [ref=e206]:
                   - generic [ref=e207]:
                     - combobox [ref=e208] [cursor=pointer]:
@@ -248,15 +248,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e209] [cursor=pointer]
-                - cell "2026-11-27 07:11:21" [ref=e210]:
-                  - generic [ref=e211]: 2026-11-27 07:11:21
+                - cell "2026-11-28 08:50:40" [ref=e210]:
+                  - generic [ref=e211]: 2026-11-28 08:50:40
                 - cell "移除" [ref=e212]:
                   - button "移除" [ref=e214] [cursor=pointer]
-              - row "pw_0_1795734695700 pw_user_0_1795734695700 普通用户 普通用户 2026-11-27 07:11:35 移除" [ref=e215]:
-                - cell "pw_0_1795734695700" [ref=e216]:
-                  - generic [ref=e217]: pw_0_1795734695700
-                - cell "pw_user_0_1795734695700" [ref=e218]:
-                  - generic [ref=e219]: pw_user_0_1795734695700
+              - row "pw_0_1795827049896 pw_user_0_1795827049896 普通用户 普通用户 2026-11-28 08:50:49 移除" [ref=e215]:
+                - cell "pw_0_1795827049896" [ref=e216]:
+                  - generic [ref=e217]: pw_0_1795827049896
+                - cell "pw_user_0_1795827049896" [ref=e218]:
+                  - generic [ref=e219]: pw_user_0_1795827049896
                 - cell "普通用户 普通用户" [ref=e220]:
                   - generic [ref=e221]:
                     - combobox [ref=e222] [cursor=pointer]:
@@ -265,15 +265,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e223] [cursor=pointer]
-                - cell "2026-11-27 07:11:35" [ref=e224]:
-                  - generic [ref=e225]: 2026-11-27 07:11:35
+                - cell "2026-11-28 08:50:49" [ref=e224]:
+                  - generic [ref=e225]: 2026-11-28 08:50:49
                 - cell "移除" [ref=e226]:
                   - button "移除" [ref=e228] [cursor=pointer]
-              - row "pw_0_1795734696993 pw_user_0_1795734696993 普通用户 普通用户 2026-11-27 07:11:37 移除" [ref=e229]:
-                - cell "pw_0_1795734696993" [ref=e230]:
-                  - generic [ref=e231]: pw_0_1795734696993
-                - cell "pw_user_0_1795734696993" [ref=e232]:
-                  - generic [ref=e233]: pw_user_0_1795734696993
+              - row "pw_0_1795827050740 pw_user_0_1795827050740 普通用户 普通用户 2026-11-28 08:50:51 移除" [ref=e229]:
+                - cell "pw_0_1795827050740" [ref=e230]:
+                  - generic [ref=e231]: pw_0_1795827050740
+                - cell "pw_user_0_1795827050740" [ref=e232]:
+                  - generic [ref=e233]: pw_user_0_1795827050740
                 - cell "普通用户 普通用户" [ref=e234]:
                   - generic [ref=e235]:
                     - combobox [ref=e236] [cursor=pointer]:
@@ -282,15 +282,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e237] [cursor=pointer]
-                - cell "2026-11-27 07:11:37" [ref=e238]:
-                  - generic [ref=e239]: 2026-11-27 07:11:37
+                - cell "2026-11-28 08:50:51" [ref=e238]:
+                  - generic [ref=e239]: 2026-11-28 08:50:51
                 - cell "移除" [ref=e240]:
                   - button "移除" [ref=e242] [cursor=pointer]
-              - row "pw_0_1795734698639 pw_user_0_1795734698639 普通用户 普通用户 2026-11-27 07:11:39 移除" [ref=e243]:
-                - cell "pw_0_1795734698639" [ref=e244]:
-                  - generic [ref=e245]: pw_0_1795734698639
-                - cell "pw_user_0_1795734698639" [ref=e246]:
-                  - generic [ref=e247]: pw_user_0_1795734698639
+              - row "pw_0_1795827051650 pw_user_0_1795827051650 普通用户 普通用户 2026-11-28 08:50:52 移除" [ref=e243]:
+                - cell "pw_0_1795827051650" [ref=e244]:
+                  - generic [ref=e245]: pw_0_1795827051650
+                - cell "pw_user_0_1795827051650" [ref=e246]:
+                  - generic [ref=e247]: pw_user_0_1795827051650
                 - cell "普通用户 普通用户" [ref=e248]:
                   - generic [ref=e249]:
                     - combobox [ref=e250] [cursor=pointer]:
@@ -299,15 +299,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e251] [cursor=pointer]
-                - cell "2026-11-27 07:11:39" [ref=e252]:
-                  - generic [ref=e253]: 2026-11-27 07:11:39
+                - cell "2026-11-28 08:50:52" [ref=e252]:
+                  - generic [ref=e253]: 2026-11-28 08:50:52
                 - cell "移除" [ref=e254]:
                   - button "移除" [ref=e256] [cursor=pointer]
-              - row "pw_0_1795734700968 pw_user_0_1795734700968 普通用户 普通用户 2026-11-27 07:11:41 移除" [ref=e257]:
-                - cell "pw_0_1795734700968" [ref=e258]:
-                  - generic [ref=e259]: pw_0_1795734700968
-                - cell "pw_user_0_1795734700968" [ref=e260]:
-                  - generic [ref=e261]: pw_user_0_1795734700968
+              - row "pw_0_1795827053410 pw_user_0_1795827053410 普通用户 普通用户 2026-11-28 08:50:53 移除" [ref=e257]:
+                - cell "pw_0_1795827053410" [ref=e258]:
+                  - generic [ref=e259]: pw_0_1795827053410
+                - cell "pw_user_0_1795827053410" [ref=e260]:
+                  - generic [ref=e261]: pw_user_0_1795827053410
                 - cell "普通用户 普通用户" [ref=e262]:
                   - generic [ref=e263]:
                     - combobox [ref=e264] [cursor=pointer]:
@@ -316,15 +316,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e265] [cursor=pointer]
-                - cell "2026-11-27 07:11:41" [ref=e266]:
-                  - generic [ref=e267]: 2026-11-27 07:11:41
+                - cell "2026-11-28 08:50:53" [ref=e266]:
+                  - generic [ref=e267]: 2026-11-28 08:50:53
                 - cell "移除" [ref=e268]:
                   - button "移除" [ref=e270] [cursor=pointer]
-              - row "pw_0_1795734703889 pw_user_0_1795734703889 普通用户 普通用户 2026-11-27 07:11:44 移除" [ref=e271]:
-                - cell "pw_0_1795734703889" [ref=e272]:
-                  - generic [ref=e273]: pw_0_1795734703889
-                - cell "pw_user_0_1795734703889" [ref=e274]:
-                  - generic [ref=e275]: pw_user_0_1795734703889
+              - row "pw_0_1795827055044 pw_user_0_1795827055044 普通用户 普通用户 2026-11-28 08:50:55 移除" [ref=e271]:
+                - cell "pw_0_1795827055044" [ref=e272]:
+                  - generic [ref=e273]: pw_0_1795827055044
+                - cell "pw_user_0_1795827055044" [ref=e274]:
+                  - generic [ref=e275]: pw_user_0_1795827055044
                 - cell "普通用户 普通用户" [ref=e276]:
                   - generic [ref=e277]:
                     - combobox [ref=e278] [cursor=pointer]:
@@ -333,15 +333,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e279] [cursor=pointer]
-                - cell "2026-11-27 07:11:44" [ref=e280]:
-                  - generic [ref=e281]: 2026-11-27 07:11:44
+                - cell "2026-11-28 08:50:55" [ref=e280]:
+                  - generic [ref=e281]: 2026-11-28 08:50:55
                 - cell "移除" [ref=e282]:
                   - button "移除" [ref=e284] [cursor=pointer]
-              - row "pw_0_1795734706374_other pw_user_0_1795734706374 普通用户 普通用户 2026-11-27 07:11:46 移除" [ref=e285]:
-                - cell "pw_0_1795734706374_other" [ref=e286]:
-                  - generic [ref=e287]: pw_0_1795734706374_other
-                - cell "pw_user_0_1795734706374" [ref=e288]:
-                  - generic [ref=e289]: pw_user_0_1795734706374
+              - row "pw_0_1795827056480_other pw_user_0_1795827056480 普通用户 普通用户 2026-11-28 08:50:56 移除" [ref=e285]:
+                - cell "pw_0_1795827056480_other" [ref=e286]:
+                  - generic [ref=e287]: pw_0_1795827056480_other
+                - cell "pw_user_0_1795827056480" [ref=e288]:
+                  - generic [ref=e289]: pw_user_0_1795827056480
                 - cell "普通用户 普通用户" [ref=e290]:
                   - generic [ref=e291]:
                     - combobox [ref=e292] [cursor=pointer]:
@@ -350,15 +350,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e293] [cursor=pointer]
-                - cell "2026-11-27 07:11:46" [ref=e294]:
-                  - generic [ref=e295]: 2026-11-27 07:11:46
+                - cell "2026-11-28 08:50:56" [ref=e294]:
+                  - generic [ref=e295]: 2026-11-28 08:50:56
                 - cell "移除" [ref=e296]:
                   - button "移除" [ref=e298] [cursor=pointer]
-              - row "pw_0_1795734706374 pw_user_0_1795734706374 普通用户 普通用户 2026-11-27 07:11:46 移除" [ref=e299]:
-                - cell "pw_0_1795734706374" [ref=e300]:
-                  - generic [ref=e301]: pw_0_1795734706374
-                - cell "pw_user_0_1795734706374" [ref=e302]:
-                  - generic [ref=e303]: pw_user_0_1795734706374
+              - row "pw_0_1795827056480 pw_user_0_1795827056480 普通用户 普通用户 2026-11-28 08:50:56 移除" [ref=e299]:
+                - cell "pw_0_1795827056480" [ref=e300]:
+                  - generic [ref=e301]: pw_0_1795827056480
+                - cell "pw_user_0_1795827056480" [ref=e302]:
+                  - generic [ref=e303]: pw_user_0_1795827056480
                 - cell "普通用户 普通用户" [ref=e304]:
                   - generic [ref=e305]:
                     - combobox [ref=e306] [cursor=pointer]:
@@ -367,15 +367,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e307] [cursor=pointer]
-                - cell "2026-11-27 07:11:46" [ref=e308]:
-                  - generic [ref=e309]: 2026-11-27 07:11:46
+                - cell "2026-11-28 08:50:56" [ref=e308]:
+                  - generic [ref=e309]: 2026-11-28 08:50:56
                 - cell "移除" [ref=e310]:
                   - button "移除" [ref=e312] [cursor=pointer]
-              - row "pw_0_1795734715157 pw_user_0_1795734715157 普通用户 普通用户 2026-11-27 07:11:55 移除" [ref=e313]:
-                - cell "pw_0_1795734715157" [ref=e314]:
-                  - generic [ref=e315]: pw_0_1795734715157
-                - cell "pw_user_0_1795734715157" [ref=e316]:
-                  - generic [ref=e317]: pw_user_0_1795734715157
+              - row "pw_0_1795827061581 pw_user_0_1795827061581 普通用户 普通用户 2026-11-28 08:51:01 移除" [ref=e313]:
+                - cell "pw_0_1795827061581" [ref=e314]:
+                  - generic [ref=e315]: pw_0_1795827061581
+                - cell "pw_user_0_1795827061581" [ref=e316]:
+                  - generic [ref=e317]: pw_user_0_1795827061581
                 - cell "普通用户 普通用户" [ref=e318]:
                   - generic [ref=e319]:
                     - combobox [ref=e320] [cursor=pointer]:
@@ -384,15 +384,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e321] [cursor=pointer]
-                - cell "2026-11-27 07:11:55" [ref=e322]:
-                  - generic [ref=e323]: 2026-11-27 07:11:55
+                - cell "2026-11-28 08:51:01" [ref=e322]:
+                  - generic [ref=e323]: 2026-11-28 08:51:01
                 - cell "移除" [ref=e324]:
                   - button "移除" [ref=e326] [cursor=pointer]
-              - row "pw_0_1795734717090 pw_user_0_1795734717090 普通用户 普通用户 2026-11-27 07:11:57 移除" [ref=e327]:
-                - cell "pw_0_1795734717090" [ref=e328]:
-                  - generic [ref=e329]: pw_0_1795734717090
-                - cell "pw_user_0_1795734717090" [ref=e330]:
-                  - generic [ref=e331]: pw_user_0_1795734717090
+              - row "pw_0_1795827062543 pw_user_0_1795827062543 普通用户 普通用户 2026-11-28 08:51:02 移除" [ref=e327]:
+                - cell "pw_0_1795827062543" [ref=e328]:
+                  - generic [ref=e329]: pw_0_1795827062543
+                - cell "pw_user_0_1795827062543" [ref=e330]:
+                  - generic [ref=e331]: pw_user_0_1795827062543
                 - cell "普通用户 普通用户" [ref=e332]:
                   - generic [ref=e333]:
                     - combobox [ref=e334] [cursor=pointer]:
@@ -401,15 +401,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e335] [cursor=pointer]
-                - cell "2026-11-27 07:11:57" [ref=e336]:
-                  - generic [ref=e337]: 2026-11-27 07:11:57
+                - cell "2026-11-28 08:51:02" [ref=e336]:
+                  - generic [ref=e337]: 2026-11-28 08:51:02
                 - cell "移除" [ref=e338]:
                   - button "移除" [ref=e340] [cursor=pointer]
-              - row "pw_0_1795734718916 pw_user_0_1795734718916 普通用户 普通用户 2026-11-27 07:11:59 移除" [ref=e341]:
-                - cell "pw_0_1795734718916" [ref=e342]:
-                  - generic [ref=e343]: pw_0_1795734718916
-                - cell "pw_user_0_1795734718916" [ref=e344]:
-                  - generic [ref=e345]: pw_user_0_1795734718916
+              - row "pw_0_1795827063523 pw_user_0_1795827063523 普通用户 普通用户 2026-11-28 08:51:03 移除" [ref=e341]:
+                - cell "pw_0_1795827063523" [ref=e342]:
+                  - generic [ref=e343]: pw_0_1795827063523
+                - cell "pw_user_0_1795827063523" [ref=e344]:
+                  - generic [ref=e345]: pw_user_0_1795827063523
                 - cell "普通用户 普通用户" [ref=e346]:
                   - generic [ref=e347]:
                     - combobox [ref=e348] [cursor=pointer]:
@@ -418,15 +418,15 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e349] [cursor=pointer]
-                - cell "2026-11-27 07:11:59" [ref=e350]:
-                  - generic [ref=e351]: 2026-11-27 07:11:59
+                - cell "2026-11-28 08:51:03" [ref=e350]:
+                  - generic [ref=e351]: 2026-11-28 08:51:03
                 - cell "移除" [ref=e352]:
                   - button "移除" [ref=e354] [cursor=pointer]
-              - row "pw_0_1795734726714 pw_user_0_1795734726714 普通用户 普通用户 2026-11-27 07:12:07 移除" [ref=e355]:
-                - cell "pw_0_1795734726714" [ref=e356]:
-                  - generic [ref=e357]: pw_0_1795734726714
-                - cell "pw_user_0_1795734726714" [ref=e358]:
-                  - generic [ref=e359]: pw_user_0_1795734726714
+              - row "pw_0_1795827068412 pw_user_0_1795827068412 普通用户 普通用户 2026-11-28 08:51:08 移除" [ref=e355]:
+                - cell "pw_0_1795827068412" [ref=e356]:
+                  - generic [ref=e357]: pw_0_1795827068412
+                - cell "pw_user_0_1795827068412" [ref=e358]:
+                  - generic [ref=e359]: pw_user_0_1795827068412
                 - cell "普通用户 普通用户" [ref=e360]:
                   - generic [ref=e361]:
                     - combobox [ref=e362] [cursor=pointer]:
@@ -435,8 +435,8 @@ Call log:
                       - option "开发运维"
                       - option "普通用户" [selected]
                     - button "普通用户" [ref=e363] [cursor=pointer]
-                - cell "2026-11-27 07:12:07" [ref=e364]:
-                  - generic [ref=e365]: 2026-11-27 07:12:07
+                - cell "2026-11-28 08:51:08" [ref=e364]:
+                  - generic [ref=e365]: 2026-11-28 08:51:08
                 - cell "移除" [ref=e366]:
                   - button "移除" [ref=e368] [cursor=pointer]
         - generic [ref=e370]:
